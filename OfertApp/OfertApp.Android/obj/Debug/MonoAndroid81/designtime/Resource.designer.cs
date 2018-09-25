@@ -26,6 +26,132 @@ namespace OfertApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Auth.Resource.Animation.slide_in_right = global::OfertApp.Droid.Resource.Animation.slide_in_right;
+			global::Xamarin.Auth.Resource.Animation.slide_out_left = global::OfertApp.Droid.Resource.Animation.slide_out_left;
+			global::Xamarin.Auth.Resource.Attribute.font = global::OfertApp.Droid.Resource.Attribute.font;
+			global::Xamarin.Auth.Resource.Attribute.fontProviderAuthority = global::OfertApp.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Xamarin.Auth.Resource.Attribute.fontProviderCerts = global::OfertApp.Droid.Resource.Attribute.fontProviderCerts;
+			global::Xamarin.Auth.Resource.Attribute.fontProviderFetchStrategy = global::OfertApp.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Xamarin.Auth.Resource.Attribute.fontProviderFetchTimeout = global::OfertApp.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Xamarin.Auth.Resource.Attribute.fontProviderPackage = global::OfertApp.Droid.Resource.Attribute.fontProviderPackage;
+			global::Xamarin.Auth.Resource.Attribute.fontProviderQuery = global::OfertApp.Droid.Resource.Attribute.fontProviderQuery;
+			global::Xamarin.Auth.Resource.Attribute.fontStyle = global::OfertApp.Droid.Resource.Attribute.fontStyle;
+			global::Xamarin.Auth.Resource.Attribute.fontWeight = global::OfertApp.Droid.Resource.Attribute.fontWeight;
+			global::Xamarin.Auth.Resource.Boolean.abc_action_bar_embed_tabs = global::OfertApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Auth.Resource.Color.notification_action_color_filter = global::OfertApp.Droid.Resource.Color.notification_action_color_filter;
+			global::Xamarin.Auth.Resource.Color.notification_icon_bg_color = global::OfertApp.Droid.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.Auth.Resource.Color.notification_material_background_media_default_color = global::OfertApp.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Xamarin.Auth.Resource.Color.primary_text_default_material_dark = global::OfertApp.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Xamarin.Auth.Resource.Color.ripple_material_light = global::OfertApp.Droid.Resource.Color.ripple_material_light;
+			global::Xamarin.Auth.Resource.Color.secondary_text_default_material_dark = global::OfertApp.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Xamarin.Auth.Resource.Color.secondary_text_default_material_light = global::OfertApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.Auth.Resource.Dimension.compat_button_inset_horizontal_material = global::OfertApp.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Xamarin.Auth.Resource.Dimension.compat_button_inset_vertical_material = global::OfertApp.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Xamarin.Auth.Resource.Dimension.compat_button_padding_horizontal_material = global::OfertApp.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Xamarin.Auth.Resource.Dimension.compat_button_padding_vertical_material = global::OfertApp.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Xamarin.Auth.Resource.Dimension.compat_control_corner_material = global::OfertApp.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Xamarin.Auth.Resource.Dimension.notification_action_icon_size = global::OfertApp.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_action_text_size = global::OfertApp.Droid.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_big_circle_margin = global::OfertApp.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.Auth.Resource.Dimension.notification_content_margin_start = global::OfertApp.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.Auth.Resource.Dimension.notification_large_icon_height = global::OfertApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.Auth.Resource.Dimension.notification_large_icon_width = global::OfertApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.Auth.Resource.Dimension.notification_main_column_padding_top = global::OfertApp.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.Auth.Resource.Dimension.notification_media_narrow_margin = global::OfertApp.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.Auth.Resource.Dimension.notification_right_icon_size = global::OfertApp.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_right_side_padding_top = global::OfertApp.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.Auth.Resource.Dimension.notification_small_icon_background_padding = global::OfertApp.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.Auth.Resource.Dimension.notification_small_icon_size_as_large = global::OfertApp.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.Auth.Resource.Dimension.notification_subtext_size = global::OfertApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_top_pad = global::OfertApp.Droid.Resource.Dimension.notification_top_pad;
+			global::Xamarin.Auth.Resource.Dimension.notification_top_pad_large_text = global::OfertApp.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Xamarin.Auth.Resource.Drawable.ic_arrow_back = global::OfertApp.Droid.Resource.Drawable.ic_arrow_back;
+			global::Xamarin.Auth.Resource.Drawable.notification_action_background = global::OfertApp.Droid.Resource.Drawable.notification_action_background;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg = global::OfertApp.Droid.Resource.Drawable.notification_bg;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_low = global::OfertApp.Droid.Resource.Drawable.notification_bg_low;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_low_normal = global::OfertApp.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_low_pressed = global::OfertApp.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_normal = global::OfertApp.Droid.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_normal_pressed = global::OfertApp.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.Auth.Resource.Drawable.notification_icon_background = global::OfertApp.Droid.Resource.Drawable.notification_icon_background;
+			global::Xamarin.Auth.Resource.Drawable.notification_template_icon_bg = global::OfertApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.Auth.Resource.Drawable.notification_template_icon_low_bg = global::OfertApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.Auth.Resource.Drawable.notification_tile_bg = global::OfertApp.Droid.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.Auth.Resource.Drawable.notify_panel_notification_icon_bg = global::OfertApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Auth.Resource.Id.action0 = global::OfertApp.Droid.Resource.Id.action0;
+			global::Xamarin.Auth.Resource.Id.action_container = global::OfertApp.Droid.Resource.Id.action_container;
+			global::Xamarin.Auth.Resource.Id.action_divider = global::OfertApp.Droid.Resource.Id.action_divider;
+			global::Xamarin.Auth.Resource.Id.action_image = global::OfertApp.Droid.Resource.Id.action_image;
+			global::Xamarin.Auth.Resource.Id.action_text = global::OfertApp.Droid.Resource.Id.action_text;
+			global::Xamarin.Auth.Resource.Id.actions = global::OfertApp.Droid.Resource.Id.actions;
+			global::Xamarin.Auth.Resource.Id.async = global::OfertApp.Droid.Resource.Id.async;
+			global::Xamarin.Auth.Resource.Id.blocking = global::OfertApp.Droid.Resource.Id.blocking;
+			global::Xamarin.Auth.Resource.Id.cancel_action = global::OfertApp.Droid.Resource.Id.cancel_action;
+			global::Xamarin.Auth.Resource.Id.chronometer = global::OfertApp.Droid.Resource.Id.chronometer;
+			global::Xamarin.Auth.Resource.Id.end_padder = global::OfertApp.Droid.Resource.Id.end_padder;
+			global::Xamarin.Auth.Resource.Id.forever = global::OfertApp.Droid.Resource.Id.forever;
+			global::Xamarin.Auth.Resource.Id.icon = global::OfertApp.Droid.Resource.Id.icon;
+			global::Xamarin.Auth.Resource.Id.icon_group = global::OfertApp.Droid.Resource.Id.icon_group;
+			global::Xamarin.Auth.Resource.Id.info = global::OfertApp.Droid.Resource.Id.info;
+			global::Xamarin.Auth.Resource.Id.italic = global::OfertApp.Droid.Resource.Id.italic;
+			global::Xamarin.Auth.Resource.Id.line1 = global::OfertApp.Droid.Resource.Id.line1;
+			global::Xamarin.Auth.Resource.Id.line3 = global::OfertApp.Droid.Resource.Id.line3;
+			global::Xamarin.Auth.Resource.Id.media_actions = global::OfertApp.Droid.Resource.Id.media_actions;
+			global::Xamarin.Auth.Resource.Id.normal = global::OfertApp.Droid.Resource.Id.normal;
+			global::Xamarin.Auth.Resource.Id.notification_background = global::OfertApp.Droid.Resource.Id.notification_background;
+			global::Xamarin.Auth.Resource.Id.notification_main_column = global::OfertApp.Droid.Resource.Id.notification_main_column;
+			global::Xamarin.Auth.Resource.Id.notification_main_column_container = global::OfertApp.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Auth.Resource.Id.right_icon = global::OfertApp.Droid.Resource.Id.right_icon;
+			global::Xamarin.Auth.Resource.Id.right_side = global::OfertApp.Droid.Resource.Id.right_side;
+			global::Xamarin.Auth.Resource.Id.status_bar_latest_event_content = global::OfertApp.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Xamarin.Auth.Resource.Id.text = global::OfertApp.Droid.Resource.Id.text;
+			global::Xamarin.Auth.Resource.Id.text2 = global::OfertApp.Droid.Resource.Id.text2;
+			global::Xamarin.Auth.Resource.Id.time = global::OfertApp.Droid.Resource.Id.time;
+			global::Xamarin.Auth.Resource.Id.title = global::OfertApp.Droid.Resource.Id.title;
+			global::Xamarin.Auth.Resource.Id.webview = global::OfertApp.Droid.Resource.Id.webview;
+			global::Xamarin.Auth.Resource.Integer.cancel_button_image_alpha = global::OfertApp.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Xamarin.Auth.Resource.Integer.status_bar_notification_info_maxnum = global::OfertApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Auth.Resource.Layout.activity_webview = global::OfertApp.Droid.Resource.Layout.activity_webview;
+			global::Xamarin.Auth.Resource.Layout.notification_action = global::OfertApp.Droid.Resource.Layout.notification_action;
+			global::Xamarin.Auth.Resource.Layout.notification_action_tombstone = global::OfertApp.Droid.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.Auth.Resource.Layout.notification_media_action = global::OfertApp.Droid.Resource.Layout.notification_media_action;
+			global::Xamarin.Auth.Resource.Layout.notification_media_cancel_action = global::OfertApp.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media = global::OfertApp.Droid.Resource.Layout.notification_template_big_media;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media_custom = global::OfertApp.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media_narrow = global::OfertApp.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media_narrow_custom = global::OfertApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Xamarin.Auth.Resource.Layout.notification_template_custom_big = global::OfertApp.Droid.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.Auth.Resource.Layout.notification_template_icon_group = global::OfertApp.Droid.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.Auth.Resource.Layout.notification_template_lines_media = global::OfertApp.Droid.Resource.Layout.notification_template_lines_media;
+			global::Xamarin.Auth.Resource.Layout.notification_template_media = global::OfertApp.Droid.Resource.Layout.notification_template_media;
+			global::Xamarin.Auth.Resource.Layout.notification_template_media_custom = global::OfertApp.Droid.Resource.Layout.notification_template_media_custom;
+			global::Xamarin.Auth.Resource.Layout.notification_template_part_chronometer = global::OfertApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.Auth.Resource.Layout.notification_template_part_time = global::OfertApp.Droid.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Auth.Resource.String.status_bar_notification_info_overflow = global::OfertApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Xamarin.Auth.Resource.String.title_activity_webview = global::OfertApp.Droid.Resource.String.title_activity_webview;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Info = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Media = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Time = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Title = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Xamarin.Auth.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::OfertApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Xamarin.Auth.Resource.Style.Widget_Compat_NotificationActionContainer = global::OfertApp.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Xamarin.Auth.Resource.Style.Widget_Compat_NotificationActionText = global::OfertApp.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily = global::OfertApp.Droid.Resource.Styleable.FontFamily;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily_fontProviderAuthority = global::OfertApp.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily_fontProviderCerts = global::OfertApp.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::OfertApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::OfertApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily_fontProviderPackage = global::OfertApp.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.Auth.Resource.Styleable.FontFamily_fontProviderQuery = global::OfertApp.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont = global::OfertApp.Droid.Resource.Styleable.FontFamilyFont;
+			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont_font = global::OfertApp.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont_fontStyle = global::OfertApp.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont_fontWeight = global::OfertApp.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::OfertApp.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -73,6 +199,12 @@ namespace OfertApp.Droid
 			
 			// aapt resource value: 0x7F01000E
 			public const int design_snackbar_out = 2130771982;
+			
+			// aapt resource value: 0x7F080018
+			public const int slide_in_right = 2131230744;
+			
+			// aapt resource value: 0x7F080019
+			public const int slide_out_left = 2131230745;
 			
 			// aapt resource value: 0x7F01000F
 			public const int tooltip_enter = 2130771983;
@@ -340,8 +472,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F040047
 			public const int buttonPanelSideLayout = 2130968647;
 			
-			// aapt resource value: 0x7F090376
-			public const int buttonSize = 2131297142;
+			// aapt resource value: 0x7F100376
+			public const int buttonSize = 2131755894;
 			
 			// aapt resource value: 0x7F040048
 			public const int buttonStyle = 2130968648;
@@ -502,8 +634,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F04004D
 			public const int checkedTextViewStyle = 2130968653;
 			
-			// aapt resource value: 0x7F090375
-			public const int circleCrop = 2131297141;
+			// aapt resource value: 0x7F100375
+			public const int circleCrop = 2131755893;
 			
 			// aapt resource value: 0x7F04004E
 			public const int closeIcon = 2130968654;
@@ -553,8 +685,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F04005D
 			public const int colorPrimaryDark = 2130968669;
 			
-			// aapt resource value: 0x7F090377
-			public const int colorScheme = 2131297143;
+			// aapt resource value: 0x7F100377
+			public const int colorScheme = 2131755895;
 			
 			// aapt resource value: 0x7F04005E
 			public const int colorSwitchThumbNormal = 2130968670;
@@ -829,11 +961,11 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0400A6
 			public const int iconTintMode = 2130968742;
 			
-			// aapt resource value: 0x7F090374
-			public const int imageAspectRatio = 2131297140;
+			// aapt resource value: 0x7F100374
+			public const int imageAspectRatio = 2131755892;
 			
-			// aapt resource value: 0x7F090373
-			public const int imageAspectRatioAdjust = 2131297139;
+			// aapt resource value: 0x7F100373
+			public const int imageAspectRatioAdjust = 2131755891;
 			
 			// aapt resource value: 0x7F0400A8
 			public const int imageButtonStyle = 2130968744;
@@ -1156,8 +1288,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int schemaOrgType = 1;
 			
-			// aapt resource value: 0x7F090378
-			public const int scopeUris = 2131297144;
+			// aapt resource value: 0x7F100378
+			public const int scopeUris = 2131755896;
 			
 			// aapt resource value: 0x7F0400F1
 			public const int scrimAnimationDuration = 2130968817;
@@ -3083,62 +3215,62 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int cast_skip_ad_label_border = 1;
 			
-			// aapt resource value: 0x7F010326
-			public const int common_full_open_on_phone = 2130772774;
-			
-			// aapt resource value: 0x7F010312
-			public const int common_google_signin_btn_icon_dark = 2130772754;
-			
-			// aapt resource value: 0x7F010313
-			public const int common_google_signin_btn_icon_dark_focused = 2130772755;
+			// aapt resource value: 0x7F010328
+			public const int common_full_open_on_phone = 2130772776;
 			
 			// aapt resource value: 0x7F010314
-			public const int common_google_signin_btn_icon_dark_normal = 2130772756;
-			
-			// aapt resource value: 0x7F010327
-			public const int common_google_signin_btn_icon_dark_normal_background = 2130772775;
+			public const int common_google_signin_btn_icon_dark = 2130772756;
 			
 			// aapt resource value: 0x7F010315
-			public const int common_google_signin_btn_icon_disabled = 2130772757;
+			public const int common_google_signin_btn_icon_dark_focused = 2130772757;
 			
 			// aapt resource value: 0x7F010316
-			public const int common_google_signin_btn_icon_light = 2130772758;
-			
-			// aapt resource value: 0x7F010317
-			public const int common_google_signin_btn_icon_light_focused = 2130772759;
-			
-			// aapt resource value: 0x7F010318
-			public const int common_google_signin_btn_icon_light_normal = 2130772760;
-			
-			// aapt resource value: 0x7F010328
-			public const int common_google_signin_btn_icon_light_normal_background = 2130772776;
-			
-			// aapt resource value: 0x7F010319
-			public const int common_google_signin_btn_text_dark = 2130772761;
-			
-			// aapt resource value: 0x7F010320
-			public const int common_google_signin_btn_text_dark_focused = 2130772768;
-			
-			// aapt resource value: 0x7F010321
-			public const int common_google_signin_btn_text_dark_normal = 2130772769;
+			public const int common_google_signin_btn_icon_dark_normal = 2130772758;
 			
 			// aapt resource value: 0x7F010329
-			public const int common_google_signin_btn_text_dark_normal_background = 2130772777;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2130772777;
 			
-			// aapt resource value: 0x7F010322
-			public const int common_google_signin_btn_text_disabled = 2130772770;
+			// aapt resource value: 0x7F010317
+			public const int common_google_signin_btn_icon_disabled = 2130772759;
 			
-			// aapt resource value: 0x7F010323
-			public const int common_google_signin_btn_text_light = 2130772771;
+			// aapt resource value: 0x7F010318
+			public const int common_google_signin_btn_icon_light = 2130772760;
 			
-			// aapt resource value: 0x7F010324
-			public const int common_google_signin_btn_text_light_focused = 2130772772;
+			// aapt resource value: 0x7F010319
+			public const int common_google_signin_btn_icon_light_focused = 2130772761;
 			
-			// aapt resource value: 0x7F010325
-			public const int common_google_signin_btn_text_light_normal = 2130772773;
+			// aapt resource value: 0x7F010320
+			public const int common_google_signin_btn_icon_light_normal = 2130772768;
 			
 			// aapt resource value: 0x7F010330
-			public const int common_google_signin_btn_text_light_normal_background = 2130772784;
+			public const int common_google_signin_btn_icon_light_normal_background = 2130772784;
+			
+			// aapt resource value: 0x7F010321
+			public const int common_google_signin_btn_text_dark = 2130772769;
+			
+			// aapt resource value: 0x7F010322
+			public const int common_google_signin_btn_text_dark_focused = 2130772770;
+			
+			// aapt resource value: 0x7F010323
+			public const int common_google_signin_btn_text_dark_normal = 2130772771;
+			
+			// aapt resource value: 0x7F010331
+			public const int common_google_signin_btn_text_dark_normal_background = 2130772785;
+			
+			// aapt resource value: 0x7F010324
+			public const int common_google_signin_btn_text_disabled = 2130772772;
+			
+			// aapt resource value: 0x7F010325
+			public const int common_google_signin_btn_text_light = 2130772773;
+			
+			// aapt resource value: 0x7F010326
+			public const int common_google_signin_btn_text_light_focused = 2130772774;
+			
+			// aapt resource value: 0x7F010327
+			public const int common_google_signin_btn_text_light_normal = 2130772775;
+			
+			// aapt resource value: 0x7F010332
+			public const int common_google_signin_btn_text_light_normal_background = 2130772786;
 			
 			// aapt resource value: 0x7F010002
 			public const int contacts_color = 2130771970;
@@ -3161,14 +3293,17 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010331
-			public const int googleg_disabled_color_18 = 2130772785;
+			// aapt resource value: 0x7F010333
+			public const int googleg_disabled_color_18 = 2130772787;
 			
-			// aapt resource value: 0x7F010332
-			public const int googleg_standard_color_18 = 2130772786;
+			// aapt resource value: 0x7F010334
+			public const int googleg_standard_color_18 = 2130772788;
 			
 			// aapt resource value: 0x7F010003
 			public const int home_color = 2130771971;
+			
+			// aapt resource value: 0x7F010313
+			public const int ic_arrow_back = 2130772755;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -3714,10 +3849,13 @@ namespace OfertApp.Droid
 			public const int ic_vol_type_tv_light = 2131296516;
 			
 			// aapt resource value: 0x7F010004
-			public const int logoOfertApp = 2130771972;
+			public const int logoGoogle = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int logoOfertAppNuevo2 = 2130771973;
+			public const int logoOfertApp = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int logoOfertAppNuevo2 = 2130771974;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -3953,11 +4091,11 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int quantum_ic_volume_up_white_36 = 1;
 			
-			// aapt resource value: 0x7F010006
-			public const int sale_color = 2130771974;
-			
 			// aapt resource value: 0x7F010007
-			public const int store_color = 2130771975;
+			public const int sale_color = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int store_color = 2130771976;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -3965,8 +4103,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
-			// aapt resource value: 0x7F010008
-			public const int xamarin_logo = 2130771976;
+			// aapt resource value: 0x7F010009
+			public const int xamarin_logo = 2130771977;
 			
 			static Drawable()
 			{
@@ -4044,11 +4182,11 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C0015
 			public const int add = 2131492885;
 			
-			// aapt resource value: 0x7F020176
-			public const int adjust_height = 2130837878;
+			// aapt resource value: 0x7F020183
+			public const int adjust_height = 2130837891;
 			
-			// aapt resource value: 0x7F020175
-			public const int adjust_width = 2130837877;
+			// aapt resource value: 0x7F020182
+			public const int adjust_width = 2130837890;
 			
 			// aapt resource value: 0x1
 			public const int ad_container = 1;
@@ -4077,8 +4215,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int android_pay_light_with_border = 1;
 			
-			// aapt resource value: 0x7F020174
-			public const int app_name = 2130837876;
+			// aapt resource value: 0x7F020181
+			public const int app_name = 2130837889;
 			
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
@@ -4224,8 +4362,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C0024
 			public const int customPanel = 2131492900;
 			
-			// aapt resource value: 0x7F020180
-			public const int dark = 2130837888;
+			// aapt resource value: 0x7F020187
+			public const int dark = 2130837895;
 			
 			// aapt resource value: 0x1
 			public const int date = 1;
@@ -4332,8 +4470,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C000B
 			public const int icon_group = 2131492875;
 			
-			// aapt resource value: 0x7F020179
-			public const int icon_only = 2130837881;
+			// aapt resource value: 0x7F020186
+			public const int icon_only = 2130837894;
 			
 			// aapt resource value: 0x1
 			public const int icon_uri = 1;
@@ -4343,6 +4481,9 @@ namespace OfertApp.Droid
 			
 			// aapt resource value: 0x7F0C0038
 			public const int image = 2131492920;
+			
+			// aapt resource value: 0x7F020007
+			public const int ImgProfile = 2130837511;
 			
 			// aapt resource value: 0x1
 			public const int index_entity_types = 1;
@@ -4395,8 +4536,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int license_list = 1;
 			
-			// aapt resource value: 0x7F020181
-			public const int light = 2130837889;
+			// aapt resource value: 0x7F020188
+			public const int light = 2130837896;
 			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
@@ -4602,6 +4743,12 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
 			
+			// aapt resource value: 0x7F020003
+			public const int relativeLayout1 = 2130837507;
+			
+			// aapt resource value: 0x7F020005
+			public const int relativeLayout2 = 2130837509;
+			
 			// aapt resource value: 0x1
 			public const int rfc822 = 1;
 			
@@ -4689,11 +4836,14 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C006A
 			public const int shortcut = 2131492970;
 			
+			// aapt resource value: 0x7F020002
+			public const int sign_in_button = 2130837506;
+			
 			// aapt resource value: 0x1
 			public const int slide = 1;
 			
-			// aapt resource value: 0x7F020002
-			public const int sliding_tabs = 2130837506;
+			// aapt resource value: 0x7F020008
+			public const int sliding_tabs = 2130837512;
 			
 			// aapt resource value: 0x7F0C006B
 			public const int smallLabel = 2131492971;
@@ -4719,8 +4869,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C0072
 			public const int src_over = 2131492978;
 			
-			// aapt resource value: 0x7F020177
-			public const int standard = 2130837879;
+			// aapt resource value: 0x7F020184
+			public const int standard = 2130837892;
 			
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
@@ -4809,8 +4959,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int title_view = 1;
 			
-			// aapt resource value: 0x7F020003
-			public const int toolbar = 2130837507;
+			// aapt resource value: 0x7F020009
+			public const int toolbar = 2130837513;
 			
 			// aapt resource value: 0x7F0C0084
 			public const int top = 2131492996;
@@ -4836,6 +4986,12 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C008B
 			public const int transition_transform = 2131493003;
 			
+			// aapt resource value: 0x7F020006
+			public const int TxtGender = 2130837510;
+			
+			// aapt resource value: 0x7F020004
+			public const int TxtName = 2130837508;
+			
 			// aapt resource value: 0x7F0C008C
 			public const int uniform = 2131493004;
 			
@@ -4854,8 +5010,11 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0C007D
 			public const int volume_item_container = 2131492989;
 			
-			// aapt resource value: 0x7F020178
-			public const int wide = 2130837880;
+			// aapt resource value: 0x7F020180
+			public const int webview = 2130837888;
+			
+			// aapt resource value: 0x7F020185
+			public const int wide = 2130837893;
 			
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;
@@ -5028,6 +5187,9 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0F001A
 			public const int abc_select_dialog_material = 2131689498;
 			
+			// aapt resource value: 0x7F030071
+			public const int activity_webview = 2130903153;
+			
 			// aapt resource value: 0x1
 			public const int cast_expanded_controller_activity = 1;
 			
@@ -5099,6 +5261,9 @@ namespace OfertApp.Droid
 			
 			// aapt resource value: 0x1
 			public const int license_menu_activity_no_licenses = 1;
+			
+			// aapt resource value: 0x7F030002
+			public const int Main = 2130903042;
 			
 			// aapt resource value: 0x7F0F001B
 			public const int mr_chooser_dialog = 2131689499;
@@ -5187,11 +5352,11 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F0F003B
 			public const int support_simple_spinner_dropdown_item = 2131689531;
 			
-			// aapt resource value: 0x7F030002
-			public const int Tabbar = 2130903042;
-			
 			// aapt resource value: 0x7F030003
-			public const int Toolbar = 2130903043;
+			public const int Tabbar = 2130903043;
+			
+			// aapt resource value: 0x7F030004
+			public const int Toolbar = 2130903044;
 			
 			// aapt resource value: 0x7F0F003C
 			public const int tooltip = 2131689532;
@@ -5450,56 +5615,56 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F150020
 			public const int character_counter_pattern = 2132082720;
 			
-			// aapt resource value: 0x7F080062
-			public const int common_google_play_services_enable_button = 2131230818;
+			// aapt resource value: 0x7F090063
+			public const int common_google_play_services_enable_button = 2131296355;
 			
-			// aapt resource value: 0x7F080063
-			public const int common_google_play_services_enable_text = 2131230819;
+			// aapt resource value: 0x7F090064
+			public const int common_google_play_services_enable_text = 2131296356;
 			
-			// aapt resource value: 0x7F080064
-			public const int common_google_play_services_enable_title = 2131230820;
+			// aapt resource value: 0x7F090065
+			public const int common_google_play_services_enable_title = 2131296357;
 			
-			// aapt resource value: 0x7F080065
-			public const int common_google_play_services_install_button = 2131230821;
+			// aapt resource value: 0x7F090066
+			public const int common_google_play_services_install_button = 2131296358;
 			
-			// aapt resource value: 0x7F080066
-			public const int common_google_play_services_install_text = 2131230822;
+			// aapt resource value: 0x7F090067
+			public const int common_google_play_services_install_text = 2131296359;
 			
-			// aapt resource value: 0x7F080067
-			public const int common_google_play_services_install_title = 2131230823;
+			// aapt resource value: 0x7F090068
+			public const int common_google_play_services_install_title = 2131296360;
 			
-			// aapt resource value: 0x7F080068
-			public const int common_google_play_services_notification_ticker = 2131230824;
+			// aapt resource value: 0x7F090069
+			public const int common_google_play_services_notification_ticker = 2131296361;
 			
 			// aapt resource value: 0x1
 			public const int common_google_play_services_unknown_issue = 1;
 			
-			// aapt resource value: 0x7F080069
-			public const int common_google_play_services_unsupported_text = 2131230825;
+			// aapt resource value: 0x7F090070
+			public const int common_google_play_services_unsupported_text = 2131296368;
 			
-			// aapt resource value: 0x7F080070
-			public const int common_google_play_services_update_button = 2131230832;
+			// aapt resource value: 0x7F090071
+			public const int common_google_play_services_update_button = 2131296369;
 			
-			// aapt resource value: 0x7F080071
-			public const int common_google_play_services_update_text = 2131230833;
+			// aapt resource value: 0x7F090072
+			public const int common_google_play_services_update_text = 2131296370;
 			
-			// aapt resource value: 0x7F080072
-			public const int common_google_play_services_update_title = 2131230834;
+			// aapt resource value: 0x7F090073
+			public const int common_google_play_services_update_title = 2131296371;
 			
-			// aapt resource value: 0x7F080073
-			public const int common_google_play_services_updating_text = 2131230835;
+			// aapt resource value: 0x7F090074
+			public const int common_google_play_services_updating_text = 2131296372;
 			
-			// aapt resource value: 0x7F080074
-			public const int common_google_play_services_wear_update_text = 2131230836;
+			// aapt resource value: 0x7F090075
+			public const int common_google_play_services_wear_update_text = 2131296373;
 			
-			// aapt resource value: 0x7F080075
-			public const int common_open_on_phone = 2131230837;
+			// aapt resource value: 0x7F090076
+			public const int common_open_on_phone = 2131296374;
 			
-			// aapt resource value: 0x7F080076
-			public const int common_signin_button_text = 2131230838;
+			// aapt resource value: 0x7F090077
+			public const int common_signin_button_text = 2131296375;
 			
-			// aapt resource value: 0x7F080077
-			public const int common_signin_button_text_long = 2131230839;
+			// aapt resource value: 0x7F090078
+			public const int common_signin_button_text_long = 2131296376;
 			
 			// aapt resource value: 0x1
 			public const int fcm_fallback_notification_channel_label = 1;
@@ -5635,6 +5800,9 @@ namespace OfertApp.Droid
 			
 			// aapt resource value: 0x1
 			public const int tagmanager_preview_dialog_title = 1;
+			
+			// aapt resource value: 0x7F090062
+			public const int title_activity_webview = 2131296354;
 			
 			// aapt resource value: 0x1
 			public const int wallet_buy_button_place_holder = 1;

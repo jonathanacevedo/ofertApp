@@ -10,44 +10,45 @@ using Xamarin.Forms.Xaml;
 using OfertApp.Models;
 using OfertApp.Views;
 using OfertApp.ViewModels;
+using Xamarin.Forms.Maps;
 
 namespace OfertApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel viewModel;
 
         public ItemsPage()
         {
-            InitializeComponent();
+            var map = new Map(
+            MapSpan.FromCenterAndRadius(
+            new Position(6.2215477, -75.5722723), Distance.FromMiles(3)))
+            {
+                IsShowingUser = true,
+                HeightRequest = 100,
+                WidthRequest = 960,
+                VerticalOptions = LayoutOptions.FillAndExpand
+            };
+            var titulo = new Label
+            {
+                Text = "Bienvenido",
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = 18,
+                VerticalOptions = LayoutOptions.Start
+            };
 
-            BindingContext = viewModel = new ItemsViewModel();
+            var stack = new StackLayout { Spacing = 0 };
+            stack.Children.Add(titulo);
+
+            stack.Children.Add(map);
+            Content = stack;
+            //InitializeComponent();
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
-        {
-            var item = args.SelectedItem as Item;
-            if (item == null)
-                return;
-
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
-        }
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }

@@ -108,6 +108,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "OfertApp.Android.dll" comes first in this list. */
 		"OfertApp.Android.dll",
 		"FormsViewGroup.dll",
+		"Google.Apis.Core.dll",
+		"Google.Apis.dll",
 		"Newtonsoft.Json.dll",
 		"OfertApp.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
@@ -130,6 +132,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.Palette.dll",
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
+		"Xamarin.Auth.dll",
 		"Xamarin.Essentials.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Maps.Android.dll",
@@ -140,6 +143,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",
 		"Xamarin.GooglePlayServices.Maps.dll",
+		"Xamarin.GooglePlayServices.Plus.dll",
 		"Xamarin.GooglePlayServices.Tasks.dll",
 	};
 	public static final String[] Dependencies = new String[]{

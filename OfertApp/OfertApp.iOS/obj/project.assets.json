@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Google.Apis/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.35.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -42,6 +67,18 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Auth/1.6.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        }
+      },
       "Xamarin.Essentials/0.10.0-preview": {
         "type": "package",
         "dependencies": {
@@ -195,8 +232,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.35.2",
           "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Auth": "1.6.0.2",
           "Xamarin.Essentials": "0.10.0-preview",
           "Xamarin.Forms": "3.3.0.840541-pre1",
           "Xamarin.Forms.Maps": "3.3.0.840541-pre1"
@@ -210,6 +249,31 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Google.Apis/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.35.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -240,6 +304,18 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Auth/1.6.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        }
+      },
       "Xamarin.Essentials/0.10.0-preview": {
         "type": "package",
         "dependencies": {
@@ -393,8 +469,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.35.2",
           "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Auth": "1.6.0.2",
           "Xamarin.Essentials": "0.10.0-preview",
           "Xamarin.Forms": "3.3.0.840541-pre1",
           "Xamarin.Forms.Maps": "3.3.0.840541-pre1"
@@ -408,6 +486,31 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Google.Apis/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.35.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -436,6 +539,18 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xamarin.Auth/1.6.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
         }
       },
       "Xamarin.Essentials/0.10.0-preview": {
@@ -591,8 +706,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.35.2",
           "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Auth": "1.6.0.2",
           "Xamarin.Essentials": "0.10.0-preview",
           "Xamarin.Forms": "3.3.0.840541-pre1",
           "Xamarin.Forms.Maps": "3.3.0.840541-pre1"
@@ -606,6 +723,31 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Google.Apis/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.35.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -634,6 +776,18 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xamarin.Auth/1.6.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
         }
       },
       "Xamarin.Essentials/0.10.0-preview": {
@@ -789,8 +943,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.35.2",
           "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Auth": "1.6.0.2",
           "Xamarin.Essentials": "0.10.0-preview",
           "Xamarin.Forms": "3.3.0.840541-pre1",
           "Xamarin.Forms.Maps": "3.3.0.840541-pre1"
@@ -805,6 +961,45 @@
     }
   },
   "libraries": {
+    "Google.Apis/1.35.2": {
+      "sha512": "kckpDbjCQA4lN9ZJ6Hb0SlWfg8e2ei0rqh+6bpuZLgB8MAL0tjwKZyr+d+iorKfB+SlmIgTtVfgDea1aH3dpbA==",
+      "type": "package",
+      "path": "google.apis/1.35.2",
+      "files": [
+        ".signature.p7s",
+        "google.apis.1.35.2.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Core/1.35.2": {
+      "sha512": "MbCIK1KxWT3yQJtuI77NwzGPmNmAaEPSYdhY9ObdypQkxe9yApw75L2V/30/YHslCc1fNrlJ5HRE9DEp90jOIw==",
+      "type": "package",
+      "path": "google.apis.core/1.35.2",
+      "files": [
+        ".signature.p7s",
+        "google.apis.core.1.35.2.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
     "Newtonsoft.Json/11.0.2": {
       "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
@@ -917,6 +1112,34 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xamarin.Auth/1.6.0.2": {
+      "sha512": "tSRTHDKTLK+YC7JGX8M8jca5RE9PcHZpamLXkPP2TGmoQULIjtwy/gxlaUFb9cAGFbSvTMCm65IAi+8GvvcQ+g==",
+      "type": "package",
+      "path": "xamarin.auth/1.6.0.2",
+      "files": [
+        "lib/MonoAndroid10/Xamarin.Auth.dll",
+        "lib/Xamarin.iOS10/Xamarin.Auth.dll",
+        "lib/netstandard1.0/Xamarin.Auth.dll",
+        "lib/netstandard1.6/Xamarin.Auth.dll",
+        "lib/portable-net45 wp8 wpa81 win8 MonoAndroid10 MonoTouch10 XamarinIOS10/Xamarin.Auth.dll",
+        "lib/uap10.0/Xamarin.Auth.dll",
+        "lib/uap10.0/Xamarin.Auth.pri",
+        "lib/uap10.0/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "lib/win81/Xamarin.Auth.dll",
+        "lib/win81/Xamarin.Auth.pri",
+        "lib/win81/Xamarin.Auth/WebAuthenticatorPage.xaml",
+        "lib/win81/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/win81/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "lib/wp8/Xamarin.Auth.dll",
+        "lib/wpa81/Xamarin.Auth.dll",
+        "lib/wpa81/Xamarin.Auth.pri",
+        "lib/wpa81/Xamarin.Auth/WebAuthenticatorPage.xaml",
+        "lib/wpa81/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/wpa81/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "xamarin.auth.1.6.0.2.nupkg.sha512",
+        "xamarin.auth.nuspec"
       ]
     },
     "Xamarin.Essentials/0.10.0-preview": {
@@ -1135,9 +1358,11 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Google.Apis >= 1.35.2",
       "Newtonsoft.Json >= 11.0.2",
       "OfertApp >= 1.0.0",
       "System.Net.Http >= 4.3.3",
+      "Xamarin.Auth >= 1.6.0.2",
       "Xamarin.Essentials >= 0.10.0-preview",
       "Xamarin.Forms >= 3.3.0.840541-pre1",
       "Xamarin.Forms.Maps >= 3.3.0.840541-pre1"
@@ -1180,6 +1405,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Google.Apis": {
+            "target": "Package",
+            "version": "[1.35.2, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[11.0.2, )"
@@ -1187,6 +1416,10 @@
           "System.Net.Http": {
             "target": "Package",
             "version": "[4.3.3, )"
+          },
+          "Xamarin.Auth": {
+            "target": "Package",
+            "version": "[1.6.0.2, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

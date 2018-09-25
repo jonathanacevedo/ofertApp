@@ -1,6 +1,9 @@
 ﻿using appOfertas.Models;
 using Newtonsoft.Json;
+using OfertApp.Models;
+using OfertApp.Services;
 using System;
+using Xamarin.Auth;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,25 +13,34 @@ namespace OfertApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutPage : ContentPage
     {
+        string nombre;
         public AboutPage()
         {
             InitializeComponent();
-            mostrarUsuario();
+            MostrarUsuario();
         }
 
-        private async void mostrarUsuario()
+        private async void MostrarUsuario()
         {
             var oauthToken = await SecureStorage.GetAsync("auth");
-            Personas personas = JsonConvert.DeserializeObject<Personas>(oauthToken);
-            bienvenida.Text = personas.persona[0].nombre;
+            try
+            {
+                Personas personas = JsonConvert.DeserializeObject<Personas>(oauthToken);
+                nombre = personas.persona[0].nombre;
+            } catch
+            {
+                Console.WriteLine("Nombre de la persona de Google: "+oauthToken);
+                nombre = oauthToken;
+            }
+            bienvenida.Text = nombre;
         }
+        
 
-
-
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
             SecureStorage.Remove("auth");
-
+            App.Current.MainPage = new Login();
+            await Navigation.PushAsync(new Login());
         }
     }
 }

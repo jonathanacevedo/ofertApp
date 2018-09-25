@@ -4,12 +4,14 @@ using Xamarin.Forms.Xaml;
 using OfertApp.Views;
 using Xamarin.Essentials;
 
+
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace OfertApp
 {
     public partial class App : Application
     {
-
+        
         public App()
         {
             InitializeComponent();

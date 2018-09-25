@@ -1,4 +1,6 @@
 FormsViewGroup
+Google.Apis.Core
+Google.Apis
 Newtonsoft.Json
 OfertApp
 System.Runtime
@@ -22,6 +24,7 @@ Xamarin.Android.Support.v7.MediaRouter
 Xamarin.Android.Support.v7.Palette
 Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
+Xamarin.Auth
 Xamarin.Essentials
 Xamarin.Forms.Core
 Xamarin.Forms.Maps.Android
@@ -32,5 +35,6 @@ Xamarin.Forms.Xaml
 Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Maps
+Xamarin.GooglePlayServices.Plus
 Xamarin.GooglePlayServices.Tasks
 netstandard

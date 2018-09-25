@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
+      "Google.Apis/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.35.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.35.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -174,7 +199,7 @@
           "lib/MonoAndroid81/Xamarin.Android.Support.CustomTabs.dll": {}
         },
         "build": {
-          "build/MonoAndroid81/_._": {}
+          "build/MonoAndroid81/Xamarin.Android.Support.CustomTabs.targets": {}
         }
       },
       "Xamarin.Android.Support.Design/27.0.2.1": {
@@ -368,6 +393,21 @@
           "build/MonoAndroid81/Xamarin.Android.Support.Vector.Drawable.targets": {}
         }
       },
+      "Xamarin.Auth/1.6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.CustomTabs": "25.4.0.2"
+        },
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/MonoAndroid10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Xamarin.Auth.dll": {}
+        }
+      },
       "Xamarin.Build.Download/0.4.9": {
         "type": "package",
         "build": {
@@ -491,6 +531,22 @@
           "build/MonoAndroid80/Xamarin.GooglePlayServices.Maps.targets": {}
         }
       },
+      "Xamarin.GooglePlayServices.Plus/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Plus.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Plus.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Plus.targets": {}
+        }
+      },
       "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
         "type": "package",
         "dependencies": {
@@ -510,8 +566,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.35.2",
           "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Auth": "1.6.0.2",
           "Xamarin.Essentials": "0.10.0-preview",
           "Xamarin.Forms": "3.3.0.840541-pre1",
           "Xamarin.Forms.Maps": "3.3.0.840541-pre1"
@@ -526,6 +584,45 @@
     }
   },
   "libraries": {
+    "Google.Apis/1.35.2": {
+      "sha512": "kckpDbjCQA4lN9ZJ6Hb0SlWfg8e2ei0rqh+6bpuZLgB8MAL0tjwKZyr+d+iorKfB+SlmIgTtVfgDea1aH3dpbA==",
+      "type": "package",
+      "path": "google.apis/1.35.2",
+      "files": [
+        ".signature.p7s",
+        "google.apis.1.35.2.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Core/1.35.2": {
+      "sha512": "MbCIK1KxWT3yQJtuI77NwzGPmNmAaEPSYdhY9ObdypQkxe9yApw75L2V/30/YHslCc1fNrlJ5HRE9DEp90jOIw==",
+      "type": "package",
+      "path": "google.apis.core/1.35.2",
+      "files": [
+        ".signature.p7s",
+        "google.apis.core.1.35.2.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
     "Newtonsoft.Json/11.0.2": {
       "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
@@ -908,6 +1005,34 @@
         "xamarin.android.support.vector.drawable.nuspec"
       ]
     },
+    "Xamarin.Auth/1.6.0.2": {
+      "sha512": "tSRTHDKTLK+YC7JGX8M8jca5RE9PcHZpamLXkPP2TGmoQULIjtwy/gxlaUFb9cAGFbSvTMCm65IAi+8GvvcQ+g==",
+      "type": "package",
+      "path": "xamarin.auth/1.6.0.2",
+      "files": [
+        "lib/MonoAndroid10/Xamarin.Auth.dll",
+        "lib/Xamarin.iOS10/Xamarin.Auth.dll",
+        "lib/netstandard1.0/Xamarin.Auth.dll",
+        "lib/netstandard1.6/Xamarin.Auth.dll",
+        "lib/portable-net45 wp8 wpa81 win8 MonoAndroid10 MonoTouch10 XamarinIOS10/Xamarin.Auth.dll",
+        "lib/uap10.0/Xamarin.Auth.dll",
+        "lib/uap10.0/Xamarin.Auth.pri",
+        "lib/uap10.0/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "lib/win81/Xamarin.Auth.dll",
+        "lib/win81/Xamarin.Auth.pri",
+        "lib/win81/Xamarin.Auth/WebAuthenticatorPage.xaml",
+        "lib/win81/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/win81/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "lib/wp8/Xamarin.Auth.dll",
+        "lib/wpa81/Xamarin.Auth.dll",
+        "lib/wpa81/Xamarin.Auth.pri",
+        "lib/wpa81/Xamarin.Auth/WebAuthenticatorPage.xaml",
+        "lib/wpa81/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/wpa81/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "xamarin.auth.1.6.0.2.nupkg.sha512",
+        "xamarin.auth.nuspec"
+      ]
+    },
     "Xamarin.Build.Download/0.4.9": {
       "sha512": "HDQzyew/2Kb8sOjbzcHtFFxLbCclln+1T8bssKx9zAs9HNuK/1mugf077A9VxzID/fFBMmBXvL/z2jUpNlgX2A==",
       "type": "package",
@@ -1166,6 +1291,17 @@
         "xamarin.googleplayservices.maps.nuspec"
       ]
     },
+    "Xamarin.GooglePlayServices.Plus/60.1142.1": {
+      "sha512": "ldkP31AO+8UI3e0Jmm1Zbmn067PaWBmfZI4aYzIB3TpKnBb9PUEJpLam66vdwluecRa1bXgmThfhCwpEcMY4bw==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.plus/60.1142.1",
+      "files": [
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Plus.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Plus.dll",
+        "xamarin.googleplayservices.plus.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.plus.nuspec"
+      ]
+    },
     "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
       "sha512": "DS4MgQWwbAuAf5gXGPAPCpuCVkElQSTv/iguZ9Ca5vmiXpbrbvCpN5JhxBYu2qGkSn1wwX37bI+EHib/FVQthg==",
       "type": "package",
@@ -1185,6 +1321,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "Google.Apis >= 1.35.2",
       "Newtonsoft.Json >= 11.0.2",
       "OfertApp >= 1.0.0",
       "System.Net.Http >= 4.3.3",
@@ -1193,9 +1330,11 @@
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
       "Xamarin.Android.Support.v7.CardView >= 27.0.2.1",
       "Xamarin.Android.Support.v7.MediaRouter >= 27.0.2.1",
+      "Xamarin.Auth >= 1.6.0.2",
       "Xamarin.Essentials >= 0.10.0-preview",
       "Xamarin.Forms >= 3.3.0.840541-pre1",
-      "Xamarin.Forms.Maps >= 3.3.0.840541-pre1"
+      "Xamarin.Forms.Maps >= 3.3.0.840541-pre1",
+      "Xamarin.GooglePlayServices.Plus >= 60.1142.1"
     ]
   },
   "packageFolders": {
@@ -1235,6 +1374,10 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "Google.Apis": {
+            "target": "Package",
+            "version": "[1.35.2, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[11.0.2, )"
@@ -1263,6 +1406,10 @@
             "target": "Package",
             "version": "[27.0.2.1, )"
           },
+          "Xamarin.Auth": {
+            "target": "Package",
+            "version": "[1.6.0.2, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[0.10.0-preview, )"
@@ -1274,6 +1421,10 @@
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[3.3.0.840541-pre1, )"
+          },
+          "Xamarin.GooglePlayServices.Plus": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
           }
         }
       }

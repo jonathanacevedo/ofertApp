@@ -2,12 +2,60 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OfertApp.Views.Negocios"
-             Title="Negocios">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Name="BrowseItemsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView VerticalOptions="FillAndExpand">
+                    <Label Margin="0,10" FontSize="25" FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}" Text="Mis negocios" HorizontalOptions="Center"/>
+                </ContentView>
+            </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+        <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding Negocios}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                            <Image Source="negocioIcono2.png" HeightRequest="90" WidthRequest="90"/>
+                            <StackLayout Padding="20" Orientation="Vertical">
+                            <Label Text="{Binding nombre}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            <Label Text="{Binding tipo}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                        </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

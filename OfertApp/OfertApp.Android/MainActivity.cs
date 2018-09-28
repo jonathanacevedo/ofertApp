@@ -25,7 +25,6 @@ namespace OfertApp.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
             TryToGetPermissions();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -33,7 +32,6 @@ namespace OfertApp.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
-
             LoadApplication(new App());
         }
 
@@ -67,8 +65,6 @@ namespace OfertApp.Droid
                 GetPermissions();
                 return;
             }
-
-
         }
         const int RequestLocationId = 0;
 
@@ -98,7 +94,6 @@ namespace OfertApp.Droid
 
                 return;
             }
-
             RequestPermissions(PermissionsGroupLocation, RequestLocationId);
 
         }

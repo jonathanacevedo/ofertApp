@@ -48,6 +48,10 @@ C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\De
 C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\store_color.png
 C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\main.xml
 C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logogoogle.png
+C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicon.png
+C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\icononegocio.png
+C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicono.png
+C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicono2.png
 C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.txt
 C:\Users\jonathan.payares\source\repos\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\uploadflags.txt

@@ -6,18 +6,18 @@ namespace OfertApp.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public object Items { get; internal set; }
+        public Negocio Negocio { get; set; }
+        public object Negocios { get; internal set; }
 
-        public ItemDetailViewModel(Item item = null)
+        public ItemDetailViewModel(Negocio negocio = null)
         {
-            Title = item?.Text;
-            Item = item;
+            Title = negocio?.nombre;
+            Negocio = negocio;
         }
 
-        public static implicit operator ItemDetailViewModel(ItemsViewModel v)
+        /*public static implicit operator ItemDetailViewModel(negocios v)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
 }

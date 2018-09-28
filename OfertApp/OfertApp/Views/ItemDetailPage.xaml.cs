@@ -24,13 +24,13 @@ namespace OfertApp.Views
         {
             InitializeComponent();
 
-            var item = new Item
+            var negocio = new Negocio
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                nombre = "Item 1",
+                tipo = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new ItemDetailViewModel(negocio);
             BindingContext = viewModel;
         }
     }

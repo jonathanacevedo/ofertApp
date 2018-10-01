@@ -40,17 +40,25 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="Editar" CommandParameter="{Binding .}"
+                             Text="Editar" />
+                            <MenuItem Clicked="Eliminar" CommandParameter="{Binding .}"
+                            Text="Eliminar" IsDestructive="True" />
+                        </ViewCell.ContextActions>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
-                            <Image Source="negocioIcono2.png" HeightRequest="90" WidthRequest="90"/>
+                            <Image Source="imagenNegocio.png" HeightRequest="85" WidthRequest="85"/>
                             <StackLayout Padding="20" Orientation="Vertical">
-                            <Label Text="{Binding nombre}" 
+                            <Label Text="{Binding nombre}" FontFamily="{StaticResource Lobster}"
+                                FontAttributes="Bold"
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                            <Label Text="{Binding tipo}" 
+                                FontSize="19" />
+                                <Label Text="{Binding tipo}" 
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
+                                FontSize="14" />
+                                <Image Source="{Binding foto}" IsVisible="False"></Image>
                         </StackLayout>
                         </StackLayout>
                     </ViewCell>

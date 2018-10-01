@@ -50,5 +50,23 @@ namespace OfertApp.Views
             if (viewModel.Negocios.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
+
+        public async void Editar(object sender, SelectedItemChangedEventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var item = mi.CommandParameter as Negocio;
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+
+            //DisplayAlert("More Context Action", item.nombre + " more context action", "OK");
+        }
+
+        public void Eliminar(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            Console.WriteLine("Seleccionado: " + e);
+            var item = mi.CommandParameter as Negocio;
+
+            DisplayAlert("Delete Context Action", item.nombre + " delete context action", "OK");
+        }
     }
 }

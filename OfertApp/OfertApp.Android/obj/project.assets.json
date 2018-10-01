@@ -1343,11 +1343,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonathan.payares\\source\\repos\\OfertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
       "projectName": "OfertApp.Android",
-      "projectPath": "C:\\Users\\jonathan.payares\\source\\repos\\OfertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
+      "projectPath": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
       "packagesPath": "C:\\Users\\jonathan.payares\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonathan.payares\\source\\repos\\OfertApp\\OfertApp\\OfertApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1364,8 +1364,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\jonathan.payares\\source\\repos\\OfertApp\\OfertApp\\OfertApp\\OfertApp.csproj": {
-              "projectPath": "C:\\Users\\jonathan.payares\\source\\repos\\OfertApp\\OfertApp\\OfertApp\\OfertApp.csproj"
+            "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp\\OfertApp.csproj": {
+              "projectPath": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp\\OfertApp.csproj"
             }
           }
         }

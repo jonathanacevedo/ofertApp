@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OfertApp.Views.ItemDetailPage"
-             Title="{Binding Title}">
+             Title="Detalle">
     <ContentPage.Resources>
         <ResourceDictionary>
             <!--Page Level Resources: Compatibile with Xamarin Live Player -->
@@ -24,33 +24,39 @@
                     <Image Source="{Binding Negocio.foto}" VerticalOptions="Center" HeightRequest="200" />
                 </ContentView>
             </StackLayout>
-
-            <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
-                <Label Text="{Binding Negocio.detalle}" FontSize="16" LineBreakMode="CharacterWrap"/>
-            </StackLayout>
-        
-        
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Tipo:" FontSize="16" FontAttributes="Bold"/>
-                <Label Text="{Binding Negocio.tipo}" FontSize="16"/>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label Text="{Binding Negocio.detalle}" FontSize="18" FontFamily="{StaticResource Lobster}"
+                       LineBreakMode="CharacterWrap"/>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Label Text="Ciudad:" FontSize="16" FontAttributes="Bold"/>
-            <Label Text="{Binding Negocio.ciudad}" FontSize="16"/>
-        </StackLayout>
+            <StackLayout  Margin="40,5">
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Label Text="Telefono:" FontSize="16" FontAttributes="Bold"/>
-            <Label Text="{Binding Negocio.telefono}" FontSize="16"/>
-        </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="tipo.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Tipo:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.tipo}" FontSize="18"/>
+                </StackLayout>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Label Text="Dirección:" FontSize="16" FontAttributes="Bold"/>
-            <Label Text="{Binding Negocio.direccion}" FontSize="16"/>
-        </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="ciudad.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Ciudad:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.ciudad}" FontSize="18"/>
+                </StackLayout>
 
-    </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="telefono.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Telefono:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.telefono}" FontSize="18"/>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="direccion.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Dirección:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.direccion}" FontSize="18"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
         </ScrollView>
 
 </ContentPage>

@@ -39,3 +39,4 @@ C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp\obj\De
 C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.dll
 C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.pdb
+C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.csprojAssemblyReference.cache

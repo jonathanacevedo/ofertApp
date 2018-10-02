@@ -22,13 +22,6 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem Text="Guardar" Clicked="Save_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="save.png"/>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -48,20 +41,19 @@
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" >
                     <StackLayout Orientation="Vertical" Margin="40,0">
-                        <Entry x:Name="nombre" TextColor="Gray" Placeholder="Nombre" PlaceholderColor="Gray" Keyboard="Email" FontSize="18" HorizontalTextAlignment="Start"/>
+                        <Entry x:Name="nom" TextColor="Gray" Placeholder="Nombre" PlaceholderColor="Gray" Keyboard="Email" FontSize="18" HorizontalTextAlignment="Start"/>
                         <Entry x:Name="nit" TextColor="Gray" Placeholder="Nit" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start"/>
-                            <Picker x:Name="tipo" Title="Tipo de Negocio">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Restaurante</x:String>
-                                    <x:String>Hotel</x:String>
-                                    <x:String>Bar</x:String>
-                                    <x:String>Almacen</x:String>
-                                    <x:String>Otro</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-
+                    <Picker x:Name="tipo" Title="Tipo de Negocio">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Restaurante</x:String>
+                                <x:String>Hotel</x:String>
+                                <x:String>Bar</x:String>
+                                <x:String>Almacen</x:String>
+                                <x:String>Otro</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <Entry x:Name="email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                         <Entry x:Name="direccion" TextColor="Gray" Placeholder="Direccion" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>

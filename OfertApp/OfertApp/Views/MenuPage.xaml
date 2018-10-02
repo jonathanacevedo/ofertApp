@@ -37,5 +37,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Label x:Name="labelNombre" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center"></Label>
+
+        <Button Clicked="Cerrar_Sesion" Text="Cerrar Sesión" VerticalOptions="EndAndExpand" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+
     </StackLayout>
 </ContentPage>

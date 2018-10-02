@@ -1029,10 +1029,11 @@
       ]
     },
     "System.Net.Http/4.3.3": {
-      "sha512": "7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
+      "sha512": "K8Bf1xc41hhxmOp1X3W/y1eRyCwTD5JdEua97gn+7FXCwUeWKK9joR/bTbud07Via/S4W4oYewyzmFeIbt5w4A==",
       "type": "package",
       "path": "system.net.http/4.3.3",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -1369,20 +1370,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jonathan.payares\\.nuget\\packages\\": {}
+    "C:\\Users\\sebastian.henao\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp.iOS\\OfertApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp.iOS\\OfertApp.iOS.csproj",
       "projectName": "OfertApp.iOS",
-      "projectPath": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp.iOS\\OfertApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\jonathan.payares\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp.iOS\\OfertApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\sebastian.henao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\jonathan.payares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sebastian.henao\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1395,8 +1396,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp\\OfertApp.csproj": {
-              "projectPath": "C:\\Users\\jonathan.payares\\OneDrive - Accenture\\OfertApp\\OfertApp\\OfertApp\\OfertApp.csproj"
+            "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj": {
+              "projectPath": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj"
             }
           }
         }

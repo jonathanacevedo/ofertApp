@@ -20,7 +20,7 @@ namespace OfertApp.Views
 
         negocios viewModel;
 
-        private const string URL = "http://192.168.7.205:8091/negocios/eliminarPut";
+        private const string URL = "http://192.168.10.53:8091/negocios/eliminarPut";
         private HttpClient cliente = new HttpClient();
 
         public Negocios ()

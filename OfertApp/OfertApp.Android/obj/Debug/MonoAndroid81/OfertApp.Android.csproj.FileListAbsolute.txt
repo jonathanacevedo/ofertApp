@@ -1,149 +1,147 @@
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.dll
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp.apk
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp-Signed.apk
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csprojAssemblyReference.cache
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Plus.dll.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\proguard\dc663e480.txt
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\dc663e48.proguard.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\0757626b.proguard.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\2f4d086a.proguard.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\a2ea833c.proguard.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\ea5c07c4.proguard.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res.flag
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csproj.CoreCompileInputs.cache
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XamlC.stamp
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csproj.CopyComplete
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.dll
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\bin\com.companyname.OfertApp.apk
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\tabbar.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\values\styles.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\values\colors.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\icon.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\icon_round.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-hdpi\icon.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-hdpi\launcher_foreground.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-mdpi\icon.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-mdpi\launcher_foreground.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\icon.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\launcher_foreground.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\icon.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\launcher_foreground.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\icon.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\launcher_foreground.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\xamarin_logo.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\contacts_color.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\home_color.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logoofertapp.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logoofertappnuevo2.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\sale_color.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\store_color.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\main.xml
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logogoogle.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicon.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\icononegocio.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicono.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicono2.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\imagennegocio.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\ciudad.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\detalle.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\direccion.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\tipo.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\telefono.png
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.cs.flag
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.txt
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\uploadflags.txt
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Google.Apis.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Google.Apis.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Mono.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Mono.Security.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\mscorlib.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.ComponentModel.Composition.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Data.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.IO.Compression.FileSystem.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.IO.Compression.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Json.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Net.Http.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Numerics.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Numerics.Vectors.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Runtime.Serialization.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.ServiceModel.Internals.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Transactions.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Web.Services.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Xml.Linq.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\System.Xml.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\FormsViewGroup.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Google.Apis.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Google.Apis.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Json.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Net.Http.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Numerics.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Numerics.Vectors.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Xml.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Xml.Linq.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Xaml.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Data.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Transactions.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.FileSystem.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.ComponentModel.Composition.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Runtime.Serialization.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.ServiceModel.Internals.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\FormsViewGroup.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\OfertApp.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Google.Apis.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Google.Apis.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\OfertApp.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.Composition.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Data.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.FileSystem.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Json.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Numerics.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Numerics.Vectors.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Serialization.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Transactions.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.dll
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.Android.pdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.dll.mdb
-C:\Users\jonathan.payares\OneDrive - Accenture\OfertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.dll
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp.apk
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp-Signed.apk
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csprojAssemblyReference.cache
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Plus.dll.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\proguard\dc663e480.txt
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\dc663e48.proguard.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\0757626b.proguard.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\2f4d086a.proguard.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\a2ea833c.proguard.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\ea5c07c4.proguard.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res.flag
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csproj.CoreCompileInputs.cache
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XamlC.stamp
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csproj.CopyComplete
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.dll
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\bin\com.companyname.OfertApp.apk
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\tabbar.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\values\styles.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\values\colors.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\icon.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\icon_round.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-hdpi\icon.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-hdpi\launcher_foreground.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-mdpi\icon.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-mdpi\launcher_foreground.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\icon.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\launcher_foreground.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\icon.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\launcher_foreground.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\icon.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\xamarin_logo.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\contacts_color.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\home_color.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logoofertapp.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logoofertappnuevo2.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\sale_color.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\store_color.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\layout\main.xml
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logogoogle.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicon.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\icononegocio.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicono.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\negocioicono2.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\imagennegocio.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\ciudad.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\detalle.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\direccion.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\tipo.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\telefono.png
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.cs.flag
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.txt
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\uploadflags.txt
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Google.Apis.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Google.Apis.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Mono.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Mono.Security.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\mscorlib.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.ComponentModel.Composition.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Data.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.IO.Compression.FileSystem.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.IO.Compression.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Json.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Net.Http.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Numerics.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Numerics.Vectors.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Runtime.Serialization.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.ServiceModel.Internals.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Transactions.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Web.Services.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Xml.Linq.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\System.Xml.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\FormsViewGroup.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Google.Apis.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Google.Apis.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Json.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Net.Http.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Numerics.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Numerics.Vectors.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Xml.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Xml.Linq.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Xaml.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Data.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Transactions.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.FileSystem.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.ComponentModel.Composition.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Runtime.Serialization.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.ServiceModel.Internals.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\FormsViewGroup.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\OfertApp.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Google.Apis.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Google.Apis.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\OfertApp.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.Composition.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Data.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.FileSystem.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Json.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Numerics.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Numerics.Vectors.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Serialization.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Transactions.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.Android.pdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.dll.mdb
+C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb

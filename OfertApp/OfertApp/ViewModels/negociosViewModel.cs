@@ -15,7 +15,7 @@ namespace OfertApp.ViewModels
 {
     class negocios: BaseViewModel, INotifyPropertyChanged
     {
-        private const string URL = "http://192.168.7.205:8050/orquestador/registrar/personas";
+        private const string URL = "http://192.168.10.53:8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
 
         public ObservableCollection<Negocio> Negocios { set; get; }
@@ -27,6 +27,8 @@ namespace OfertApp.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(Negocios));
             Console.WriteLine("Hubo un cambio");
+            IsBusy = false;
+
         }
 
         public negocios()
@@ -47,7 +49,7 @@ namespace OfertApp.ViewModels
             OnPropertyChanged("cambio");
             Negocios.Clear();
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-            var uri = new Uri(String.Format("http://192.168.7.205:8091/negocios/listar", String.Empty));
+            var uri = new Uri(String.Format("http://192.168.10.53:8091/negocios/listar", String.Empty));
             var response = await cliente.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {

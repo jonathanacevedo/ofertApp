@@ -16,7 +16,7 @@ namespace OfertApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        private const string URL = "http://192.168.7.205:8091/negocios/registrar";
+        private const string URL = "http://192.168.10.53:8091/negocios/registrar";
         private HttpClient cliente = new HttpClient();
 
         public Item Item { get; set; }

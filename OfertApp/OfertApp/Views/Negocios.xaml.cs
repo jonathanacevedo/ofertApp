@@ -3,6 +3,7 @@ using OfertApp.Models;
 using OfertApp.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -26,9 +27,10 @@ namespace OfertApp.Views
 		{
 			InitializeComponent();
 
-            //BindingContext = viewModel = new ItemsViewModel();
             BindingContext = viewModel = new negocios();  //NegociosViewModel
         }
+
+
 
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -110,6 +112,7 @@ namespace OfertApp.Views
             {
                 Console.WriteLine("respuesta: " + res);
                 await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
+
             }
             else
             {
@@ -119,4 +122,3 @@ namespace OfertApp.Views
         }
     }
 }
-

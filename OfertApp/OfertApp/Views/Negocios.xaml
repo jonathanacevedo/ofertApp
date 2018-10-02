@@ -35,7 +35,9 @@
                 ItemsSource="{Binding Negocios}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
                 ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -58,7 +60,6 @@
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="14" />
-                                <Image Source="{Binding foto}" IsVisible="False"></Image>
                         </StackLayout>
                         </StackLayout>
                     </ViewCell>

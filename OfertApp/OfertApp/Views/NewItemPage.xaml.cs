@@ -77,14 +77,14 @@ namespace OfertApp.Views
             var json = JsonConvert.SerializeObject(negocios);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await cliente.DeleteAsync(URL);
+            var response = await cliente.PostAsync(URL, content);
             var res = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
             {
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Registro", "Registro Completado", "OK");
-                await Navigation.PopAsync();
+                await Navigation.PopModalAsync();
             }
             else
             {

@@ -100,8 +100,8 @@ namespace OfertApp.Views
             {
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Registro", "Registro Completado", "OK");
+                n.actualizarVistaAsync();
                 await Navigation.PopModalAsync();
-                n.actualizarVista();
             }
             else
             {

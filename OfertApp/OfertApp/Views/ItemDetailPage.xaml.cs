@@ -48,7 +48,6 @@ namespace OfertApp.Views
         {
             //var mi = ((MenuItem)sender);
             var item = sender as Negocio;
-            Console.WriteLine("Objecto: " + viewModel.Negocio.nombre);
             await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(viewModel.Negocio)));
         }
 
@@ -96,8 +95,8 @@ namespace OfertApp.Views
             {
                 Console.WriteLine("respuesta: " + res);
                 await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
-                //await Navigation.PopModalAsync();
-                n.actualizarVista();
+                n.actualizarVistaAsync();
+                await Navigation.PopAsync();
             }
             else
             {

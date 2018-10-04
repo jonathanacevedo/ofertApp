@@ -31,8 +31,8 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ScrollView>
-    <StackLayout Spacing="20" Padding="8" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-        <Label Text="{Binding Negocio.nombre}" FontSize="30" HorizontalOptions="Center"
+        <StackLayout Spacing="20" Padding="8" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label Text="{Binding Negocio.nombre}" FontSize="30" HorizontalOptions="Center"
                FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
@@ -72,6 +72,5 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-        </ScrollView>
-
+    </ScrollView>
 </ContentPage>

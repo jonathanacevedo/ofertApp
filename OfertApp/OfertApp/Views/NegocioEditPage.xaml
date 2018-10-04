@@ -52,7 +52,7 @@
                         <Entry x:Name="ciudad" Text="{Binding Negocio.ciudad}" TextColor="Gray" Placeholder="Ciudad" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                     <Editor AutoSize="TextChanges" x:Name="detalle" Text="{Binding Negocio.detalle}" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalOptions="FillAndExpand"/>
-                    <Button Margin="0,25" Text="Editar" BackgroundColor="{StaticResource Primary}" TextColor="White" FontSize="16"/>
+                    <Button Margin="0,25" Clicked="Editar_Clicked" Text="Editar" BackgroundColor="{StaticResource Primary}" TextColor="White" FontSize="16"/>
                     <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>
                 </StackLayout>
             </StackLayout>

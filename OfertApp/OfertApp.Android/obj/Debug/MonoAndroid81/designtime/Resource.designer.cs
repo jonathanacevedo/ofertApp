@@ -1899,38 +1899,38 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F050004
 			public const int colorPrimaryDark = 2131034116;
 			
-			// aapt resource value: 0x7F050105
-			public const int common_google_signin_btn_text_dark = 2131034373;
-			
-			// aapt resource value: 0x7F050108
-			public const int common_google_signin_btn_text_dark_default = 2131034376;
-			
-			// aapt resource value: 0x7F050109
-			public const int common_google_signin_btn_text_dark_disabled = 2131034377;
+			// aapt resource value: 0x7F050107
+			public const int common_google_signin_btn_text_dark = 2131034375;
 			
 			// aapt resource value: 0x7F050110
-			public const int common_google_signin_btn_text_dark_focused = 2131034384;
+			public const int common_google_signin_btn_text_dark_default = 2131034384;
 			
 			// aapt resource value: 0x7F050111
-			public const int common_google_signin_btn_text_dark_pressed = 2131034385;
-			
-			// aapt resource value: 0x7F050106
-			public const int common_google_signin_btn_text_light = 2131034374;
+			public const int common_google_signin_btn_text_dark_disabled = 2131034385;
 			
 			// aapt resource value: 0x7F050112
-			public const int common_google_signin_btn_text_light_default = 2131034386;
+			public const int common_google_signin_btn_text_dark_focused = 2131034386;
 			
 			// aapt resource value: 0x7F050113
-			public const int common_google_signin_btn_text_light_disabled = 2131034387;
+			public const int common_google_signin_btn_text_dark_pressed = 2131034387;
+			
+			// aapt resource value: 0x7F050108
+			public const int common_google_signin_btn_text_light = 2131034376;
 			
 			// aapt resource value: 0x7F050114
-			public const int common_google_signin_btn_text_light_focused = 2131034388;
+			public const int common_google_signin_btn_text_light_default = 2131034388;
 			
 			// aapt resource value: 0x7F050115
-			public const int common_google_signin_btn_text_light_pressed = 2131034389;
+			public const int common_google_signin_btn_text_light_disabled = 2131034389;
 			
-			// aapt resource value: 0x7F050107
-			public const int common_google_signin_btn_tint = 2131034375;
+			// aapt resource value: 0x7F050116
+			public const int common_google_signin_btn_text_light_focused = 2131034390;
+			
+			// aapt resource value: 0x7F050117
+			public const int common_google_signin_btn_text_light_pressed = 2131034391;
+			
+			// aapt resource value: 0x7F050109
+			public const int common_google_signin_btn_tint = 2131034377;
 			
 			// aapt resource value: 0x7F060027
 			public const int design_bottom_navigation_shadow_color = 2131099687;
@@ -1994,6 +1994,12 @@ namespace OfertApp.Droid
 			
 			// aapt resource value: 0x7F050002
 			public const int launcher_background = 2131034114;
+			
+			// aapt resource value: 0x7F050007
+			public const int ListViewHighlighted = 2131034119;
+			
+			// aapt resource value: 0x7F050006
+			public const int ListViewSelected = 2131034118;
 			
 			// aapt resource value: 0x7F06003B
 			public const int material_blue_grey_800 = 2131099707;

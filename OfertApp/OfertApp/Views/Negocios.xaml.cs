@@ -42,37 +42,26 @@ namespace OfertApp.Views
             ItemsListView.SelectedItem = null;
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
+        void AddItem_Clicked(object sender, EventArgs e)
         {
 
             var tcs = new TaskCompletionSource<bool>();
             NewItemPage pagina = new NewItemPage(this);
             var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagina));
-
-            await agregarNegocio.ContinueWith(task =>
-            {
-                Console.WriteLine("estoy en el task");
-                if (task.IsCompleted)
-                {
-                    Console.WriteLine("termina el task");
-                    viewModel.LoadItemsCommand.Execute(null);
-                }
-
-            });
-
         }
 
-        public void actualizarVista()
+        public void actualizarVistaAsync()
         {
-            
-                viewModel.LoadItemsCommand.Execute(null);
+            Console.WriteLine("Actualizando vista...");
+            viewModel.Negocios.Clear();
+            //viewModel.LoadItemsCommand.Execute(null);
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             if (viewModel.Negocios.Count == 0)
-                actualizarVista();
+                viewModel.LoadItemsCommand.Execute(null);
         }
 
         public async void Editar(object sender, SelectedItemChangedEventArgs e)
@@ -80,62 +69,69 @@ namespace OfertApp.Views
             var mi = ((MenuItem)sender);
             var item = mi.CommandParameter as Negocio;
             await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(item)));
-
-            //DisplayAlert("More Context Action", item.nombre + " more context action", "OK");
         }
 
         public async void Eliminar(object sender, EventArgs e)
         {
 
-            var mi = ((MenuItem)sender);
-            var negocioItem = mi.CommandParameter as Negocio;
+            var confirm = await DisplayAlert("Confirmación", "¿Está seguro de eliminar este negocio?", "Si", "No");
+            Console.WriteLine("Respuesta: " + confirm);
 
-            cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-
-            Negos negocios = new Negos();
-            Negocio nego = new Negocio();
-
-            List<Negocio> negocio = new List<Negocio>();
-
-            nego.idnegocio = negocioItem.idnegocio;
-            nego.parametro = "1152";
-            nego.idadmin = "";
-            nego.nombre = "";
-            nego.nit = "";
-            nego.email = "";
-            nego.direccion = "";
-            nego.telefono = "";
-            nego.tipo = "";
-            nego.ciudad = "";
-            nego.detalle = "";
-            nego.foto = "";
-            nego.latitud = "";
-            nego.longitud = "";
-
-            negocio.Add(nego);
-
-            negocios.negocio = negocio;
-
-            var json = JsonConvert.SerializeObject(negocios);
-
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await cliente.PutAsync(URL, content);
-            var res = response.Content.ReadAsStringAsync();
-
-            Console.WriteLine("Body: " + json);
-
-            if (response.IsSuccessStatusCode)
+            if (confirm)
             {
-                Console.WriteLine("respuesta: " + res);
-                await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
-                viewModel.LoadItemsCommand.Execute(null);
+                var mi = ((MenuItem)sender);
+                var negocioItem = mi.CommandParameter as Negocio;
+
+                cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+
+                Negos negocios = new Negos();
+                Negocio nego = new Negocio();
+
+                List<Negocio> negocio = new List<Negocio>();
+
+                nego.idnegocio = negocioItem.idnegocio;
+                nego.parametro = "1152";
+                nego.idadmin = "";
+                nego.nombre = "";
+                nego.nit = "";
+                nego.email = "";
+                nego.direccion = "";
+                nego.telefono = "";
+                nego.tipo = "";
+                nego.ciudad = "";
+                nego.detalle = "";
+                nego.foto = "";
+                nego.latitud = "";
+                nego.longitud = "";
+
+                negocio.Add(nego);
+
+                negocios.negocio = negocio;
+
+                var json = JsonConvert.SerializeObject(negocios);
+
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await cliente.PutAsync(URL, content);
+                var res = response.Content.ReadAsStringAsync();
+
+                Console.WriteLine("Body: " + json);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("respuesta: " + res);
+                    await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
+                    viewModel.LoadItemsCommand.Execute(null);
+                }
+                else
+                {
+                    Console.WriteLine("respuesta: " + res);
+                    await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
+                }
+                
             }
-            else
-            {
-                Console.WriteLine("respuesta: " + res);
-                await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
-            }
+
+         
         }
 
         private void ItemsListView_Refreshing(object sender, EventArgs e)

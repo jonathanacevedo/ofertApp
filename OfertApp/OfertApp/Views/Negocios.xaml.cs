@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using OfertApp.Models;
+using OfertApp.Services;
 using OfertApp.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,9 @@ namespace OfertApp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Negocios : ContentPage
 	{
-
         negocios viewModel;
 
-        private const string URL = "http://192.168.10.53:8091/negocios/eliminarPut";
+        private const string URL = Constants.IP+":8091/negocios/eliminarPut";
         private HttpClient cliente = new HttpClient();
 
         public Negocios ()
@@ -30,16 +30,13 @@ namespace OfertApp.Views
             BindingContext = viewModel = new negocios();  //NegociosViewModel
         }
 
-
-
-
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var negocio = args.SelectedItem as Negocio;
             if (negocio == null)
                 return;
+           await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
@@ -47,22 +44,42 @@ namespace OfertApp.Views
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+
+            var tcs = new TaskCompletionSource<bool>();
+            NewItemPage pagina = new NewItemPage(this);
+            var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagina));
+
+            await agregarNegocio.ContinueWith(task =>
+            {
+                Console.WriteLine("estoy en el task");
+                if (task.IsCompleted)
+                {
+                    Console.WriteLine("termina el task");
+                    viewModel.LoadItemsCommand.Execute(null);
+                }
+
+            });
+
+        }
+
+        public void actualizarVista()
+        {
+            
+                viewModel.LoadItemsCommand.Execute(null);
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
             if (viewModel.Negocios.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+                actualizarVista();
         }
 
         public async void Editar(object sender, SelectedItemChangedEventArgs e)
         {
             var mi = ((MenuItem)sender);
             var item = mi.CommandParameter as Negocio;
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(item)));
 
             //DisplayAlert("More Context Action", item.nombre + " more context action", "OK");
         }
@@ -112,13 +129,18 @@ namespace OfertApp.Views
             {
                 Console.WriteLine("respuesta: " + res);
                 await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
-
+                viewModel.LoadItemsCommand.Execute(null);
             }
             else
             {
                 Console.WriteLine("respuesta: " + res);
                 await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
             }
+        }
+
+        private void ItemsListView_Refreshing(object sender, EventArgs e)
+        {
+            Console.WriteLine("Actualizando...");
         }
     }
 }

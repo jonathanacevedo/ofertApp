@@ -10,13 +10,15 @@ using Newtonsoft.Json;
 using System.Text;
 using Xamarin.Essentials;
 using appOfertas.Models;
+using OfertApp.Services;
 
 namespace OfertApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        private const string URL = "http://192.168.10.53:8091/negocios/registrar";
+        Negocios n = new Negocios();
+        private const string URL = Constants.IP+":8091/negocios/registrar";
         private HttpClient cliente = new HttpClient();
 
         public Item Item { get; set; }
@@ -25,6 +27,19 @@ namespace OfertApp.Views
         {
             InitializeComponent();
 
+            Item = new Item
+            {
+                Text = "Item name",
+                Description = "This is an item description."
+            };
+
+            BindingContext = this;
+        }
+
+        public NewItemPage(Negocios n)
+        {
+            InitializeComponent();
+            this.n = n;
             Item = new Item
             {
                 Text = "Item name",
@@ -43,6 +58,7 @@ namespace OfertApp.Views
         async void Cancel_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -85,6 +101,7 @@ namespace OfertApp.Views
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Registro", "Registro Completado", "OK");
                 await Navigation.PopModalAsync();
+                n.actualizarVista();
             }
             else
             {

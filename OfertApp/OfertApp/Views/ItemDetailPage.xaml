@@ -14,6 +14,22 @@
             </OnPlatform>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Editar" Clicked="Editar_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Eliminar" Clicked="Eliminar_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ScrollView>
     <StackLayout Spacing="20" Padding="8" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
         <Label Text="{Binding Negocio.nombre}" FontSize="30" HorizontalOptions="Center"
@@ -30,7 +46,6 @@
             </StackLayout>
 
             <StackLayout  Margin="40,5">
-
                 <StackLayout Orientation="Horizontal" Margin="0,5">
                     <Image Source="tipo.png" WidthRequest="24" HeightRequest="24"/>
                     <Label Text="Tipo:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>

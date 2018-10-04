@@ -21,7 +21,7 @@ namespace OfertApp.Views
         Account account;
         AccountStore store;
 
-        private const string URL = "http://192.168.10.53:8050/orquestador/registrar/personas";
+        private const string URL = Constants.IP+":8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
 
         public Login ()
@@ -44,7 +44,7 @@ namespace OfertApp.Views
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
             String user = email.Text;
             String pass = password.Text;
-            var uri = new Uri(String.Format("http://192.168.10.53:8090/personas/loguear?usuario=" + user + "&password=" + pass, String.Empty));
+            var uri = new Uri(String.Format(Constants.IP+":8090/personas/loguear?usuario=" + user + "&password=" + pass, String.Empty));
             var response = await cliente.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {

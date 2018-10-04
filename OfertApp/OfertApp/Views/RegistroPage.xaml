@@ -35,7 +35,7 @@
                 <StackLayout Orientation="Vertical" Margin="40,0">
                     <Entry x:Name="nombre" TextColor="Gray" Placeholder="Nombres" PlaceholderColor="Gray" Keyboard="Email" FontSize="18" HorizontalTextAlignment="Start"/>
                     <Entry x:Name="apellidos" TextColor="Gray" Placeholder="Apellidos" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start"/>
-                    <Entry x:Name="correo" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start"/>
+                    <Entry x:Name="correo" TextColor="Gray" Keyboard="Email" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start"/>
                     <Entry x:Name="contrasena" TextColor="Gray" Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" FontSize="18" HorizontalTextAlignment="Start"/>
                     <Picker x:Name="rol" Title="Registrarse como">
                         <Picker.ItemsSource>
@@ -47,7 +47,7 @@
                     </Picker>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Entry x:Name="telefono" TextColor="Gray" Placeholder="Teléfono" PlaceholderColor="Gray" IsPassword="True" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Entry x:Name="telefono" TextColor="Gray" Keyboard="Telephone" Placeholder="Teléfono" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                         <Picker x:Name="genero" Title="Genero" HorizontalOptions="FillAndExpand">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">

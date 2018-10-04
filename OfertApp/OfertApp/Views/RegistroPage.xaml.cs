@@ -1,5 +1,6 @@
 ﻿using appOfertas.Models;
 using Newtonsoft.Json;
+using OfertApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace OfertApp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RegistroPage : ContentPage
 	{
-        private const string URL = "http://192.168.10.53:8050/orquestador/registrar/personas";
+        private const string URL = Constants.IP+":8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
 
 		public RegistroPage ()

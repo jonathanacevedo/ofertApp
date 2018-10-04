@@ -1339,20 +1339,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sebastian.henao\\.nuget\\packages\\": {}
+    "C:\\Users\\jonathan.payares\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
       "projectName": "OfertApp.Android",
-      "projectPath": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
-      "packagesPath": "C:\\Users\\sebastian.henao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp.Android\\obj\\",
+      "projectPath": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp.Android\\OfertApp.Android.csproj",
+      "packagesPath": "C:\\Users\\jonathan.payares\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\sebastian.henao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jonathan.payares\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1365,8 +1365,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj": {
-              "projectPath": "C:\\Users\\sebastian.henao\\Documents\\Proyecto junto\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj"
+            "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj": {
+              "projectPath": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj"
             }
           }
         }

@@ -55,12 +55,13 @@
                         </Picker.ItemsSource>
                     </Picker>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Entry x:Name="email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
-                        <Entry x:Name="direccion" TextColor="Gray" Placeholder="Direccion" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Entry x:Name="email" Keyboard="Email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Entry x:Name="telefono" Keyboard="Telephone" TextColor="Gray" Placeholder="Teléfono" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Entry x:Name="telefono" TextColor="Gray" Placeholder="Teléfono" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Entry x:Name="direccion" TextColor="Gray" Placeholder="Direccion" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                         <Entry x:Name="ciudad" TextColor="Gray" Placeholder="Ciudad" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                      </StackLayout>
                     <Entry x:Name="detalle" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>

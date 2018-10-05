@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfertApp.Views.NegocioEditPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="LayoutRoot" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,0,0,1" VerticalOptions="FillAndExpand">
+                        <Label Margin="0,10" FontSize="28" FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}" Text="Editar Negocio" HorizontalOptions="Center"/>
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Orientation="Vertical" >
+                <StackLayout Orientation="Vertical" Margin="40,0">
+                    <Entry x:Name="nom" Text="{Binding Negocio.nombre}" TextColor="Gray" Placeholder="Nombre" PlaceholderColor="Gray" Keyboard="Email" FontSize="18" HorizontalTextAlignment="Start"/>
+                    <Entry x:Name="nit" Text="{Binding Negocio.nit}" TextColor="Gray" Placeholder="Nit" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start"/>
+                    <Picker x:Name="tipo" Title="Tipo de Negocio" SelectedItem="{Binding Negocio.tipo}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Restaurante</x:String>
+                                <x:String>Hotel</x:String>
+                                <x:String>Bar</x:String>
+                                <x:String>Almacen</x:String>
+                                <x:String>Otro</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Entry x:Name="email" Text="{Binding Negocio.email}" Keyboard="Email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Entry x:Name="telefono" Text="{Binding Negocio.telefono}" Keyboard="Telephone" TextColor="Gray" Placeholder="Teléfono" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Entry x:Name="direccion" Text="{Binding Negocio.direccion}" TextColor="Gray" Placeholder="Direccion" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Entry x:Name="ciudad" Text="{Binding Negocio.ciudad}" TextColor="Gray" Placeholder="Ciudad" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Editor AutoSize="TextChanges" x:Name="detalle" Text="{Binding Negocio.detalle}" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalOptions="FillAndExpand"/>
+                    <Button Margin="0,25" Clicked="Editar_Clicked" Text="Editar" BackgroundColor="{StaticResource Primary}" TextColor="White" FontSize="16"/>
+                    <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfertApp.Views.Negocios"
+             x:Name="BrowseItemsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView VerticalOptions="FillAndExpand">
+                    <Label Margin="0,10" FontSize="25" FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}" Text="Mis negocios" HorizontalOptions="Center"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding Negocios}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                IsRefreshing="{Binding Busy, Mode=OneWay}"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="false"
+                Refreshing="ItemsListView_Refreshing"
+                ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="Editar" CommandParameter="{Binding .}"
+                             Text="Editar" />
+                            <MenuItem Clicked="Eliminar" CommandParameter="{Binding .}"
+                            Text="Eliminar" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                            <Image Source="imagenNegocio.png" HeightRequest="85" WidthRequest="85"/>
+                            <StackLayout Padding="20" Orientation="Vertical">
+                            <Label Text="{Binding nombre}" FontFamily="{StaticResource Lobster}"
+                                FontAttributes="Bold"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="19" />
+                                <Label Text="{Binding tipo}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="14" />
+                                <Image Source="{Binding foto}" IsVisible="False"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

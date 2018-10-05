@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfertApp.Views.Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="LayoutRoot" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--<ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" Grid.RowSpan="3" Color="Red" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+
+            <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,0,0,20" VerticalOptions="FillAndExpand">
+                        <Image Source="logoOfertApp.png" VerticalOptions="Center" HeightRequest="120" />
+                        <!--<Label Margin="0,10" FontSize="35" FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}" Text="Registro" HorizontalOptions="Center"/>-->
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" >
+                <StackLayout Orientation="Vertical" Margin="55,1">
+                    <Entry Margin="0,10" x:Name="email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" Keyboard="Email" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <Entry Margin="0,10" x:Name="password" TextColor="Gray" Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <Button Margin="0,10" Text="Iniciar Sesión" BackgroundColor="{StaticResource Primary}" TextColor="White" FontSize="16" Clicked="Button_Clicked"/>
+                    <Button Margin="0,10" Text="Registrarse" BackgroundColor="{StaticResource Primary}" Opacity="0.9" TextColor="White" FontSize="16" Clicked="Button_Clicked_1"/>
+                    <!--<Button Margin="0,10" Text="Google" BackgroundColor="{StaticResource Primary}" TextColor="White" FontSize="16" Clicked="Button_Clicked_2"/>-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+                        </Grid.ColumnDefinitions>
+                     <!--   <Button Text="Iniciar con Google" Image="logoGoogle.png" HeightRequest="55" BackgroundColor="#4885ed" TextColor="White" Clicked="Button_Clicked_2"/>
+-->
+                        <Image Source="g_logo.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" WidthRequest="50" HeightRequest="50"/>
+                        <Image Source="f_logo.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" WidthRequest="50" HeightRequest="50"/>
+
+                    </Grid>
+                    <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

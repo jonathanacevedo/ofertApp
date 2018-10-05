@@ -11,6 +11,12 @@ using System.Text;
 using Xamarin.Essentials;
 using appOfertas.Models;
 using OfertApp.Services;
+using Plugin.Media.Abstractions;
+using Plugin.Media;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Firebase.Storage;
+using System.IO;
 
 namespace OfertApp.Views
 {
@@ -23,6 +29,9 @@ namespace OfertApp.Views
 
         public Item Item { get; set; }
 
+        //para la imagen
+        public String urlImagen;
+        MediaFile file;
         public NewItemPage()
         {
             InitializeComponent();
@@ -109,6 +118,61 @@ namespace OfertApp.Views
                 await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
                 Console.WriteLine("Error");
             }
+        }
+
+        // para las imagenes
+        private async void btnPick_Clicked(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+            try
+            {
+                file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                {
+                    PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+                });
+                if (file == null)
+                    return;
+
+                {
+                    var imageStram = file.GetStream();
+
+                };
+                await StoreImages(file.GetStream());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        /*  private async void btnStore_Clicked(object sender, EventArgs e)
+        {
+            await StoreImages(file.GetStream());
+        }*/
+        public string ramdon()
+        {
+            Random obj = new Random();
+            string posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            int longitud = posibles.Length;
+            char letra;
+            int longitudnuevacadena = 8;
+            string nuevacadena = "";
+            for (int i = 0; i < longitudnuevacadena; i++)
+            {
+                letra = posibles[obj.Next(longitud)];
+                nuevacadena += letra.ToString();
+            }
+            return nuevacadena;
+        }
+
+        public async Task<string> StoreImages(Stream imageStream)
+        {
+            var stroageImage = await new FirebaseStorage("ofertas-1535298242523.appspot.com")
+                .Child("XamarinImages").Child(ramdon()).PutAsync(imageStream);
+            string imgurl = stroageImage;
+            urlImagen = imgurl;
+            imgChoosed.Text = urlImagen;
+            //  Console.WriteLine("URL de la imagen: "+imgurl);
+            return imgurl;
         }
     }
 }

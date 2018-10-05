@@ -3059,6 +3059,9 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F090055
 			public const int avd_show_password = 2131296341;
 			
+			// aapt resource value: 0x7F010002
+			public const int camara = 2130771970;
+			
 			// aapt resource value: 0x1
 			public const int cast_abc_scrubber_control_off_mtrl_alpha = 1;
 			
@@ -3221,68 +3224,68 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int cast_skip_ad_label_border = 1;
 			
-			// aapt resource value: 0x7F010002
-			public const int ciudad = 2130771970;
-			
-			// aapt resource value: 0x7F010339
-			public const int common_full_open_on_phone = 2130772793;
-			
-			// aapt resource value: 0x7F010325
-			public const int common_google_signin_btn_icon_dark = 2130772773;
-			
-			// aapt resource value: 0x7F010326
-			public const int common_google_signin_btn_icon_dark_focused = 2130772774;
-			
-			// aapt resource value: 0x7F010327
-			public const int common_google_signin_btn_icon_dark_normal = 2130772775;
+			// aapt resource value: 0x7F010003
+			public const int ciudad = 2130771971;
 			
 			// aapt resource value: 0x7F010340
-			public const int common_google_signin_btn_icon_dark_normal_background = 2130772800;
+			public const int common_full_open_on_phone = 2130772800;
+			
+			// aapt resource value: 0x7F010326
+			public const int common_google_signin_btn_icon_dark = 2130772774;
+			
+			// aapt resource value: 0x7F010327
+			public const int common_google_signin_btn_icon_dark_focused = 2130772775;
 			
 			// aapt resource value: 0x7F010328
-			public const int common_google_signin_btn_icon_disabled = 2130772776;
-			
-			// aapt resource value: 0x7F010329
-			public const int common_google_signin_btn_icon_light = 2130772777;
-			
-			// aapt resource value: 0x7F010330
-			public const int common_google_signin_btn_icon_light_focused = 2130772784;
-			
-			// aapt resource value: 0x7F010331
-			public const int common_google_signin_btn_icon_light_normal = 2130772785;
+			public const int common_google_signin_btn_icon_dark_normal = 2130772776;
 			
 			// aapt resource value: 0x7F010341
-			public const int common_google_signin_btn_icon_light_normal_background = 2130772801;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2130772801;
+			
+			// aapt resource value: 0x7F010329
+			public const int common_google_signin_btn_icon_disabled = 2130772777;
+			
+			// aapt resource value: 0x7F010330
+			public const int common_google_signin_btn_icon_light = 2130772784;
+			
+			// aapt resource value: 0x7F010331
+			public const int common_google_signin_btn_icon_light_focused = 2130772785;
 			
 			// aapt resource value: 0x7F010332
-			public const int common_google_signin_btn_text_dark = 2130772786;
-			
-			// aapt resource value: 0x7F010333
-			public const int common_google_signin_btn_text_dark_focused = 2130772787;
-			
-			// aapt resource value: 0x7F010334
-			public const int common_google_signin_btn_text_dark_normal = 2130772788;
+			public const int common_google_signin_btn_icon_light_normal = 2130772786;
 			
 			// aapt resource value: 0x7F010342
-			public const int common_google_signin_btn_text_dark_normal_background = 2130772802;
+			public const int common_google_signin_btn_icon_light_normal_background = 2130772802;
+			
+			// aapt resource value: 0x7F010333
+			public const int common_google_signin_btn_text_dark = 2130772787;
+			
+			// aapt resource value: 0x7F010334
+			public const int common_google_signin_btn_text_dark_focused = 2130772788;
 			
 			// aapt resource value: 0x7F010335
-			public const int common_google_signin_btn_text_disabled = 2130772789;
-			
-			// aapt resource value: 0x7F010336
-			public const int common_google_signin_btn_text_light = 2130772790;
-			
-			// aapt resource value: 0x7F010337
-			public const int common_google_signin_btn_text_light_focused = 2130772791;
-			
-			// aapt resource value: 0x7F010338
-			public const int common_google_signin_btn_text_light_normal = 2130772792;
+			public const int common_google_signin_btn_text_dark_normal = 2130772789;
 			
 			// aapt resource value: 0x7F010343
-			public const int common_google_signin_btn_text_light_normal_background = 2130772803;
+			public const int common_google_signin_btn_text_dark_normal_background = 2130772803;
 			
-			// aapt resource value: 0x7F010003
-			public const int contacts_color = 2130771971;
+			// aapt resource value: 0x7F010336
+			public const int common_google_signin_btn_text_disabled = 2130772790;
+			
+			// aapt resource value: 0x7F010337
+			public const int common_google_signin_btn_text_light = 2130772791;
+			
+			// aapt resource value: 0x7F010338
+			public const int common_google_signin_btn_text_light_focused = 2130772792;
+			
+			// aapt resource value: 0x7F010339
+			public const int common_google_signin_btn_text_light_normal = 2130772793;
+			
+			// aapt resource value: 0x7F010344
+			public const int common_google_signin_btn_text_light_normal_background = 2130772804;
+			
+			// aapt resource value: 0x7F010004
+			public const int contacts_color = 2130771972;
 			
 			// aapt resource value: 0x7F090056
 			public const int design_bottom_navigation_item_background = 2131296342;
@@ -3302,29 +3305,29 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010004
-			public const int detalle = 2130771972;
-			
 			// aapt resource value: 0x7F010005
-			public const int direccion = 2130771973;
-			
-			// aapt resource value: 0x7F010344
-			public const int googleg_disabled_color_18 = 2130772804;
-			
-			// aapt resource value: 0x7F010345
-			public const int googleg_standard_color_18 = 2130772805;
+			public const int detalle = 2130771973;
 			
 			// aapt resource value: 0x7F010006
-			public const int home_color = 2130771974;
+			public const int direccion = 2130771974;
+			
+			// aapt resource value: 0x7F010345
+			public const int googleg_disabled_color_18 = 2130772805;
+			
+			// aapt resource value: 0x7F010346
+			public const int googleg_standard_color_18 = 2130772806;
 			
 			// aapt resource value: 0x7F010007
-			public const int iconoApp = 2130771975;
+			public const int home_color = 2130771975;
 			
 			// aapt resource value: 0x7F010008
-			public const int iconoNegocio = 2130771976;
+			public const int iconoApp = 2130771976;
 			
-			// aapt resource value: 0x7F010324
-			public const int ic_arrow_back = 2130772772;
+			// aapt resource value: 0x7F010009
+			public const int iconoNegocio = 2130771977;
+			
+			// aapt resource value: 0x7F010325
+			public const int ic_arrow_back = 2130772773;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -3869,17 +3872,17 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
 			
-			// aapt resource value: 0x7F010009
-			public const int imagenNegocio = 2130771977;
-			
 			// aapt resource value: 0x7F010010
-			public const int logoGoogle = 2130771984;
+			public const int imagenNegocio = 2130771984;
 			
 			// aapt resource value: 0x7F010011
-			public const int logoOfertApp = 2130771985;
+			public const int logoGoogle = 2130771985;
 			
 			// aapt resource value: 0x7F010012
-			public const int logoOfertAppNuevo2 = 2130771986;
+			public const int logoOfertApp = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int logoOfertAppNuevo2 = 2130771987;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -3944,14 +3947,14 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F09005C
 			public const int navigation_empty_icon = 2131296348;
 			
-			// aapt resource value: 0x7F010013
-			public const int negocioIcon = 2130771987;
-			
 			// aapt resource value: 0x7F010014
-			public const int negocioIcono = 2130771988;
+			public const int negocioIcon = 2130771988;
 			
 			// aapt resource value: 0x7F010015
-			public const int negocioIcono2 = 2130771989;
+			public const int negocioIcono = 2130771989;
+			
+			// aapt resource value: 0x7F010016
+			public const int negocioIcono2 = 2130771990;
 			
 			// aapt resource value: 0x7F090001
 			public const int notification_action_background = 2131296257;
@@ -4124,17 +4127,17 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x1
 			public const int quantum_ic_volume_up_white_36 = 1;
 			
-			// aapt resource value: 0x7F010016
-			public const int sale_color = 2130771990;
-			
 			// aapt resource value: 0x7F010017
-			public const int store_color = 2130771991;
+			public const int sale_color = 2130771991;
 			
 			// aapt resource value: 0x7F010018
-			public const int telefono = 2130771992;
+			public const int store_color = 2130771992;
 			
 			// aapt resource value: 0x7F010019
-			public const int tipo = 2130771993;
+			public const int telefono = 2130771993;
+			
+			// aapt resource value: 0x7F010020
+			public const int tipo = 2130772000;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -4142,8 +4145,8 @@ namespace OfertApp.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
-			// aapt resource value: 0x7F010020
-			public const int xamarin_logo = 2130772000;
+			// aapt resource value: 0x7F010021
+			public const int xamarin_logo = 2130772001;
 			
 			static Drawable()
 			{

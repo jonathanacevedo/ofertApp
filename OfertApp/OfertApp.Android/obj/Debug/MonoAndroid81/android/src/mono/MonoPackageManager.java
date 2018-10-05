@@ -107,11 +107,15 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "OfertApp.Android.dll" comes first in this list. */
 		"OfertApp.Android.dll",
+		"Firebase.Storage.dll",
 		"FormsViewGroup.dll",
 		"Google.Apis.Core.dll",
 		"Google.Apis.dll",
 		"Newtonsoft.Json.dll",
 		"OfertApp.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Media.dll",
+		"Plugin.Permissions.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

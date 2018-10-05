@@ -1,8 +1,12 @@
+Firebase.Storage
 FormsViewGroup
 Google.Apis.Core
 Google.Apis
 Newtonsoft.Json
 OfertApp
+Plugin.CurrentActivity
+Plugin.Media
+Plugin.Permissions
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common

@@ -70,6 +70,11 @@ namespace OfertApp.Views
             }
         }
 
+        private void facebookClicked(object sender, EventArgs e)
+        {
+
+        }
+
         private void Button_Clicked_2(object sender, EventArgs e)
         {
             string clientId = null;

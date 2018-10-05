@@ -2058,7 +2058,7 @@
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
-      "sha512": "MNcaYxUJvUcoXOa+jgKl/GDw/Mh+wMrxDjW4dre7qrp35LUGTjUBNtZsNjxsWX592ocdyqt1X5hMJB+5OStoYw==",
+      "sha512": "AK4wVgiJqQQCALZ+2ZFY3UqEyIunVlNSBLAHNyI8bJfLT5c9kHZH3nVF2KUWYd1/2POvaz3xx9K6nSKo6m78Ew==",
       "type": "package",
       "path": "system.numerics.vectors/4.5.0",
       "files": [
@@ -3323,23 +3323,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jonathan.payares\\.nuget\\packages\\": {},
+    "C:\\Users\\santiago.acevedo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj",
+      "projectUniqueName": "C:\\Users\\santiago.acevedo\\Documents\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj",
       "projectName": "OfertApp",
-      "projectPath": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj",
-      "packagesPath": "C:\\Users\\jonathan.payares\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonathan.payares\\Documents\\ofertApp\\OfertApp\\OfertApp\\obj\\",
+      "projectPath": "C:\\Users\\santiago.acevedo\\Documents\\ofertApp\\OfertApp\\OfertApp\\OfertApp.csproj",
+      "packagesPath": "C:\\Users\\santiago.acevedo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\santiago.acevedo\\Documents\\ofertApp\\OfertApp\\OfertApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jonathan.payares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\santiago.acevedo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

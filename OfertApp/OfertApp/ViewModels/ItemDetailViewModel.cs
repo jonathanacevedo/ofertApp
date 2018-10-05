@@ -15,6 +15,11 @@ namespace OfertApp.ViewModels
             Negocio = negocio;
         }
 
+        internal void PropertyChanged()
+        {
+            Console.WriteLine("Hubo un cambio");
+        }
+
         /*public static implicit operator ItemDetailViewModel(negocios v)
         {
             throw new NotImplementedException();

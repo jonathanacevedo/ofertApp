@@ -20,14 +20,14 @@ namespace OfertApp.ViewModels
         private const string URL = Constants.IP+":8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
 
-        public ObservableCollection<Negocio> Negocios { set; get; }
+        public ObservableCollection<Negocio> Negocios { set ; get; }
         public Command LoadItemsCommand { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
+            Console.WriteLine("Hubo un cambio.");
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 

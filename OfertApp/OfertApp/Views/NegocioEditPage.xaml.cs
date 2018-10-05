@@ -24,9 +24,10 @@ namespace OfertApp.Views
         private const string URL = Constants.IP + ":8091/negocios/editar";
         private HttpClient cliente = new HttpClient();
 
-        public NegocioEditPage(ItemDetailViewModel viewModel)
+        public NegocioEditPage(ItemDetailViewModel viewModel, Negocios n)
         {
             InitializeComponent();
+            this.n = n;
 
             BindingContext = this.viewModel = viewModel;
         }
@@ -84,8 +85,8 @@ namespace OfertApp.Views
             {
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Actualizar", "Editar Completado", "OK");
-                await Navigation.PopAsync();
                 n.actualizarVistaAsync();
+                await Navigation.PopModalAsync();
             }
             else
             {

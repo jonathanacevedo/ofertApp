@@ -60,9 +60,6 @@ C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp\obj
 C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.dll
 C:\Users\sebastian.henao\Documents\Proyecto junto\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.pdb
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.deps.json
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.dll
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.pdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
@@ -78,7 +75,9 @@ C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstan
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.csproj.CoreCompileInputs.cache
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.AssemblyInfoInputs.cache
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.AssemblyInfo.cs
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.deps.json
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.dll
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.pdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.dll
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.pdb
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\obj\Debug\netstandard2.0\OfertApp.csprojAssemblyReference.cache

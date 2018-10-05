@@ -23,9 +23,10 @@ namespace OfertApp.Views
         Negocios n = new Negocios();
 
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(ItemDetailViewModel viewModel, Negocios n)
         {
             InitializeComponent();
+            this.n = n;
 
             BindingContext = this.viewModel = viewModel;
         }
@@ -44,64 +45,75 @@ namespace OfertApp.Views
             BindingContext = viewModel;
         }
 
-       async void Editar_Clicked(object sender, EventArgs e)
+       void Editar_Clicked(object sender, EventArgs e)
         {
             //var mi = ((MenuItem)sender);
             var item = sender as Negocio;
-            await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(viewModel.Negocio)));
+
+            NegocioEditPage pagEditar = new NegocioEditPage(new ItemDetailViewModel(viewModel.Negocio), n);
+            var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagEditar));
+
+            //await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(viewModel.Negocio)));
         }
 
         private async void Eliminar_Clicked(object sender, EventArgs e)
         {
 
-            var negocioItem = viewModel.Negocio;
+            var confirm = await DisplayAlert("Confirmación", "¿Está seguro de eliminar este negocio?", "Si", "No");
+            Console.WriteLine("Respuesta: " + confirm);
 
-            cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-
-            Negos negocios = new Negos();
-            Negocio nego = new Negocio();
-
-            List<Negocio> negocio = new List<Negocio>();
-
-            nego.idnegocio = negocioItem.idnegocio;
-            nego.parametro = "1152";
-            nego.idadmin = "";
-            nego.nombre = "";
-            nego.nit = "";
-            nego.email = "";
-            nego.direccion = "";
-            nego.telefono = "";
-            nego.tipo = "";
-            nego.ciudad = "";
-            nego.detalle = "";
-            nego.foto = "";
-            nego.latitud = "";
-            nego.longitud = "";
-
-            negocio.Add(nego);
-
-            negocios.negocio = negocio;
-
-            var json = JsonConvert.SerializeObject(negocios);
-
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await cliente.PutAsync(URL, content);
-            var res = response.Content.ReadAsStringAsync();
-
-            Console.WriteLine("Body: " + json);
-
-            if (response.IsSuccessStatusCode)
+            if (confirm)
             {
-                Console.WriteLine("respuesta: " + res);
-                await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
-                n.actualizarVistaAsync();
-                await Navigation.PopAsync();
-            }
-            else
-            {
-                Console.WriteLine("respuesta: " + res);
-                await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
+
+                var negocioItem = viewModel.Negocio;
+
+                cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+
+                Negos negocios = new Negos();
+                Negocio nego = new Negocio();
+
+                List<Negocio> negocio = new List<Negocio>();
+
+                nego.idnegocio = negocioItem.idnegocio;
+                nego.parametro = "1152";
+                nego.idadmin = "";
+                nego.nombre = "";
+                nego.nit = "";
+                nego.email = "";
+                nego.direccion = "";
+                nego.telefono = "";
+                nego.tipo = "";
+                nego.ciudad = "";
+                nego.detalle = "";
+                nego.foto = "";
+                nego.latitud = "";
+                nego.longitud = "";
+
+                negocio.Add(nego);
+
+                negocios.negocio = negocio;
+
+                var json = JsonConvert.SerializeObject(negocios);
+
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await cliente.PutAsync(URL, content);
+                var res = response.Content.ReadAsStringAsync();
+
+                Console.WriteLine("Body: " + json);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("respuesta: " + res);
+                    await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
+                    n.actualizarVistaAsync();
+                    await Navigation.PopModalAsync();
+                }
+                else
+                {
+                    Console.WriteLine("respuesta: " + res);
+                    await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
+                }
             }
         }
     }

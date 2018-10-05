@@ -19,7 +19,7 @@ using Android;
 
 namespace OfertApp.Droid
 {
-    [Activity(Label = "OfertApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "OfertApp", Icon = "@drawable/imagenNegocio", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
 
@@ -105,12 +105,12 @@ namespace OfertApp.Droid
                     {
                         if (grantResults[0] == (int)Android.Content.PM.Permission.Granted)
                         {
-                            Toast.MakeText(this, "Special permissions granted", ToastLength.Short).Show();
+                            //Toast.MakeText(this, "Special permissions granted", ToastLength.Short).Show();
                         }
                         else
                         {
                             //Permission Denied :(
-                            Toast.MakeText(this, "Special permissions denied", ToastLength.Short).Show();
+                            Toast.MakeText(this, "Permisos denegados", ToastLength.Short).Show();
                             TryToGetPermissions();
                         }
                     }

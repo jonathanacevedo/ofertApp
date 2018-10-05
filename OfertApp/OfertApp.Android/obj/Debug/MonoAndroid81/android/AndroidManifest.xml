@@ -21,7 +21,7 @@
         <data android:scheme="com.googleusercontent.apps.364014280769-n853ibkeagms631c6nmv73438jblb00o" />
       </intent-filter>
     </activity>
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="OfertApp" android:theme="@style/MainTheme" android:name="md5f0c965dee8ac5fb1137ac87e4517e97e.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/imagennegocio" android:label="OfertApp" android:theme="@style/MainTheme" android:name="md5f0c965dee8ac5fb1137ac87e4517e97e.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

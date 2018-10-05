@@ -30,12 +30,16 @@ namespace OfertApp.Views
             BindingContext = viewModel = new negocios();  //NegociosViewModel
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var negocio = args.SelectedItem as Negocio;
             if (negocio == null)
                 return;
-           await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
+
+            ItemDetailPage pagEditar = new ItemDetailPage(new ItemDetailViewModel(negocio), this);
+            var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagEditar));
+
+            //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
 
 
             // Manually deselect item.
@@ -54,7 +58,7 @@ namespace OfertApp.Views
         {
             Console.WriteLine("Actualizando vista...");
             viewModel.Negocios.Clear();
-            //viewModel.LoadItemsCommand.Execute(null);
+            viewModel.LoadItemsCommand.Execute(null);
         }
 
         protected override void OnAppearing()
@@ -64,11 +68,15 @@ namespace OfertApp.Views
                 viewModel.LoadItemsCommand.Execute(null);
         }
 
-        public async void Editar(object sender, SelectedItemChangedEventArgs e)
+        public void Editar(object sender, SelectedItemChangedEventArgs e)
         {
             var mi = ((MenuItem)sender);
             var item = mi.CommandParameter as Negocio;
-            await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(item)));
+
+            NegocioEditPage pagEditar = new NegocioEditPage(new ItemDetailViewModel(item), this);
+            var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagEditar));
+
+            //await Navigation.PushModalAsync(new NegocioEditPage(new ItemDetailViewModel(item)));
         }
 
         public async void Eliminar(object sender, EventArgs e)

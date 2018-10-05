@@ -1,9 +1,3 @@
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.dll
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.pdb
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp.apk
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp-Signed.apk
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.pdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csprojAssemblyReference.cache
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
@@ -16,6 +10,12 @@ C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\2f4d086a.proguard.stamp
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\a2ea833c.proguard.stamp
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XbdMerge\ea5c07c4.proguard.stamp
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.dll
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.Android.pdb
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp.apk
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\com.companyname.OfertApp-Signed.apk
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.pdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res.flag
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\OfertApp.Android.csproj.CoreCompileInputs.cache
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\XamlC.stamp
@@ -40,6 +40,7 @@ C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\icon.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\xamarin_logo.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\iconoapp.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\contacts_color.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\home_color.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\logoofertapp.png
@@ -58,6 +59,14 @@ C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\direccion.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\tipo.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\telefono.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-hdpi\iconoapp.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xhdpi\iconoapp.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\iconoapp.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\iconoapp.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-hdpi\imagennegocio.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xhdpi\imagennegocio.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\imagennegocio.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\imagennegocio.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.txt
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\uploadflags.txt

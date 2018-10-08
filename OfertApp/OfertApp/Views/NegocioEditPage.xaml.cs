@@ -1,10 +1,15 @@
 ﻿using appOfertas.Models;
+using Firebase.Storage;
 using Newtonsoft.Json;
 using OfertApp.Models;
 using OfertApp.Services;
 using OfertApp.ViewModels;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -24,6 +29,9 @@ namespace OfertApp.Views
         private const string URL = Constants.IP + ":8091/negocios/editar";
         private HttpClient cliente = new HttpClient();
 
+        //para la imagen
+        public String urlImagen;
+        MediaFile file;
         public NegocioEditPage(ItemDetailViewModel viewModel, Negocios n)
         {
             InitializeComponent();
@@ -67,7 +75,7 @@ namespace OfertApp.Views
             nego.tipo = (string)tipo.SelectedItem;
             nego.ciudad = ciudad.Text;
             nego.detalle = detalle.Text;
-            nego.foto = "sinFoto";
+            nego.foto = urlImagen;
             nego.latitud = "";
             nego.longitud = "";
 
@@ -95,5 +103,61 @@ namespace OfertApp.Views
                 Console.WriteLine("Error");
             }
         }
+
+        // para las imagenes
+        private async void btnPick_Clicked(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+            try
+            {
+                file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                {
+                    PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+                });
+                if (file == null)
+                    return;
+
+                {
+                    var imageStram = file.GetStream();
+
+                };
+                await StoreImages(file.GetStream());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        /*  private async void btnStore_Clicked(object sender, EventArgs e)
+        {
+            await StoreImages(file.GetStream());
+        }*/
+        public string ramdon()
+        {
+            Random obj = new Random();
+            string posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            int longitud = posibles.Length;
+            char letra;
+            int longitudnuevacadena = 8;
+            string nuevacadena = "";
+            for (int i = 0; i < longitudnuevacadena; i++)
+            {
+                letra = posibles[obj.Next(longitud)];
+                nuevacadena += letra.ToString();
+            }
+            return nuevacadena;
+        }
+
+        public async Task<string> StoreImages(Stream imageStream)
+        {
+            var stroageImage = await new FirebaseStorage("ofertas-1535298242523.appspot.com")
+                .Child("XamarinImages").Child(ramdon()).PutAsync(imageStream);
+            string imgurl = stroageImage;
+            urlImagen = imgurl;
+            imgChoosed.Text = urlImagen;
+            //  Console.WriteLine("URL de la imagen: "+imgurl);
+            return imgurl;
+        }
+
     }
 }

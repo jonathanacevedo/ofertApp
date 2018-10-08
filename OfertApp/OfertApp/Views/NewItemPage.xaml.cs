@@ -91,9 +91,9 @@ namespace OfertApp.Views
             nego.tipo = (string)tipo.SelectedItem;
             nego.ciudad = ciudad.Text;
             nego.detalle = detalle.Text;
-            nego.foto = "sinFoto";
-            nego.latitud = "";
+            nego.foto = urlImagen;
             nego.longitud = "";
+            nego.latitud = "";
             
             negocio.Add(nego);
 

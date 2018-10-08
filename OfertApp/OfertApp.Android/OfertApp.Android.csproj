@@ -64,6 +64,7 @@
     <PackageReference Include="Microsoft.Bcl">
       <Version>1.1.10</Version>
     </PackageReference>
+    
     <PackageReference Include="Microsoft.Net.Http">
       <Version>2.2.29</Version>
     </PackageReference>
@@ -216,11 +217,20 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\imagenNegocio.png" />
   </ItemGroup>
+<ItemGroup>
+    <AndroidResource Include="Resources\drawable\fecha.png" />
+  </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\oferta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\valor.png" />
+  </ItemGroup>
+<ItemGroup>
     <Content Include="file_paths.xml" />
     <AndroidResource Include="Resources\drawable\camara.png" />
   </ItemGroup>
-  <ItemGroup>
+<ItemGroup>
     <AndroidResource Include="Resources\drawable\f_logo.png" />
   </ItemGroup>
   <ItemGroup>

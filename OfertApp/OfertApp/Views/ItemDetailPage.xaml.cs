@@ -56,6 +56,11 @@ namespace OfertApp.Views
             //await Navigation.PushAsync(new NegocioEditPage(new ItemDetailViewModel(viewModel.Negocio)));
         }
 
+        private async void CrearOferta_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewOfertaPage(viewModel.Negocio.idnegocio));
+        }
+
         private async void Eliminar_Clicked(object sender, EventArgs e)
         {
 

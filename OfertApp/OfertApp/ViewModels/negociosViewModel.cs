@@ -27,7 +27,7 @@ namespace OfertApp.ViewModels
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            Console.WriteLine("Hubo un cambio.");
+
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
@@ -41,10 +41,10 @@ namespace OfertApp.ViewModels
 
         async Task GetNegocios()
         {
-
+                       
             if (IsBusy)
-                return;
-
+                return; 
+                        
             IsBusy = true;
             
             OnPropertyChanged("cambio");
@@ -70,8 +70,9 @@ namespace OfertApp.ViewModels
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
-                } finally {
-                    Console.WriteLine("Cerrando el cargar");
+                }
+                finally
+                {
                     IsBusy = false;
                 }
             }

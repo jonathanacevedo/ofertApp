@@ -50,8 +50,8 @@
                         </Grid.ColumnDefinitions>
                      <!--   <Button Text="Iniciar con Google" Image="logoGoogle.png" HeightRequest="55" BackgroundColor="#4885ed" TextColor="White" Clicked="Button_Clicked_2"/>
 -->
-                        <Image Source="g_logo.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" WidthRequest="50" HeightRequest="50"/>
-                        <Image Source="f_logo.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" WidthRequest="50" HeightRequest="50"/>
+                        <Image x:Name="botonGoogle" Source="g_logo.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" WidthRequest="50" HeightRequest="50"/>
+                        <Image x:Name="botonFacebook" Source="f_logo.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" WidthRequest="50" HeightRequest="50" />
 
                     </Grid>
                     <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>

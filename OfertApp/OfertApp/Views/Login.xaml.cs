@@ -1,5 +1,6 @@
 ﻿using appOfertas.Models;
 using Newtonsoft.Json;
+using OfertApp.Models;
 using OfertApp.Services;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace OfertApp.Views
         
         Account account;
         AccountStore store;
+        String accountLoggedIn;
 
         private const string URL = Constants.IP+":8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
@@ -28,11 +30,18 @@ namespace OfertApp.Views
 		{
 
             InitializeComponent();
+            var facebook = botonFacebook;
+            var google = botonGoogle;
+
             store = AccountStore.Create();
+            facebook.GestureRecognizers.Add(new TapGestureRecognizer(loginFacebook));
+            google.GestureRecognizers.Add(new TapGestureRecognizer(GoogleLoginClicked));
+
             account = store.FindAccountsForService(Constants.AppName).FirstOrDefault();
         }
 
-       
+
+
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             Navigation.PushAsync(new RegistroPage());
@@ -70,24 +79,31 @@ namespace OfertApp.Views
             }
         }
 
-        private void facebookClicked(object sender, EventArgs e)
+        private void facebookClicked(View arg1, object arg2)
         {
-
+            LoginWithFacebook();
         }
 
-        private void Button_Clicked_2(object sender, EventArgs e)
+
+        async void LoginWithFacebook()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new LoginFacebookView());
+        }
+
+        private void GoogleLoginClicked(View arg1, object arg2)
         {
             string clientId = null;
             string redirectUri = null;
+            accountLoggedIn = "Google";
 
-            switch (Device.RuntimePlatform)
+            switch (Xamarin.Forms.Device.RuntimePlatform)
             {
-                case Device.iOS:
+                case Xamarin.Forms.Device.iOS:
                     clientId = Constants.iOSClientId;
                     redirectUri = Constants.iOSRedirectUrl;
                     break;
 
-                case Device.Android:
+                case Xamarin.Forms.Device.Android:
                     clientId = Constants.AndroidClientId;
                     redirectUri = Constants.AndroidRedirectUrl;
                     break;
@@ -112,6 +128,32 @@ namespace OfertApp.Views
             presenter.Login(authenticator);
         }
 
+        private void loginFacebook(View arg1, object arg2)
+        {
+            OAuth2Authenticator auth = new OAuth2Authenticator(
+                clientId: "504256876713065",
+                scope: "",
+                authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
+                redirectUrl: new Uri("fb504256876713065://localhost/path"),
+                // switch for new Native UI API
+                //      true = Android Custom Tabs and/or iOS Safari View Controller
+                //      false = Embedded Browsers used (Android WebView, iOS UIWebView)
+                //  default = false  (not using NEW native UI)
+                isUsingNativeUI: true
+            );
+
+            accountLoggedIn = "Facebook";
+
+            auth.Completed += OnAuthCompleted;
+            auth.Error += OnAuthError;
+
+            AuthenticationState.Authenticator = auth;
+
+            var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
+            presenter.Login(auth);
+
+        }
+
         async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
         {
             var authenticator = sender as OAuth2Authenticator;
@@ -124,29 +166,66 @@ namespace OfertApp.Views
             User user = null;
             if (e.IsAuthenticated)
             {
+                String urlInfo = accountLoggedIn.Equals("Google") ? Constants.UserInfoUrl :
+                "https://graph.facebook.com/me";
+
                 // If the user is authenticated, request their basic user data from Google
                 // UserInfoUrl = https://www.googleapis.com/oauth2/v2/userinfo
-                var request = new OAuth2Request("GET", new Uri(Constants.UserInfoUrl), null, e.Account);
+                var request = new OAuth2Request("GET", new Uri(urlInfo), null, e.Account);
+
+
+
                 var response = await request.GetResponseAsync();
                 if (response != null)
                 {
+                    FacebookResponse userFb = new FacebookResponse();
                     // Deserialize the data and store it in the account store
                     // The users email address will be used to identify data in SimpleDB
                     string userJson = await response.GetResponseTextAsync();
-                    user = JsonConvert.DeserializeObject<User>(userJson);
+                    //user = JsonConvert.DeserializeObject<User>(userJson);
+
+                    if (accountLoggedIn.Equals("Google"))
+                    {
+                        user = JsonConvert.DeserializeObject<User>(userJson);
+                    }
+                    else
+                    {
+                        userFb = JsonConvert.DeserializeObject<FacebookResponse>(userJson);
+                    }
+
+                    if (account != null)
+                    {
+                        store.Delete(account, Constants.AppName);
+                    }
+
+                    await store.SaveAsync(account = e.Account, Constants.AppName);
+
+                    //RegistrarPersona(user.Email, user.Name);
+                    //await DisplayAlert("Email address", user.Email+", "+user.Name, "OK");
                 }
-
-                if (account != null)
-                {
-                    store.Delete(account, Constants.AppName);
-                }
-
-                await store.SaveAsync(account = e.Account, Constants.AppName);
-
-                RegistrarPersona(user.Email, user.Name);
-                //await DisplayAlert("Email address", user.Email+", "+user.Name, "OK");
             }
         }
+        //Login con Facebook
+
+        #region Facebook
+        public static Action LoginFacebookFail
+        {
+            get
+            {
+                return new Action(() => App.Current.MainPage =
+                                  new NavigationPage(new Login()));
+            }
+        }
+
+        public static void LoginFacebookSuccess(FacebookResponse profile)
+        {
+            App.Current.MainPage = new RegistroPage();
+        } 
+        #endregion
+
+
+        //
+
 
         public async void RegistrarPersona(string email, string nombre)
         {

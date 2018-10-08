@@ -11,7 +11,7 @@ namespace OfertApp.Droid
 	[IntentFilter(
 		new[] { Intent.ActionView },
 		Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-		DataSchemes = new[] { "com.googleusercontent.apps.364014280769-n853ibkeagms631c6nmv73438jblb00o" },
+		DataSchemes = new[] { "com.googleusercontent.apps.364014280769-n853ibkeagms631c6nmv73438jblb00o", "fb504256876713065" },
 		DataPath = ":/oauth2redirect")]
 	public class CustomUrlSchemeInterceptorActivity : Activity
 	{

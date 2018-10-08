@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Firebase.Storage;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace OfertApp.Views
 {
@@ -94,7 +95,63 @@ namespace OfertApp.Views
             nego.foto = urlImagen;
             nego.longitud = "";
             nego.latitud = "";
-            
+
+            if (string.IsNullOrEmpty(nego.nombre))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a name", "Accept");
+
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(nego.nit))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a nit", "Accept");
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(nego.email))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter an email", "Accept");
+                return;
+            }
+
+            else if (!email_bien_escrito(nego.email))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a correct email", "Accept");
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(nego.telefono))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a phone", "Accept");
+                return;
+            }
+         
+            else if (string.IsNullOrEmpty(nego.direccion))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a address", "Accept");
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(nego.ciudad))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a city", "Accept");
+                return;
+            }
+
+
+            else if (string.IsNullOrEmpty(nego.detalle))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a detail", "Accept");
+                return;
+            }
+
+
+            else if (string.IsNullOrEmpty(nego.foto))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must choose a photo", "Accept");
+                return;
+            }
             negocio.Add(nego);
 
             negocios.negocio = negocio;
@@ -173,6 +230,27 @@ namespace OfertApp.Views
             imgChoosed.Text = urlImagen;
             //  Console.WriteLine("URL de la imagen: "+imgurl);
             return imgurl;
+        }
+
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

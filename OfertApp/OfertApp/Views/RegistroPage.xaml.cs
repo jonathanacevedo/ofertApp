@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -44,6 +45,48 @@ namespace OfertApp.Views
             person.estado = "Activo";
             person.token = "Xamarin";
 
+            if (string.IsNullOrEmpty(person.nombre))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a name", "Accept");
+
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(person.apellidos))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a spellname", "Accept");
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(person.correo))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter an email", "Accept");
+                return;
+            }
+
+            else if (! email_bien_escrito(person.correo))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a correct email", "Accept");
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(person.contrasena))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a password", "Accept");
+                return;
+            }
+            else if (person.contrasena.Length < 6)
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "password must have a minimum of 6 characters ", "Accept");
+                return;
+            }
+            else if (string.IsNullOrEmpty(person.telefono))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "you must enter a phonenumber", "Accept");
+                return;
+            }
+
+
             persona.Add(person);
 
             personas.persona = persona;
@@ -66,6 +109,27 @@ namespace OfertApp.Views
                 Console.WriteLine("Error");
             }
             Console.WriteLine(personas.persona[0].nombre);
+        }
+
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

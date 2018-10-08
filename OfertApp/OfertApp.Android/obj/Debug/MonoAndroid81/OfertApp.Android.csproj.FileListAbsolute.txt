@@ -67,6 +67,9 @@ C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xhdpi\imagennegocio.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\imagennegocio.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\imagennegocio.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\fecha.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\oferta.png
+C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\res\drawable\valor.png
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\R.txt
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\uploadflags.txt
@@ -150,9 +153,7 @@ C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp\bin\Debug\netstandard2.0\OfertApp.dll
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.Android.pdb
-C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\bin\Debug\OfertApp.dll.mdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\OfertApp.dll.mdb
 C:\Users\jonathan.payares\Documents\ofertApp\OfertApp\OfertApp.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb

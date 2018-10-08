@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfertApp.Android", "OfertAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfertApp.iOS", "OfertApp\OfertApp.iOS\OfertApp.iOS.csproj", "{14AC5284-2A2F-4D2B-9885-877BB6744EB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfertApp", "OfertApp\OfertApp\OfertApp.csproj", "{E9C7EDAE-E6BD-437B-891C-F322A641C50D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfertApp", "OfertApp\OfertApp\OfertApp.csproj", "{E9C7EDAE-E6BD-437B-891C-F322A641C50D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

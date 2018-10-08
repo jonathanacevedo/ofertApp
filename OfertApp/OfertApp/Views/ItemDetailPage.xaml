@@ -15,7 +15,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Editar" Clicked="Editar_Clicked">
+        <ToolbarItem Text="Crear Oferta" Clicked="CrearOferta_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="UWP" Value="add.png"/>

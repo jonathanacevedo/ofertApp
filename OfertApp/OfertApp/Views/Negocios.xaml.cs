@@ -41,7 +41,6 @@ namespace OfertApp.Views
 
             //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
 
-
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
         }
@@ -83,8 +82,6 @@ namespace OfertApp.Views
         {
 
             var confirm = await DisplayAlert("Confirmación", "¿Está seguro de eliminar este negocio?", "Si", "No");
-            Console.WriteLine("Respuesta: " + confirm);
-
             if (confirm)
             {
                 var mi = ((MenuItem)sender);
@@ -128,8 +125,8 @@ namespace OfertApp.Views
                 if (response.IsSuccessStatusCode)
                 {
                     Console.WriteLine("respuesta: " + res);
+                    actualizarVistaAsync();
                     await App.Current.MainPage.DisplayAlert("Correcto", "Negocio Eliminado", "OK");
-                    viewModel.LoadItemsCommand.Execute(null);
                 }
                 else
                 {

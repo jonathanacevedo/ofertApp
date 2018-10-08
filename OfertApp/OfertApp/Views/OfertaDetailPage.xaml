@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfertApp.Views.OfertaDetailPage"
+             Title="Detalle">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Editar">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Eliminar">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="8" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label Text="{Binding Oferta.producto}" FontSize="30" HorizontalOptions="Center"
+               FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView VerticalOptions="FillAndExpand">
+                    <Image Source="{Binding Oferta.foto}" VerticalOptions="Center" HeightRequest="200" />
+                </ContentView>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="60">
+                <Label LineBreakMode="WordWrap" Text="{Binding Oferta.detalle}" HorizontalOptions="Center" FontSize="18" FontFamily="{StaticResource Lobster}"/>
+            </StackLayout>
+            
+            <StackLayout  Margin="10,5">
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="tipo.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Tipo:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Oferta.tipo}" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="oferta.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Oferta:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Oferta.descuento}" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="valor.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Valor:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Oferta.valor}" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="fecha.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Fecha:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Oferta.fecha_inicio}" FontSize="16"/>
+                        <Label Text="-" FontSize="18"/>
+                        <Label Text="{Binding Oferta.fecha_inicio}" FontSize="16"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

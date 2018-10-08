@@ -47,7 +47,7 @@ namespace OfertApp.Views
             {
                 Detail = newPage;
 
-                if (Device.RuntimePlatform == Device.Android)
+                if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android)
                     await Task.Delay(100);
 
                 IsPresented = false;

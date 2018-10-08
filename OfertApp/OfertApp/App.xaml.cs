@@ -47,5 +47,7 @@ namespace OfertApp
         {
             // Handle when your app resumes
         }
+
+
     }
 }

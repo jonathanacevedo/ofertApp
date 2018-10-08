@@ -23,8 +23,9 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
+        <ScrollView>
             <Grid x:Name="LayoutRoot" BackgroundColor="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -43,33 +44,42 @@
                     <StackLayout Orientation="Vertical" Margin="40,0">
                         <Entry x:Name="nom" TextColor="Gray" Placeholder="Nombre" PlaceholderColor="Gray" Keyboard="Email" FontSize="18" HorizontalTextAlignment="Start"/>
                         <Entry x:Name="nit" TextColor="Gray" Placeholder="Nit" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start"/>
-                    <Picker x:Name="tipo" Title="Tipo de Negocio">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>Restaurante</x:String>
-                                <x:String>Hotel</x:String>
-                                <x:String>Bar</x:String>
-                                <x:String>Almacen</x:String>
-                                <x:String>Otro</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Entry x:Name="email" Keyboard="Email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
-                        <Entry x:Name="telefono" Keyboard="Telephone" TextColor="Gray" Placeholder="Teléfono" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Picker x:Name="tipo" Title="Tipo de Negocio">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Restaurante</x:String>
+                                    <x:String>Hotel</x:String>
+                                    <x:String>Bar</x:String>
+                                    <x:String>Almacen</x:String>
+                                    <x:String>Otro</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Entry x:Name="email" Keyboard="Email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                            <Entry x:Name="telefono" Keyboard="Telephone" TextColor="Gray" Placeholder="Teléfono" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
 
-                    </StackLayout>
+                        </StackLayout>
 
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Entry x:Name="direccion" TextColor="Gray" Placeholder="Direccion" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
-                        <Entry x:Name="ciudad" TextColor="Gray" Placeholder="Ciudad" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
-                     </StackLayout>
-                    <Entry x:Name="detalle" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Entry x:Name="direccion" TextColor="Gray" Placeholder="Direccion" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                            <Entry x:Name="ciudad" TextColor="Gray" Placeholder="Ciudad" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <Entry x:Name="detalle" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
 
-                    <Button Margin="0,25" Text="Agregar" BackgroundColor="{StaticResource Primary}" TextColor="White" Clicked="Button_Clicked" FontSize="16"/>
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+
+                            <Entry x:Name="imgChoosed" IsEnabled="False" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" ></Entry>
+                            <Button x:Name="btnPick" Image="camara.png" BackgroundColor="Transparent" WidthRequest="45" HeightRequest="45" Clicked="btnPick_Clicked"></Button>
+                        </StackLayout>
+
+
+                        <Button Margin="0,25" Text="Agregar" BackgroundColor="{StaticResource Primary}" TextColor="White" Clicked="Button_Clicked" FontSize="16"/>
                         <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>
                     </StackLayout>
                 </StackLayout>
             </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

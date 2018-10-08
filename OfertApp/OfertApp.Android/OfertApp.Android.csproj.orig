@@ -61,6 +61,15 @@
     <PackageReference Include="Google.Apis">
       <Version>1.35.2</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Bcl">
+      <Version>1.1.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Bcl.Build">
+      <Version>1.0.21</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Net.Http">
+      <Version>2.2.29</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
@@ -92,6 +101,7 @@
   <ItemGroup>
     <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\LoginFacebookRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -211,14 +221,25 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+    <AndroidResource Include="Resources\drawable\fecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\oferta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\valor.png" />
+  </ItemGroup>
+=======
     <Content Include="file_paths.xml" />
     <AndroidResource Include="Resources\drawable\camara.png" />
-=======
+  </ItemGroup>
+<ItemGroup>
     <AndroidResource Include="Resources\drawable\f_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\g_logo.png" />
->>>>>>> a8b59b312182a5adf9afa6eecba7fe23e8390aba
   </ItemGroup>
+  <ItemGroup />
+>>>>>>> 3cc77c604ec7940bc993503a3ec2eafddf24608c
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

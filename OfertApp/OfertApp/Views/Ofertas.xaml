@@ -13,15 +13,6 @@
             </OnPlatform>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Agregar" Clicked="Agregar_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="add.png"/>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
     <StackLayout>
         <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
@@ -43,7 +34,7 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem CommandParameter="{Binding .}"
-                             Text="Editar" />
+                             Text="Editar" Clicked="Editar_Clicked"/>
                             <MenuItem CommandParameter="{Binding .}"
                             Text="Eliminar" Clicked="Eliminar_Clicked" IsDestructive="True" />
                         </ViewCell.ContextActions>

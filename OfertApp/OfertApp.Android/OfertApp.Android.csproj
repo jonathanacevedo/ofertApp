@@ -64,9 +64,6 @@
     <PackageReference Include="Microsoft.Bcl">
       <Version>1.1.10</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.Bcl.Build">
-      <Version>1.0.21</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.Net.Http">
       <Version>2.2.29</Version>
     </PackageReference>
@@ -223,7 +220,7 @@
     <Content Include="file_paths.xml" />
     <AndroidResource Include="Resources\drawable\camara.png" />
   </ItemGroup>
-<ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\f_logo.png" />
   </ItemGroup>
   <ItemGroup>

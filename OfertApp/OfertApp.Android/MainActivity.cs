@@ -73,6 +73,8 @@ namespace OfertApp.Droid
                             //TODO add more permissions
                             Manifest.Permission.AccessCoarseLocation,
                             Manifest.Permission.AccessFineLocation,
+                            Manifest.Permission.ReadExternalStorage,
+                            Manifest.Permission.WriteExternalStorage
              };
         void GetPermissions()
         {

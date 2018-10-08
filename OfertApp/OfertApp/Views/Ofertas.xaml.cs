@@ -36,7 +36,7 @@ namespace OfertApp.Views
             if (oferta == null)
                 return;
 
-            OfertaDetailPage pagEditar = new OfertaDetailPage(new ofertaDetailViewModel(oferta));
+            OfertaDetailPage pagEditar = new OfertaDetailPage(new ofertaDetailViewModel(oferta), this);
             var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagEditar));
 
             //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
@@ -56,6 +56,14 @@ namespace OfertApp.Views
         private void Agregar_Clicked(object sender, EventArgs e)
         {
             Console.WriteLine("Intentango agregar oferta");
+        }
+
+        public void Editar_Clicked(object sender, EventArgs e) {
+            var mi = ((MenuItem)sender);
+            var item = mi.CommandParameter as Oferta;
+
+            OfertaEditPage pagEditar = new OfertaEditPage(new ofertaDetailViewModel(item), this);
+            var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagEditar));
         }
 
         public async void Eliminar_Clicked(object sender, EventArgs e)
@@ -90,6 +98,7 @@ namespace OfertApp.Views
 
                 oferta.Add(ofer);
 
+
                 ofertas.oferta = oferta;
 
                 var json = JsonConvert.SerializeObject(ofertas);
@@ -117,7 +126,7 @@ namespace OfertApp.Views
 
         }
 
-        private void actualizarVistaAsync()
+        public void actualizarVistaAsync()
         {
             Console.WriteLine("Actualizando vista...");
             viewModel.Ofertas.Clear();

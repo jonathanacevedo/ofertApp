@@ -38,8 +38,10 @@ namespace OfertApp.Views
             google.GestureRecognizers.Add(new TapGestureRecognizer(GoogleLoginClicked));
 
             account = store.FindAccountsForService(Constants.AppName).FirstOrDefault();
+            
         }
 
+        
 
 
         private void Button_Clicked_1(object sender, EventArgs e)

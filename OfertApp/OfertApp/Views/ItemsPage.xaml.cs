@@ -20,12 +20,29 @@ namespace OfertApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemsPage : ContentPage
     {
+        Map map;
 
         private HttpClient cliente = new HttpClient();
 
         public ItemsPage()
         {
-            var map = new Map(
+
+            mostrarNegocios();
+            //InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            mostrarNegocios();
+            OnPropertyChanged();
+        }
+
+       
+
+        private async void mostrarNegocios()
+        {
+            Map map = new Map(
             MapSpan.FromCenterAndRadius(
             new Position(6.2215477, -75.5722723), Distance.FromMiles(3)))
             {
@@ -35,11 +52,10 @@ namespace OfertApp.Views
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
-            mostrarNegocios(map);
-
+            
             var titulo = new Label
             {
-                Text = "Bienvenido",
+                Text = "Hola",
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 FontSize = 18,
                 VerticalOptions = LayoutOptions.Start
@@ -50,11 +66,9 @@ namespace OfertApp.Views
 
             stack.Children.Add(map);
             Content = stack;
-            //InitializeComponent();
-        }
 
-        private async void mostrarNegocios(Map map)
-        {
+            OnPropertyChanged();
+//            map.Pins.Clear();
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
             var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
             var response = await cliente.GetAsync(uri);
@@ -66,22 +80,20 @@ namespace OfertApp.Views
 
                     var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
 
-
+                    Pin pin;
                     foreach (var negocio in negocios)
                     {
-                        //Negocios.Add(negocio);
-                        //OnPropertyChanged();
-                        
-                        var posicionPrueba = new Position(Double.Parse(negocio.latitud), Double.Parse(negocio.longitud));
-                        var pin = new Pin
+                        //await DisplayAlert("latlong", negocio.latitud + " " + negocio.longitud, "OK");
+                        var posicion = new Position(Double.Parse(negocio.latitud), Double.Parse(negocio.longitud));
+                        pin = new Pin
                         {
                             Type = PinType.Place,
-                            Position = posicionPrueba,
+                            Position = posicion,
                             Label = negocio.nombre,
                             Address = negocio.detalle
                         };
-
                         map.Pins.Add(pin);
+                        OnPropertyChanged();
                     }
                 }
                 catch (Exception ex)

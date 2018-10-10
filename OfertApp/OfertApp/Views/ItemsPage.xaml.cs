@@ -81,8 +81,7 @@ namespace OfertApp.Views
 
             stackMapa.Children.Add(map);
             stack.Children.Add(scrollOfertas);
-            stack.Children.Add(stackMapa);
-
+            stack.Children.Add(stackMapa);            
             Content = stack;
             //InitializeComponent();
         }
@@ -101,30 +100,87 @@ namespace OfertApp.Views
                     var ofertas = JsonConvert.DeserializeObject<List<Oferta>>(content);
                     foreach (var oferta in ofertas)
                     {
-
-                        var producto = new Label
-                        {
-                            Text = oferta.producto,
-                            TextColor = Color.PaleVioletRed,
-                            FontSize = 18
-                        };
-                        var tipo = new Label
-                        {
-                            Text = oferta.tipo,
-                            FontSize = 16
-                        };
-
                         var itemOferta = new StackLayout
                         {
                             Spacing = 0,
-                            Orientation = StackOrientation.Vertical
+                            Orientation = StackOrientation.Vertical,
+                            HorizontalOptions = LayoutOptions.Center,
+                            Padding = new Thickness(10, 10, 10, 10),
+                            Children = {
+                                new Label { Text = oferta.producto,
+                                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                                        TextColor = Color.FromHex("b42554".ToString()), FontSize = 18,
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
+                                 new Image { Source = oferta.foto, HeightRequest=50, WidthRequest= 50},
+                                new StackLayout //Layout Tipo
+                                {
+                                    Orientation = StackOrientation.Horizontal,
+                                    Children =
+                                    {
+                                    new Image { Source = "tipo.png", HeightRequest=10, WidthRequest=10},
+                                    new Label { Text = "Tipo:",
+                                        TextColor = Color.FromHex("b42554".ToString()),
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
+
+                                    new Label { Text = oferta.tipo},
+                                    }
+                                },
+                                new StackLayout //Layout Descuento
+                                {
+                                    Orientation = StackOrientation.Horizontal,
+                                    Children =
+                                    {
+                                    new Image { Source = "oferta.png", HeightRequest=10, WidthRequest=10},
+                                    new Label { Text = "Oferta:",
+                                        TextColor = Color.FromHex("b42554".ToString()),
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
+                                    new Label { Text = oferta.descuento},
+                                    }
+                                }
+                            }
                         };
 
-                        itemOferta.Children.Add(producto);
-                        itemOferta.Children.Add(tipo);
+                        var stackBotones = new StackLayout
+                        {
+                            Orientation = StackOrientation.Horizontal,
+                            HorizontalOptions = LayoutOptions.CenterAndExpand
+                        };
 
+                        Button btnUbicar = new Button
+                        {
+                            Text = "Ubicar",
+                            VerticalOptions = LayoutOptions.CenterAndExpand,
+                            HorizontalOptions = LayoutOptions.Center,
+                            FontSize = 10,
+                            Padding = new Thickness(0, 0, 0, 0),
+                            HeightRequest = 25,                      
+                            BackgroundColor = Color.FromHex("b42554".ToString()),
+                            TextColor = Color.White
+                        };
+                        Button btnNegocio = new Button
+                        {
+                            Text = "Negocio",
+                            VerticalOptions = LayoutOptions.Start,
+                            HorizontalOptions = LayoutOptions.Center,
+                            FontSize = 10,
+                            HeightRequest = 25,
+                            Padding = new Thickness(0, 0, 0, 0),
+                            BackgroundColor = Color.FromHex("b42554".ToString()),
+                            TextColor = Color.White
+                        };
+
+                        btnUbicar.Clicked +=  (sender, args) =>
+                        {
+                            Console.WriteLine("Presiono la oferta: " + oferta.producto);
+                        };
+                        btnNegocio.Clicked += (sender, args) =>
+                        {
+                            Console.WriteLine("Presiono la oferta: " + oferta.producto);
+                        };
+                        stackBotones.Children.Add(btnNegocio);
+                        stackBotones.Children.Add(btnUbicar);
+                        itemOferta.Children.Add(stackBotones);
                         stackOfertas.Children.Add(itemOferta);
-
                     }
                 }
                 catch (Exception ex)

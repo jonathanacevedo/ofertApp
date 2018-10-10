@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -80,7 +80,7 @@ namespace OfertApp.Views
 
             Negos negocios = new Negos();
             Negocio nego = new Negocio();
-
+            
             List<Negocio> negocio = new List<Negocio>();
 
             nego.idadmin = personas.persona[0].id;
@@ -93,8 +93,22 @@ namespace OfertApp.Views
             nego.ciudad = ciudad.Text;
             nego.detalle = detalle.Text;
             nego.foto = urlImagen;
-            nego.longitud = "";
-            nego.latitud = "";
+
+            Geolocalizacion geo = new Geolocalizacion();
+            List<double> latLong = await geo.calcularCoordenadas(nego.direccion);
+            if (latLong == null)
+            {
+                nego.latitud = "";
+                nego.longitud = "";
+                await DisplayAlert("Problema con la direccion", "No fue posible verficar la dirección", "OK");
+            }
+            else
+            {
+                nego.latitud = latLong.ElementAt(0).ToString();
+                nego.longitud = latLong.ElementAt(1).ToString();
+                //await DisplayAlert("Direccion correcta", "Latitud: " + nego.latitud + " Longitud: " + nego.longitud, "ok");
+            }
+
 
             if (string.IsNullOrEmpty(nego.nombre))
             {

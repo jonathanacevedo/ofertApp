@@ -50,8 +50,7 @@ namespace OfertApp.Views
             var confirm = await DisplayAlert("Confirmación", "¿Está seguro de eliminar este negocio?", "Si", "No");
             if (confirm)
             {
-                var mi = ((MenuItem)sender);
-                var ofertaItem = mi.CommandParameter as Oferta;
+                var ofertaItem = viewModel.Oferta;
 
                 cliente.DefaultRequestHeaders.Add("Accept", "application/json");
 
@@ -76,7 +75,6 @@ namespace OfertApp.Views
 
                 oferta.Add(ofer);
 
-
                 ofertas.oferta = oferta;
 
                 var json = JsonConvert.SerializeObject(ofertas);
@@ -86,13 +84,11 @@ namespace OfertApp.Views
                 var response = await cliente.PutAsync(URL, content);
                 var res = response.Content.ReadAsStringAsync();
 
-                Console.WriteLine("Body: " + json);
-
                 if (response.IsSuccessStatusCode)
                 {
                     Console.WriteLine("respuesta: " + res);
-                    n.actualizarVistaAsync();
                     await App.Current.MainPage.DisplayAlert("Correcto", "Oferta Eliminada", "OK");
+                    n.actualizarVistaAsync();
                     await Navigation.PopModalAsync();
                 }
                 else
@@ -100,7 +96,6 @@ namespace OfertApp.Views
                     Console.WriteLine("respuesta: " + res);
                     await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
                 }
-
             }
         }
     }

@@ -24,7 +24,7 @@ namespace OfertApp.Views
         ofertasViewModel viewModel;
 		public Ofertas ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
             BindingContext = viewModel = new ofertasViewModel(); 
 
@@ -39,11 +39,7 @@ namespace OfertApp.Views
             OfertaDetailPage pagEditar = new OfertaDetailPage(new ofertaDetailViewModel(oferta), this);
             var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagEditar));
 
-            //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(negocio)));
-
-
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            //ItemsListView.SelectedItem = null;
         }
 
         protected override void OnAppearing()

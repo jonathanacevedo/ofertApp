@@ -22,6 +22,7 @@ namespace OfertApp.Views
         Account account;
         AccountStore store;
         String accountLoggedIn;
+        FacebookResponse respuestaPerfil;
 
         private const string URL = Constants.IP+":8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
@@ -155,6 +156,29 @@ namespace OfertApp.Views
             presenter.Login(auth);
 
         }
+        //email
+        private async Task<FacebookResponse> GetFacebookProfileAsync()
+        {
+            String accessToken = "EAAJhtfiHJZBgBADGOcssYOcNAEFSpFsaL9o97diZCqSaM5XTPntiCAjofZABl4gAxMa04vvIaOZAdZBevcQmGo7EcZAv6Fza22FxNPN8iOXJxlsHogNqR3qKxZC3eqGhnrKlq1wnX8369Qdd0DkVP7yY49njEVLpxLYlPAeVCmMEwZDZD";
+            var requestUrl = "https://graph.facebook.com/v2.8/me/?fields=" +
+                "name,picture,cover,age_range,devices,email,gender," +
+                "is_verified,birthday,work,website," +
+                "location,locale,link,first_name,last_name," +
+                "hometown&access_token=" + accessToken; // falla hacirndo esta solicitud
+            var httpClient = new HttpClient();
+
+            //await DisplayAlert("antes del ", "perfil", "ok");
+            var userJson = await httpClient.GetStringAsync(requestUrl);
+            //await DisplayAlert("despues del ", "perfil", "ok");
+            FacebookResponse facebookResponse =
+                JsonConvert.DeserializeObject<FacebookResponse>(userJson);
+            //await DisplayAlert("despues de ", "deserealizar el perfil", "ok");
+            //Console.WriteLine(facebookResponse.Email);
+            //Console.WriteLine(respuestaPerfil.Email + respuestaPerfil.FirstName + respuestaPerfil.LastName);
+
+            await DisplayAlert("devuelve el ", "perfil", "ok");
+            return facebookResponse;
+        }
 
         async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
         {
@@ -169,30 +193,39 @@ namespace OfertApp.Views
             if (e.IsAuthenticated)
             {
                 String urlInfo = accountLoggedIn.Equals("Google") ? Constants.UserInfoUrl :
-                "https://graph.facebook.com/me";
+               "https://graph.facebook.com/me?fields=email";
 
                 // If the user is authenticated, request their basic user data from Google
                 // UserInfoUrl = https://www.googleapis.com/oauth2/v2/userinfo
                 var request = new OAuth2Request("GET", new Uri(urlInfo), null, e.Account);
 
 
-
+                await DisplayAlert("antes de obtener", "el correo", "ok");
                 var response = await request.GetResponseAsync();
                 if (response != null)
                 {
+                    await DisplayAlert("el correo", "no es nulo", "ok");
                     FacebookResponse userFb = new FacebookResponse();
                     // Deserialize the data and store it in the account store
                     // The users email address will be used to identify data in SimpleDB
+                    await DisplayAlert("antes de setear", "el correo", "ok");
                     string userJson = await response.GetResponseTextAsync();
+                    await DisplayAlert("despues de setear", "el correo", "ok");
                     //user = JsonConvert.DeserializeObject<User>(userJson);
 
                     if (accountLoggedIn.Equals("Google"))
                     {
+                        await DisplayAlert("desearilizo en gmail", "el correo", "ok");
                         user = JsonConvert.DeserializeObject<User>(userJson);
+                        await DisplayAlert("ok en gmail", "el correo", "ok");
                     }
                     else
                     {
-                        userFb = JsonConvert.DeserializeObject<FacebookResponse>(userJson);
+                        await DisplayAlert("Hago lo de fb", "para el correo", "ok");
+                        respuestaPerfil = await GetFacebookProfileAsync();
+                        //userFb = JsonConvert.DeserializeObject<FacebookResponse>(userJson);
+                        
+
                     }
 
                     if (account != null)
@@ -201,8 +234,23 @@ namespace OfertApp.Views
                     }
 
                     await store.SaveAsync(account = e.Account, Constants.AppName);
+                    
+                    if (accountLoggedIn.Equals("Google")){
+                        RegistrarPersona(user.Email, user.Name);
 
-                    //RegistrarPersona(user.Email, user.Name);
+                    }
+                    else
+                    {
+
+                        String correo = respuestaPerfil.Email;
+                        correo = correo.Replace(@"\\u0040", "@");
+                        await DisplayAlert("else de fb", correo, "ok");
+
+
+                        RegistrarPersona(correo, respuestaPerfil.Name);
+                    }
+
+
                     //await DisplayAlert("Email address", user.Email+", "+user.Name, "OK");
                 }
             }
@@ -221,7 +269,7 @@ namespace OfertApp.Views
 
         public static void LoginFacebookSuccess(FacebookResponse profile)
         {
-            App.Current.MainPage = new RegistroPage();
+            App.Current.MainPage = new MainPage();
         } 
         #endregion
 
@@ -238,39 +286,71 @@ namespace OfertApp.Views
 
             List<Persona> persona = new List<Persona>();
 
-            person.nombre = nombre;
-            person.apellidos = "DEFAULT";
-            person.correo = email;
-            person.contrasena = "DEFAULT";
-            person.telefono = "DEFAULT";
-            person.genero = "DEFAULT";
-            person.rol = "DEFAULT";
-            person.estado = "Activo";
-            person.token = "Google";
+            if (accountLoggedIn.Equals("Google")){
+                person.nombre = nombre;
+                person.apellidos = "DEFAULT";
+                person.correo = email;
+                person.contrasena = "DEFAULT";
+                person.telefono = "DEFAULT";
+                person.genero = "DEFAULT";
+                person.rol = "DEFAULT";
+                person.estado = "Activo";
+                person.token = "Google";
+            }
+            else
+            {
+                Console.WriteLine("ESTE ES EL PERFIL ");
+                Console.WriteLine("PERFIL: " + respuestaPerfil.FirstName);
+                person.nombre = respuestaPerfil.FirstName;    
+                person.apellidos = respuestaPerfil.LastName;
+                person.correo = respuestaPerfil.Email;
+                person.contrasena = "DEFAULT";
+                person.telefono = "DEFAULT";
+                person.genero = "DEFAULT";
+                person.rol = "DEFAULT";
+                person.estado = "Activo";
+                person.token = "Facebook";
+            }
 
             persona.Add(person);
-
             personas.persona = persona;
-
             var json = JsonConvert.SerializeObject(personas);
+
+            Console.WriteLine(json);
+
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await cliente.PostAsync(URL, content);
-            
+
             if (response.IsSuccessStatusCode)
             {
                 var res = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(res);
+                //Console.WriteLine(res);
                 try
                 {
-                    await SecureStorage.SetAsync("auth", nombre);
+                    await DisplayAlert("antes de setasync", "el facebook", "ok");
+                    await DisplayAlert("Person nombre", person.nombre, "ok");
+
+                    var contenido = JsonConvert.SerializeObject(personas);
+
+                    await SecureStorage.SetAsync("auth", contenido);
+                    await DisplayAlert("despues de setasync", "el facebook", "ok");
+
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error " + ex);
                 }
-                App.Current.MainPage = new MainPage();
-                await Navigation.PushAsync(new MainPage());
+                await DisplayAlert("antes de llevar a mainpage", "el mainpage", "ok");
+
+                Application.Current.MainPage = new MainPage();
+                //await Navigation.PushAsync(new MenuPage());
+
+
+                //App.Current.MainPage = new MainPage();
+                //await Navigation.PushAsync(new MenuPage());
+                await DisplayAlert("despues de llevar a mainpage", "el mainpage", "ok");
+
             }
             else
             {

@@ -26,7 +26,7 @@ namespace OfertApp.Views
 		{
 			InitializeComponent();
 
-            BindingContext = viewModel = new ofertasViewModel(); 
+            BindingContext = viewModel = new ofertasViewModel();
 
         }
 
@@ -45,7 +45,6 @@ namespace OfertApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (viewModel.Ofertas.Count == 0)
                 viewModel.LoadOfertasCommand.Execute(null);
         }
 

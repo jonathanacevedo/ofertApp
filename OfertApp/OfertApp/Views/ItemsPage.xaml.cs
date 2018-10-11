@@ -196,64 +196,53 @@ namespace OfertApp.Views
 
         private async void MostrarNegocios(Map map)
         {
-            var posicion = new Position(Double.Parse("6.272363700000001"), Double.Parse("-75.59355340000002"));
-            var pin = new Pin
-            {
-                Type = PinType.Place,
-                Position = posicion,
-                Label = "Pin de Prueba",
-                Address = "Detalle de Prueba"
-            };
+        cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+         var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
+         var response = await cliente.GetAsync(uri);
+         if (response.IsSuccessStatusCode)
+         {
+             try
+             {
+                 var content = await response.Content.ReadAsStringAsync();
 
-            map.Pins.Add(pin);
-
-     
-            /*cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-            var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
-            var response = await cliente.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                try
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-
-                    var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
+                 var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
 
 
-                    foreach (var negocio in negocios)
-                    {
-                        //Negocios.Add(negocio);
-                        //OnPropertyChanged();
+                 foreach (var negocio in negocios)
+                 {
+                     //Negocios.Add(negocio);
+                     //OnPropertyChanged();
 
-                        Console.WriteLine("Coordenadas del negocio: " + negocio.latitud);
-                        
-                        var posicionPrueba = new Position(Double.Parse(negocio.latitud), Double.Parse(negocio.longitud));
-                        var pin = new Pin
-                        {
-                            Type = PinType.Place,
-                            Position = posicionPrueba,
-                            Label = negocio.nombre,
-                            Address = negocio.detalle
-                        };
+                     Console.WriteLine("Coordenadas del negocio: " + negocio.latitud);
+                        var latitud = negocio.latitud.Replace(".", ",");
+                        var longitud = negocio.longitud.Replace(".", ",");
+                        var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
+                     var pin = new Pin
+                     {
+                         Type = PinType.Place,
+                         Position = posicionPrueba,
+                         Label = negocio.nombre,
+                         Address = negocio.detalle
+                     };
 
-                        map.Pins.Add(pin);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                }
-                finally
-                {
-                    IsBusy = false;
-                }
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
-                Console.WriteLine("Error");
-            }*/
-        }
+                     map.Pins.Add(pin);
+                 }
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex);
+             }
+             finally
+             {
+                 IsBusy = false;
+             }
+         }
+         else
+         {
+             await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
+             Console.WriteLine("Error");
+         }
+    }
 
 
         async void AddItem_Clicked(object sender, EventArgs e)

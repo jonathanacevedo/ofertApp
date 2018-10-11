@@ -176,7 +176,6 @@ namespace OfertApp.Views
             //Console.WriteLine(facebookResponse.Email);
             //Console.WriteLine(respuestaPerfil.Email + respuestaPerfil.FirstName + respuestaPerfil.LastName);
 
-            await DisplayAlert("devuelve el ", "perfil", "ok");
             return facebookResponse;
         }
 
@@ -200,28 +199,21 @@ namespace OfertApp.Views
                 var request = new OAuth2Request("GET", new Uri(urlInfo), null, e.Account);
 
 
-                await DisplayAlert("antes de obtener", "el correo", "ok");
                 var response = await request.GetResponseAsync();
                 if (response != null)
                 {
-                    await DisplayAlert("el correo", "no es nulo", "ok");
                     FacebookResponse userFb = new FacebookResponse();
                     // Deserialize the data and store it in the account store
                     // The users email address will be used to identify data in SimpleDB
-                    await DisplayAlert("antes de setear", "el correo", "ok");
                     string userJson = await response.GetResponseTextAsync();
-                    await DisplayAlert("despues de setear", "el correo", "ok");
                     //user = JsonConvert.DeserializeObject<User>(userJson);
 
                     if (accountLoggedIn.Equals("Google"))
                     {
-                        await DisplayAlert("desearilizo en gmail", "el correo", "ok");
                         user = JsonConvert.DeserializeObject<User>(userJson);
-                        await DisplayAlert("ok en gmail", "el correo", "ok");
                     }
                     else
                     {
-                        await DisplayAlert("Hago lo de fb", "para el correo", "ok");
                         respuestaPerfil = await GetFacebookProfileAsync();
                         //userFb = JsonConvert.DeserializeObject<FacebookResponse>(userJson);
                         
@@ -244,7 +236,7 @@ namespace OfertApp.Views
 
                         String correo = respuestaPerfil.Email;
                         correo = correo.Replace(@"\\u0040", "@");
-                        await DisplayAlert("else de fb", correo, "ok");
+                        //await DisplayAlert("else de fb", correo, "ok");
 
 
                         RegistrarPersona(correo, respuestaPerfil.Name);
@@ -328,20 +320,20 @@ namespace OfertApp.Views
                 //Console.WriteLine(res);
                 try
                 {
-                    await DisplayAlert("antes de setasync", "el facebook", "ok");
-                    await DisplayAlert("Person nombre", person.nombre, "ok");
+                    /*await DisplayAlert("antes de setasync", "el facebook", "ok");
+                    await DisplayAlert("Person nombre", person.nombre, "ok");*/
 
                     var contenido = JsonConvert.SerializeObject(personas);
 
-                    await SecureStorage.SetAsync("auth", contenido);
-                    await DisplayAlert("despues de setasync", "el facebook", "ok");
+                    /*await SecureStorage.SetAsync("auth", contenido);
+                    await DisplayAlert("despues de setasync", "el facebook", "ok");*/
 
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error " + ex);
                 }
-                await DisplayAlert("antes de llevar a mainpage", "el mainpage", "ok");
+                //await DisplayAlert("antes de llevar a mainpage", "el mainpage", "ok");
 
                 Application.Current.MainPage = new MainPage();
                 //await Navigation.PushAsync(new MenuPage());
@@ -349,7 +341,7 @@ namespace OfertApp.Views
 
                 //App.Current.MainPage = new MainPage();
                 //await Navigation.PushAsync(new MenuPage());
-                await DisplayAlert("despues de llevar a mainpage", "el mainpage", "ok");
+                //await DisplayAlert("despues de llevar a mainpage", "el mainpage", "ok");
 
             }
             else

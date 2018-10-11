@@ -52,14 +52,31 @@
                         </Picker.ItemsSource>
                     </Picker>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Entry x:Name="fecha_inicio" Keyboard="Plain"  TextColor="Gray" Placeholder="Fecha Inicio" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
-                        <Entry x:Name="fecha_fin" Keyboard="Plain" TextColor="Gray" Placeholder="Fecha Fin" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                        <Label Text="Fecha inicio:" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+
+                        <Label Text="Fecha fin:" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                       
                     </StackLayout>
+                    
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <DatePicker x:Name="fecha_inicioFront" DateSelected="fecha_inicio_DateSelected"  MaximumDate="12/31/2019" HorizontalOptions="FillAndExpand" />
+  
+                        <DatePicker x:Name="fecha_finFront" DateSelected="fecha_fin_DateSelected"   MaximumDate="12/31/2019"  HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        
                         <Entry x:Name="valor" TextColor="Gray" Keyboard="Numeric" Placeholder="Valor" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                         <Entry x:Name="descuento" TextColor="Gray" Placeholder="Oferta" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+
                     </StackLayout>
                     <Entry x:Name="detalle" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Entry x:Name="imgChoosed" IsEnabled="False" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" ></Entry>
+                        <Button x:Name="btnPick" Image="camara.png" BackgroundColor="Transparent" WidthRequest="45" HeightRequest="45" Clicked="btnPick_Clicked"></Button>
+                    </StackLayout>
+
                     <Button Margin="0,25" Text="Agregar" BackgroundColor="{StaticResource Primary}" TextColor="White" Clicked="Agregar_Clicked" FontSize="16"/>
                     <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>
                 </StackLayout>

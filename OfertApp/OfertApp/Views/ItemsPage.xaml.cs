@@ -21,7 +21,6 @@ namespace OfertApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemsPage : ContentPage
     {
-        Map map;
 
         private HttpClient cliente = new HttpClient();
         public Label ofertas;
@@ -63,27 +62,23 @@ namespace OfertApp.Views
                 Spacing = 0
             };
 
-            var titulo = new Label
-            {
-                Text = "Hola",
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                FontSize = 18,
-                VerticalOptions = LayoutOptions.Start
-            };
+            
 
             var stack = new StackLayout { Spacing = 0 };
-            stack.Children.Add(titulo);
+            
 
             stackMapa.Children.Add(map);
             stack.Children.Add(scrollOfertas);
             stack.Children.Add(stackMapa);
             Content = stack;
+            //InitializeComponent();
         }
+
 
         public async void GetOfertas()
         {
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-            var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
+            var uri = new Uri(String.Format(Constants.IP + ":8092/ofertas/listar", String.Empty));
             var response = await cliente.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {

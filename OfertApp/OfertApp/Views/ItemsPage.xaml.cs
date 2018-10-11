@@ -76,9 +76,9 @@ namespace OfertApp.Views
 
             stackMapa.Children.Add(map);
             stack.Children.Add(scrollOfertas);
-            stack.Children.Add(stackMapa);            
+            stack.Children.Add(stackMapa);
             Content = stack;
-
+        }
 
         public async void GetOfertas()
         {

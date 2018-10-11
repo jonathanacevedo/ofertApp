@@ -108,8 +108,13 @@ namespace OfertApp.Views
             ofert.foto = urlImagen;
             ofert.latitud = "";
             ofert.longitud = "";
+          
 
-            if (string.IsNullOrEmpty(ofert.producto))
+            if (string.IsNullOrEmpty(ofert.fecha_inicio))
+            {
+                ofert.fecha_inicio = actual.ToString("dd/MM/yyyy");
+            }
+            else if (string.IsNullOrEmpty(ofert.producto))
             {
                 await Application.Current.MainPage.DisplayAlert("error", "Producto no puede estar vacio", "Accept");
 
@@ -133,12 +138,7 @@ namespace OfertApp.Views
 
                 return;
             }
-            else if (string.IsNullOrEmpty(ofert.fecha_inicio))
-            {
-                await Application.Current.MainPage.DisplayAlert("error", "debes ingresar una fecha inicial", "Accept");
-
-                return;
-            }
+           
             else if (string.IsNullOrEmpty(ofert.fecha_fin))
             {
                 await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar una fecha final", "Accept");
@@ -227,7 +227,9 @@ namespace OfertApp.Views
 
         private void fecha_inicio_DateSelected(object sender, DateChangedEventArgs e)
         {
+            
             fechaI = e.NewDate;
+         
             fecha_inicial = fechaI.ToString("dd/MM/yyyy");
         }
 

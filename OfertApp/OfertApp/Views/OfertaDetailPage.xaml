@@ -62,7 +62,7 @@
                     <StackLayout Orientation="Horizontal">
                         <Label Text="{Binding Oferta.fecha_inicio}" FontSize="16"/>
                         <Label Text="-" FontSize="18"/>
-                        <Label Text="{Binding Oferta.fecha_inicio}" FontSize="16"/>
+                        <Label Text="{Binding Oferta.fecha_fin}" FontSize="16"/>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

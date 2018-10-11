@@ -17,7 +17,7 @@ namespace OfertApp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RegistroPage : ContentPage
 	{
-        private const string URL = Constants.IP+":8050/orquestador/registrar/personas";
+        private const string URL = Constants.IP + ":8050/orquestador/registrar/personas";
         private HttpClient cliente = new HttpClient();
 
 		public RegistroPage ()

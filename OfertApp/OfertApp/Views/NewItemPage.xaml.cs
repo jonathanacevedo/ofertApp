@@ -33,6 +33,8 @@ namespace OfertApp.Views
         //para la imagen
         public String urlImagen;
         MediaFile file;
+        Utilidades utilidades = new Utilidades();
+
         public NewItemPage()
         {
             InitializeComponent();
@@ -101,49 +103,50 @@ namespace OfertApp.Views
                 nego.latitud = "";
                 nego.longitud = "";
                 await DisplayAlert("Problema con la direccion", "No fue posible verficar la dirección", "OK");
+                return;
             }
             else
             {
-                nego.latitud = latLong.ElementAt(0).ToString();
-                nego.longitud = latLong.ElementAt(1).ToString();
+                nego.latitud = latLong.ElementAt(0).ToString().Replace(",", ".");
+                nego.longitud = latLong.ElementAt(1).ToString().Replace(",", ".");
                 //await DisplayAlert("Direccion correcta", "Latitud: " + nego.latitud + " Longitud: " + nego.longitud, "ok");
             }
 
 
             if (string.IsNullOrEmpty(nego.nombre))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a name", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Campo nombre no puede estar vacio", "Accept");
 
                 return;
             }
 
             else if (string.IsNullOrEmpty(nego.nit))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a nit", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Se debe ingresar un nit", "Accept");
                 return;
             }
 
             else if (string.IsNullOrEmpty(nego.email))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter an email", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar un correo", "Accept");
                 return;
             }
 
-            else if (!email_bien_escrito(nego.email))
+            else if (! utilidades.email_bien_escrito(nego.email))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a correct email", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Correo no admitido", "Accept");
                 return;
             }
 
             else if (string.IsNullOrEmpty(nego.telefono))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a phone", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Ingresa un telefono", "Accept");
                 return;
             }
          
             else if (string.IsNullOrEmpty(nego.direccion))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a address", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "ingresa", "Accept");
                 return;
             }
 
@@ -219,26 +222,12 @@ namespace OfertApp.Views
         {
             await StoreImages(file.GetStream());
         }*/
-        public string ramdon()
-        {
-            Random obj = new Random();
-            string posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-            int longitud = posibles.Length;
-            char letra;
-            int longitudnuevacadena = 8;
-            string nuevacadena = "";
-            for (int i = 0; i < longitudnuevacadena; i++)
-            {
-                letra = posibles[obj.Next(longitud)];
-                nuevacadena += letra.ToString();
-            }
-            return nuevacadena;
-        }
+      
 
         public async Task<string> StoreImages(Stream imageStream)
         {
             var stroageImage = await new FirebaseStorage("ofertas-1535298242523.appspot.com")
-                .Child("XamarinImages").Child(ramdon()).PutAsync(imageStream);
+                .Child("XamarinImages").Child(utilidades.ramdon()).PutAsync(imageStream);
             string imgurl = stroageImage;
             urlImagen = imgurl;
             imgChoosed.Text = urlImagen;
@@ -246,25 +235,6 @@ namespace OfertApp.Views
             return imgurl;
         }
 
-        private Boolean email_bien_escrito(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
     }
 }

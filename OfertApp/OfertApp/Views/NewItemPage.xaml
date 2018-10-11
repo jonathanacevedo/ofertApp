@@ -70,8 +70,6 @@
                         <Entry x:Name="detalle" TextColor="Gray" Placeholder="Detalle" PlaceholderColor="Gray" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
 
                         <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-
-
                             <Entry x:Name="imgChoosed" IsEnabled="False" FontSize="18" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" ></Entry>
                             <Button x:Name="btnPick" Image="camara.png" BackgroundColor="Transparent" WidthRequest="45" HeightRequest="45" Clicked="btnPick_Clicked"></Button>
                         </StackLayout>

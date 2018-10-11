@@ -41,6 +41,8 @@ namespace OfertApp.Models
 
     public class Device
     {
+        public static object Android { get; internal set; }
+        public static object RuntimePlatform { get; internal set; }
         [JsonProperty(PropertyName = "hardware")]
         public string Hardware { get; set; }
 

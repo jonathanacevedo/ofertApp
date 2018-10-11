@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Xamarin.Forms.Maps;
 
 namespace OfertApp.Services
 {
@@ -21,16 +22,24 @@ namespace OfertApp.Services
             List<double> latLong = null;
             try
             {
+                /*
+                var coder = new Geocoder();
+                var localizaciones = (await coder.GetPositionsForAddressAsync(direccion +" AN CO" )).ToList();
+                var localizacion = localizaciones.FirstOrDefault();
+                */
+
                 var localizaciones = await Geocoding.GetLocationsAsync(direccion + " AN CO");
-                var localizacion = localizaciones?.FirstOrDefault();
+                var localizacion = localizaciones.First();
+                Console.WriteLine("ESTA ES LA LOCALIZACION: " + localizacion.ToString());
+
                 if (localizacion != null)
-                {
+                {                    
                     double latitud = localizacion.Latitude;
                     double longitud = localizacion.Longitude;
-
                     latLong = new List<double>();
                     latLong.Insert(0, latitud);
                     latLong.Insert(1, longitud);
+                    return latLong;
                 }
             }
             catch (Exception e)

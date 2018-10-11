@@ -87,11 +87,12 @@ namespace OfertApp.Views
                 nego.latitud = "";
                 nego.longitud = "";
                 await DisplayAlert("Problema con la direccion", "No fue posible verficar la dirección", "OK");
+                return;
             }
             else
             {
-                nego.latitud = latLong.ElementAt(0).ToString();
-                nego.longitud = latLong.ElementAt(1).ToString();
+                nego.latitud = latLong.ElementAt(0).ToString().Replace(",", ".");
+                nego.longitud = latLong.ElementAt(1).ToString().Replace(",", ".");
                 //await DisplayAlert("Direccion correcta", "Latitud: " + nego.latitud + " Longitud: " + nego.longitud, "ok");
             }
 

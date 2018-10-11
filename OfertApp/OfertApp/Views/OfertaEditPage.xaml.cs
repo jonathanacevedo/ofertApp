@@ -97,33 +97,45 @@ namespace OfertApp.Views
             ofert.foto = urlImagen;
             ofert.latitud = "";
             ofert.longitud = "";
-           
+
 
             if (string.IsNullOrEmpty(ofert.producto))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a product name", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Producto no puede estar vacio", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.detalle))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a detail", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar un detalle", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.valor))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a value", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Valor no puede estar vacio", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.descuento))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter an ofer", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "ingresa como es el descuento o promoción", "Accept");
 
                 return;
             }
-           
+
+            else if (string.IsNullOrEmpty(ofert.fecha_inicio))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "debes ingresar una fecha inicial", "Accept");
+
+                return;
+            }
+            else if (string.IsNullOrEmpty(ofert.fecha_fin))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar una fecha final", "Accept");
+
+                return;
+            }
             else if (fechaI > fechaF )
             {
                 await Application.Current.MainPage.DisplayAlert("error", "No es posible que la fecha inicial sea mayor a la final", "cancel");
@@ -132,7 +144,7 @@ namespace OfertApp.Views
             else if (string.IsNullOrEmpty(ofert.foto))
             {
                 ofert.foto = fotoVieja;
-                Console.WriteLine("oeeee: " + ofert.foto);
+               
 
             }
 

@@ -111,31 +111,43 @@ namespace OfertApp.Views
 
             if (string.IsNullOrEmpty(ofert.producto))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a product name", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Producto no puede estar vacio", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.detalle))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a detail", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar un detalle", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.valor))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a value", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Valor no puede estar vacio", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.descuento))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter an ofer", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "ingresa como es el descuento o promoción", "Accept");
+
+                return;
+            }
+            else if (string.IsNullOrEmpty(ofert.fecha_inicio))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "debes ingresar una fecha inicial", "Accept");
+
+                return;
+            }
+            else if (string.IsNullOrEmpty(ofert.fecha_fin))
+            {
+                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar una fecha final", "Accept");
 
                 return;
             }
             else if (string.IsNullOrEmpty(ofert.foto))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must choose a photo", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Debes escoger una foto", "Accept");
 
                 return;
             }

@@ -69,7 +69,7 @@ namespace OfertApp.Views
 
             OnPropertyChanged();
 //            map.Pins.Clear();
-            cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+            /*cliente.DefaultRequestHeaders.Add("Accept", "application/json");
             var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
             var response = await cliente.GetAsync(uri);
             if (response.IsSuccessStatusCode)
@@ -110,6 +110,7 @@ namespace OfertApp.Views
                 await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
                 Console.WriteLine("Error");
             }
+            */
         }
 
 

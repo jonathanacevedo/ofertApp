@@ -114,38 +114,38 @@ namespace OfertApp.Views
 
             if (string.IsNullOrEmpty(nego.nombre))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a name", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Campo nombre no puede estar vacio", "Accept");
 
                 return;
             }
 
             else if (string.IsNullOrEmpty(nego.nit))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a nit", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Se debe ingresar un nit", "Accept");
                 return;
             }
 
             else if (string.IsNullOrEmpty(nego.email))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter an email", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar un correo", "Accept");
                 return;
             }
 
             else if (! utilidades.email_bien_escrito(nego.email))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a correct email", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Correo no admitido", "Accept");
                 return;
             }
 
             else if (string.IsNullOrEmpty(nego.telefono))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a phone", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "Ingresa un telefono", "Accept");
                 return;
             }
          
             else if (string.IsNullOrEmpty(nego.direccion))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "you must enter a address", "Accept");
+                await Application.Current.MainPage.DisplayAlert("error", "ingresa", "Accept");
                 return;
             }
 

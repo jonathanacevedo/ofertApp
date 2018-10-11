@@ -33,6 +33,8 @@ namespace OfertApp.Views
         //para la imagen
         public String urlImagen;
         MediaFile file;
+        Utilidades utilidades = new Utilidades();
+
         public NewItemPage()
         {
             InitializeComponent();
@@ -130,7 +132,7 @@ namespace OfertApp.Views
                 return;
             }
 
-            else if (!email_bien_escrito(nego.email))
+            else if (! utilidades.email_bien_escrito(nego.email))
             {
                 await Application.Current.MainPage.DisplayAlert("error", "you must enter a correct email", "Accept");
                 return;
@@ -220,26 +222,12 @@ namespace OfertApp.Views
         {
             await StoreImages(file.GetStream());
         }*/
-        public string ramdon()
-        {
-            Random obj = new Random();
-            string posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-            int longitud = posibles.Length;
-            char letra;
-            int longitudnuevacadena = 8;
-            string nuevacadena = "";
-            for (int i = 0; i < longitudnuevacadena; i++)
-            {
-                letra = posibles[obj.Next(longitud)];
-                nuevacadena += letra.ToString();
-            }
-            return nuevacadena;
-        }
+      
 
         public async Task<string> StoreImages(Stream imageStream)
         {
             var stroageImage = await new FirebaseStorage("ofertas-1535298242523.appspot.com")
-                .Child("XamarinImages").Child(ramdon()).PutAsync(imageStream);
+                .Child("XamarinImages").Child(utilidades.ramdon()).PutAsync(imageStream);
             string imgurl = stroageImage;
             urlImagen = imgurl;
             imgChoosed.Text = urlImagen;
@@ -247,25 +235,6 @@ namespace OfertApp.Views
             return imgurl;
         }
 
-        private Boolean email_bien_escrito(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
     }
 }

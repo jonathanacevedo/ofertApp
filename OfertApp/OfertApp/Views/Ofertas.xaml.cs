@@ -20,11 +20,14 @@ namespace OfertApp.Views
 
         private const string URL = Constants.IP + ":8092/ofertas/eliminarPut";
         private HttpClient cliente = new HttpClient();
+        public Boolean afterModal;
 
         ofertasViewModel viewModel;
 		public Ofertas ()
 		{
+
 			InitializeComponent();
+            afterModal = false;
 
             BindingContext = viewModel = new ofertasViewModel();
 
@@ -45,7 +48,11 @@ namespace OfertApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            if (!afterModal)
+            {
                 viewModel.LoadOfertasCommand.Execute(null);
+            }
+            afterModal = false;
         }
 
         private void Agregar_Clicked(object sender, EventArgs e)

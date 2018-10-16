@@ -28,6 +28,9 @@ namespace OfertApp.Views
 			InitializeComponent ();
             this.n = n;
 
+            n.afterModal = true;
+
+
             BindingContext = this.viewModel = viewModel;
         }
 

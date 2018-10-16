@@ -16,6 +16,7 @@ using System.Net;
 using static Android.Resource;
 using System.Threading.Tasks;
 using Android;
+using Acr.UserDialogs;
 
 namespace OfertApp.Droid
 {
@@ -28,7 +29,11 @@ namespace OfertApp.Droid
             TryToGetPermissions();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-            
+
+            UserDialogs.Init(this);
+
+
+
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);

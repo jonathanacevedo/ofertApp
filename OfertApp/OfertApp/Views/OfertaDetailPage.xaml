@@ -32,6 +32,7 @@
                 <ContentView VerticalOptions="FillAndExpand">
                     <Image Source="{Binding Oferta.foto}" VerticalOptions="Center" HeightRequest="200" />
                 </ContentView>
+                <ActivityIndicator BindingContext="{x:Reference imagenNegocio}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"/>
             </StackLayout>
             <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="60">
                 <Label LineBreakMode="WordWrap" Text="{Binding Oferta.detalle}" HorizontalOptions="Center" FontSize="18" FontFamily="{StaticResource Lobster}"/>

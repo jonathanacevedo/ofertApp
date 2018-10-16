@@ -30,7 +30,7 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView VerticalOptions="FillAndExpand">
-                    <Image Source="{Binding Oferta.foto}" VerticalOptions="Center" HeightRequest="200" />
+                    <Image x:Name="imagenNegocio" Source="{Binding Oferta.foto}" VerticalOptions="Center" HeightRequest="200" />
                 </ContentView>
                 <ActivityIndicator BindingContext="{x:Reference imagenNegocio}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"/>
             </StackLayout>

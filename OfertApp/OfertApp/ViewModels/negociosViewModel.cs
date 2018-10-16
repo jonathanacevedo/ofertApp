@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace OfertApp.ViewModels
@@ -25,6 +26,8 @@ namespace OfertApp.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        String idPersona;
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
 
@@ -35,6 +38,9 @@ namespace OfertApp.ViewModels
 
         public negocios()
         {
+            CargarPersona();
+           
+
             Negocios = new ObservableCollection<Negocio>();
             LoadItemsCommand = new Command(async () => await GetNegocios());
         }
@@ -50,7 +56,7 @@ namespace OfertApp.ViewModels
             OnPropertyChanged("cambio");
             Negocios.Clear();
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-            var uri = new Uri(String.Format(Constants.IP+":8091/negocios/listar", String.Empty));
+            var uri = new Uri(String.Format(Constants.IP+":8091/negocios/listar/admin/"+ idPersona, String.Empty));
             var response = await cliente.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
@@ -82,6 +88,15 @@ namespace OfertApp.ViewModels
                 Console.WriteLine("Error");
             }
 
+        }
+        public async void CargarPersona()
+        {
+
+            var lista = await SecureStorage.GetAsync("auth");
+
+            Personas personas = JsonConvert.DeserializeObject<Personas>(lista);
+            idPersona = personas.persona[0].id;
+          
         }
     }
 }

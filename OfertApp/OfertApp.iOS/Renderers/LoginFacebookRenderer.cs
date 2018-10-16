@@ -52,6 +52,7 @@ namespace OfertApp.iOS.Renderers
                 {
                     var accessToken =
                         eventArgs.Account.Properties["access_token"].ToString();
+
                     var profile = await GetFacebookProfileAsync(accessToken);
                     Login.LoginFacebookSuccess(profile);
                 }
@@ -65,20 +66,7 @@ namespace OfertApp.iOS.Renderers
             PresentViewController(auth.GetUI(), true, null);
         }
 
-        private async Task<FacebookResponse> GetFacebookProfileAsync(
-            string accessToken)
-        {
-            var requestUrl = "https://graph.facebook.com/v2.8/me/?fields=" +
-                "name,picture,cover,age_range,devices,email,gender," +
-                "is_verified,birthday,languages,work,website,religion," +
-                "location,locale,link,first_name,last_name," +
-                "hometown&access_token=" + accessToken;
-            var httpClient = new HttpClient();
-            var userJson = await httpClient.GetStringAsync(requestUrl);
-            var facebookResponse =
-                JsonConvert.DeserializeObject<FacebookResponse>(userJson);
-            return facebookResponse;
-        }
+
     }
 }
 

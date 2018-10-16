@@ -65,9 +65,15 @@ namespace OfertApp.Views
                 Spacing = 0
             };
 
-            
-
+            var toolbar = new ToolbarItem
+            {
+                Icon = "buscar1.png",
+                Text = "Filtros"
+            };
             stack = new StackLayout { Spacing = 0 };
+
+            this.ToolbarItems.Add(toolbar);
+            this.Title = "OfertApp";
 
             stackMapa.Children.Add(map);
             stack.Children.Add(scrollOfertas);

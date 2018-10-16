@@ -73,6 +73,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.1.4.168</Version>
+    </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.3</Version>
     </PackageReference>
@@ -232,6 +235,7 @@
     <Content Include="file_paths.xml" />
     <AndroidResource Include="Resources\drawable\camara.png" />
     <AndroidResource Include="Resources\drawable\ubicar.png" />
+    <AndroidResource Include="Resources\drawable\buscar1.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\f_logo.png" />

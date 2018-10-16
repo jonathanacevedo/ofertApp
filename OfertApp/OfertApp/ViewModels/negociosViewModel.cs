@@ -40,8 +40,6 @@ namespace OfertApp.ViewModels
         public negocios()
         {
             CargarPersona();
-           
-
             Negocios = new ObservableCollection<Negocio>();
             LoadItemsCommand = new Command(async () => await GetNegocios());
         }

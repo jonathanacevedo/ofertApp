@@ -4,13 +4,7 @@
              x:Class="OfertApp.Views.ItemsPage"
              Title="OfertApp">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Nuevo" Clicked="AddItem_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="add.png"/>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="oferta.png" Text="Item 1" Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
     <StackLayout>

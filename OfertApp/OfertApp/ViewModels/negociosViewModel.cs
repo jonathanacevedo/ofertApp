@@ -57,7 +57,7 @@ namespace OfertApp.ViewModels
             OnPropertyChanged("cambio");
             Negocios.Clear();
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-            var uri = new Uri(String.Format(Constants.IP+":8091/negocios/listar", String.Empty));
+            var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar/admin/" + idPersona, String.Empty));
             var response = await cliente.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {

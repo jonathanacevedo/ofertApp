@@ -14,17 +14,38 @@ namespace OfertApp.Views
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         List<HomeMenuItem> menuItems;
+        String rol;
         public MenuPage()
         {
             InitializeComponent();
             CargarPersona();
-            menuItems = new List<HomeMenuItem>
+            
+            
+
+            if (rol.Equals("Administrador"))
             {
-                new HomeMenuItem {Id = MenuItemType.Inicio, Title="Inicio", IconSource = "home_color.png" },
-                new HomeMenuItem {Id = MenuItemType.Negocios, Title="Mis Negocios", IconSource = "store_color.png" },
-                new HomeMenuItem {Id = MenuItemType.Ofertas, Title="Mis Ofertas", IconSource = "sale_color.png" },
-                new HomeMenuItem {Id = MenuItemType.Config, Title="Configuración", IconSource = "contacts_color.png" }
+                
+                menuItems = new List<HomeMenuItem>
+                {
+                new HomeMenuItem { Id = MenuItemType.Inicio, Title = "Inicio", IconSource = "home_color.png" },
+                new HomeMenuItem { Id = MenuItemType.Negocios, Title = "Mis Negocios", IconSource = "store_color.png" },
+                new HomeMenuItem { Id = MenuItemType.Ofertas, Title = "Mis Ofertas", IconSource = "sale_color.png" },
+                new HomeMenuItem { Id = MenuItemType.Config, Title = "Configuración", IconSource = "contacts_color.png" }
               };
+
+            }
+
+            if (rol.Equals("Cliente"))
+            {
+                menuItems = new List<HomeMenuItem>
+                {
+                new HomeMenuItem { Id = MenuItemType.Inicio, Title = "Inicio", IconSource = "home_color.png" },
+            
+                new HomeMenuItem { Id = MenuItemType.Config, Title = "Configuración", IconSource = "contacts_color.png" }
+              };
+
+            }
+          
 
             ListViewMenu.ItemsSource = menuItems;
 
@@ -41,25 +62,14 @@ namespace OfertApp.Views
 
         public async void CargarPersona()
         {
-            // var content = await response.Content.ReadAsStringAsync();
-            // await SecureStorage.SetAsync("auth", content);
+           
             var lista = await SecureStorage.GetAsync("auth");
-            // ListarPersona persona = JsonConvert.DeserializeObject<ListarPersona>(lista);
+           
             Personas personas = JsonConvert.DeserializeObject<Personas>(lista);
-            /*
-                if (personas.persona[0].genero == "Masculino")
-                {
-                    labelNombre.Text = "Bienvenido " + personas.persona[0].nombre;
-                }
-                else if (personas.persona[0].genero == "Femenino")
-                {
-                    labelNombre.Text = "Bienvenida " + personas.persona[0].nombre;
-                }C:\OfertApp\ofertApp\OfertApp\OfertApp\Services\AuthenticationState.cs
-                else
-                {
-                    labelNombre.Text = "Bienvenido(a) " + personas.persona[0].nombre;
-                }*/
+        
             labelNombre.Text = "Bienvenido/a " + personas.persona[0].nombre;
+            rol = personas.persona[0].rol;
+           
         }
 
         private async void Cerrar_Sesion(object sender, EventArgs e)

@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace OfertApp.ViewModels
@@ -26,6 +27,8 @@ namespace OfertApp.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        String idPersona;
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
 
@@ -36,51 +39,65 @@ namespace OfertApp.ViewModels
 
         public negocios()
         {
+            CargarPersona();
+           
+
             Negocios = new ObservableCollection<Negocio>();
             LoadItemsCommand = new Command(async () => await GetNegocios());
         }
 
         async Task GetNegocios()
         {
-                if (IsBusy)
-                    return;
-
-                IsBusy = true;
-
-                OnPropertyChanged("cambio");
-                Negocios.Clear();
-                cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-                var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
-                var response = await cliente.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
+                       
+            if (IsBusy)
+                return; 
+                        
+            IsBusy = true;
+            
+            OnPropertyChanged("cambio");
+            Negocios.Clear();
+            cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+            var uri = new Uri(String.Format(Constants.IP+":8091/negocios/listar", String.Empty));
+            var response = await cliente.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                try
                 {
-                    try
-                    {
-                        var content = await response.Content.ReadAsStringAsync();
+                var content = await response.Content.ReadAsStringAsync();
 
-                        var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
+                var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
 
 
-                        foreach (var negocio in negocios)
-                        {
-                            Negocios.Add(negocio);
-                            OnPropertyChanged();
-                        }
-                    }
-                    catch (Exception ex)
+                    foreach (var negocio in negocios)
                     {
-                        Console.WriteLine(ex);
-                    }
-                    finally
-                    {
-                        IsBusy = false;
+                        Negocios.Add(negocio);
+                        OnPropertyChanged();
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
-                    Console.WriteLine("Error");
+                    Console.WriteLine(ex);
                 }
+                finally
+                {
+                    IsBusy = false;
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
+                Console.WriteLine("Error");
+            }
+
+        }
+        public async void CargarPersona()
+        {
+
+            var lista = await SecureStorage.GetAsync("auth");
+
+            Personas personas = JsonConvert.DeserializeObject<Personas>(lista);
+            idPersona = personas.persona[0].id;
+          
         }
     }
 }

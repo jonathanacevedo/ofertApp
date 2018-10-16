@@ -1,4 +1,5 @@
-﻿using appOfertas.Models;
+﻿using Acr.UserDialogs;
+using appOfertas.Models;
 using Newtonsoft.Json;
 using OfertApp.Models;
 using OfertApp.Services;
@@ -41,47 +42,45 @@ namespace OfertApp.ViewModels
 
         async Task GetNegocios()
         {
-                       
-            if (IsBusy)
-                return; 
-                        
-            IsBusy = true;
-            
-            OnPropertyChanged("cambio");
-            Negocios.Clear();
-            cliente.DefaultRequestHeaders.Add("Accept", "application/json");
-            var uri = new Uri(String.Format(Constants.IP+":8091/negocios/listar", String.Empty));
-            var response = await cliente.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                try
+                if (IsBusy)
+                    return;
+
+                IsBusy = true;
+
+                OnPropertyChanged("cambio");
+                Negocios.Clear();
+                cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+                var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar", String.Empty));
+                var response = await cliente.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                var content = await response.Content.ReadAsStringAsync();
-
-                var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
-
-
-                    foreach (var negocio in negocios)
+                    try
                     {
-                        Negocios.Add(negocio);
-                        OnPropertyChanged();
+                        var content = await response.Content.ReadAsStringAsync();
+
+                        var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
+
+
+                        foreach (var negocio in negocios)
+                        {
+                            Negocios.Add(negocio);
+                            OnPropertyChanged();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                    finally
+                    {
+                        IsBusy = false;
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine(ex);
+                    await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
+                    Console.WriteLine("Error");
                 }
-                finally
-                {
-                    IsBusy = false;
-                }
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
-                Console.WriteLine("Error");
-            }
-
         }
     }
 }

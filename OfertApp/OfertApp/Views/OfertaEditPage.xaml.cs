@@ -1,4 +1,5 @@
-﻿using appOfertas.Models;
+﻿using Acr.UserDialogs;
+using appOfertas.Models;
 using Firebase.Storage;
 using Newtonsoft.Json;
 using OfertApp.Models;
@@ -206,13 +207,16 @@ namespace OfertApp.Views
 
         public async Task<string> StoreImages(Stream imageStream)
         {
-            var stroageImage = await new FirebaseStorage("ofertas-1535298242523.appspot.com")
+            using (UserDialogs.Instance.Loading("Subiendo Imagen"))
+            {
+                var stroageImage = await new FirebaseStorage("ofertas-1535298242523.appspot.com")
                 .Child("XamarinImages").Child(utilidades.ramdon()).PutAsync(imageStream);
-            string imgurl = stroageImage;
-            urlImagen = imgurl;
-            imgChoosed.Text = urlImagen;
-            //  Console.WriteLine("URL de la imagen: "+imgurl);
-            return imgurl;
+                string imgurl = stroageImage;
+                urlImagen = imgurl;
+                imgChoosed.Text = urlImagen;
+                //  Console.WriteLine("URL de la imagen: "+imgurl);
+                return imgurl;
+            }
         }
 
         private void fecha_inicio_DateSelected(object sender, DateChangedEventArgs e)

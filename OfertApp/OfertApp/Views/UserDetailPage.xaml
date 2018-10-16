@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfertApp.Views.UserDetailPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="8" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label Text="{Binding Negocio.nombre}" FontSize="30" HorizontalOptions="Center"
+               FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView VerticalOptions="FillAndExpand">
+                    <Image Source="{Binding Negocio.foto}" VerticalOptions="Center" HeightRequest="200" />
+                </ContentView>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label Text="{Binding Negocio.detalle}" FontSize="18" FontFamily="{StaticResource Lobster}"
+                       LineBreakMode="CharacterWrap"/>
+            </StackLayout>
+
+            <StackLayout  Margin="40,5">
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="tipo.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Tipo:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.tipo}" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="ciudad.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Ciudad:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.ciudad}" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="telefono.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Telefono:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.telefono}" FontSize="18"/>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Image Source="direccion.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Dirección:" FontSize="18" FontAttributes="Bold" FontFamily="{StaticResource Lobster}"/>
+                    <Label Text="{Binding Negocio.direccion}" FontSize="18"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

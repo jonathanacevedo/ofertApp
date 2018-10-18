@@ -167,14 +167,9 @@ namespace OfertApp.Views
                 "hometown&access_token=" + accessToken; // falla hacirndo esta solicitud
             var httpClient = new HttpClient();
 
-            //await DisplayAlert("antes del ", "perfil", "ok");
             var userJson = await httpClient.GetStringAsync(requestUrl);
-            //await DisplayAlert("despues del ", "perfil", "ok");
             FacebookResponse facebookResponse =
                 JsonConvert.DeserializeObject<FacebookResponse>(userJson);
-            //await DisplayAlert("despues de ", "deserealizar el perfil", "ok");
-            //Console.WriteLine(facebookResponse.Email);
-            //Console.WriteLine(respuestaPerfil.Email + respuestaPerfil.FirstName + respuestaPerfil.LastName);
 
             return facebookResponse;
         }

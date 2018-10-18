@@ -42,22 +42,27 @@ namespace OfertApp.Views
         DateTime fechaI;
         DateTime fechaF;
         String fotoVieja;
+        DateTime parsedDateInicio;
+        DateTime parsedDateFin;
+
         internal OfertaEditPage(ofertaDetailViewModel viewModel, Ofertas n)
         {
             InitializeComponent();
             this.n = n;
-            fecha_inicioFront.MinimumDate = actual;
-            fecha_finFront.MinimumDate = actual;
+            
+            
             BindingContext = this.viewModel = viewModel;
 
             fotoVieja = viewModel.Oferta.foto;
 
-            DateTime parsedDateInicio = DateTime.Parse(viewModel.Oferta.fecha_inicio);
-            DateTime parsedDateFin = DateTime.Parse(viewModel.Oferta.fecha_fin);
+            parsedDateInicio = DateTime.Parse(viewModel.Oferta.fecha_inicio);
+            parsedDateFin = DateTime.Parse(viewModel.Oferta.fecha_fin);
            
             fecha_inicioFront.Date = parsedDateInicio;
             fecha_finFront.Date = parsedDateFin;
-         //  imgChoosed.Text = viewModel.Oferta.foto;
+            fecha_inicioFront.MinimumDate = actual;
+            fecha_finFront.MinimumDate = actual;
+            //  imgChoosed.Text = viewModel.Oferta.foto;
         }
 
         public OfertaEditPage()
@@ -106,48 +111,60 @@ namespace OfertApp.Views
 
                 return;
             }
-            else if (string.IsNullOrEmpty(ofert.detalle))
+            if (string.IsNullOrEmpty(ofert.detalle))
             {
                 await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar un detalle", "Accept");
 
                 return;
             }
-            else if (string.IsNullOrEmpty(ofert.valor))
+            if (string.IsNullOrEmpty(ofert.valor))
             {
                 await Application.Current.MainPage.DisplayAlert("error", "Valor no puede estar vacio", "Accept");
 
                 return;
             }
-            else if (string.IsNullOrEmpty(ofert.descuento))
+            if (string.IsNullOrEmpty(ofert.descuento))
             {
                 await Application.Current.MainPage.DisplayAlert("error", "ingresa como es el descuento o promoción", "Accept");
 
                 return;
             }
+     
 
-            else if (string.IsNullOrEmpty(ofert.fecha_inicio))
-            {
-                await Application.Current.MainPage.DisplayAlert("error", "debes ingresar una fecha inicial", "Accept");
+            if (string.IsNullOrEmpty(ofert.fecha_inicio))
+            {   
+                ofert.fecha_inicio = parsedDateInicio.ToString("dd/MM/yyyy");
+                if (parsedDateInicio < actual)
+                {
+                    await Application.Current.MainPage.DisplayAlert("error", "debes ingresar una fecha inicial mayor o igual a la actual", "Accept");
+                    return;    
+                }
 
-                return;
+
+                //return;
             }
-            else if (string.IsNullOrEmpty(ofert.fecha_fin))
+            if (string.IsNullOrEmpty(ofert.fecha_fin))
             {
-                await Application.Current.MainPage.DisplayAlert("error", "Debes ingresar una fecha final", "Accept");
-
-                return;
+                ofert.fecha_fin = parsedDateFin.ToString("dd/MM/yyyy");
+                if (parsedDateFin < actual)
+                {
+                    await Application.Current.MainPage.DisplayAlert("error", "debes ingresar una fecha final mayor o igual a la actual", "Accept");
+                    return;    
+                }
             }
-            else if (fechaI > fechaF )
+            if (fechaI > fechaF )
             {
                 await Application.Current.MainPage.DisplayAlert("error", "No es posible que la fecha inicial sea mayor a la final", "cancel");
                 return;
             }
-            else if (string.IsNullOrEmpty(ofert.foto))
+          
+            if (string.IsNullOrEmpty(ofert.foto))
             {
                 ofert.foto = fotoVieja;
                
 
             }
+
 
             oferta.Add(ofert);
 
@@ -155,7 +172,8 @@ namespace OfertApp.Views
 
             var json = JsonConvert.SerializeObject(ofertas);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-
+           
+            Console.WriteLine("json: "+json);
             var response = await cliente.PutAsync(URL, content);
             var res = await response.Content.ReadAsStringAsync();
 
@@ -163,7 +181,7 @@ namespace OfertApp.Views
             {
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Actualizar", "Editar Completado", "OK");
-                n.actualizarVistaAsync();
+               // n.actualizarVistaAsync();
                 await Navigation.PopModalAsync();
             }
             else
@@ -223,18 +241,21 @@ namespace OfertApp.Views
         {
             fechaI = e.NewDate;
             fecha_inicial = fechaI.ToString("dd/MM/yyyy");
+            if (fechaI < actual)
+            {
+                App.Current.MainPage.DisplayAlert("Error", "Seleccione una fecha inicial mayor o igual al dia de hoy", "OK");
+            }
         }
 
         private void fecha_fin_DateSelected(object sender, DateChangedEventArgs e)
         {
             fechaF = e.NewDate;
 
-            if (fechaI > fechaF)
-            {
-                App.Current.MainPage.DisplayAlert("error", "No es posible que la fecha inicial sea mayor a la final", "cancel");
-            }
             fecha_final = fechaF.ToString("dd/MM/yyyy");
-
+            if (fechaF < actual)
+            {
+                 App.Current.MainPage.DisplayAlert("Error", "Seleccione una fecha final mayor o igual al dia de hoy", "OK");
+            }
         }
     }
  }

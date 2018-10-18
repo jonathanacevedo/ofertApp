@@ -163,7 +163,6 @@ namespace OfertApp.Views
             {
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Actualizar", "Editar Completado", "OK");
-                n.actualizarVistaAsync();
                 await Navigation.PopModalAsync();
             }
             else

@@ -16,6 +16,7 @@ using OfertApp.Services;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using Acr.UserDialogs;
+using Rg.Plugins.Popup.Services;
 
 namespace OfertApp.Views
 {
@@ -31,8 +32,11 @@ namespace OfertApp.Views
         public StackLayout stack;
         private Map map;
 
+        public Command filtrosCommand { set; get; }
+
+
         public ItemsPage()
-        {            
+        {
             map = new Map(
             MapSpan.FromCenterAndRadius(
             new Position(6.2215477, -75.5722723), Distance.FromMiles(3)))
@@ -68,8 +72,9 @@ namespace OfertApp.Views
             var toolbar = new ToolbarItem
             {
                 Icon = "buscar1.png",
-                Text = "Filtros"
-            };
+                Text = "Filtros",
+                Command = new Command(async () => await MostrarFiltros())
+        };
             stack = new StackLayout { Spacing = 0 };
 
             this.ToolbarItems.Add(toolbar);
@@ -82,6 +87,10 @@ namespace OfertApp.Views
                 //InitializeComponent();
         }
 
+        private async Task MostrarFiltros()
+        {
+            await PopupNavigation.Instance.PushAsync(new FiltrosPage());
+        }
 
         public void VaciarOfertas(int n)
         {

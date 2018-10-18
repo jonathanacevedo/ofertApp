@@ -52,7 +52,6 @@ namespace OfertApp.iOS.Renderers
                 {
                     var accessToken =
                         eventArgs.Account.Properties["access_token"].ToString();
-
                     var profile = await GetFacebookProfileAsync(accessToken);
                     Login.LoginFacebookSuccess(profile);
                 }

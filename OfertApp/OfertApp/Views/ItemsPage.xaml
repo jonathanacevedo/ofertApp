@@ -3,9 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OfertApp.Views.ItemsPage"
              Title="OfertApp">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="oferta.png" Text="Item 1" Priority="0" />
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
     <StackLayout>
     </StackLayout>

@@ -49,8 +49,8 @@ namespace OfertApp.Views
         {
             InitializeComponent();
             this.n = n;
-            
-            
+            fecha_inicioFront.MinimumDate = actual;
+            fecha_finFront.MinimumDate = actual;
             BindingContext = this.viewModel = viewModel;
 
             fotoVieja = viewModel.Oferta.foto;
@@ -129,7 +129,6 @@ namespace OfertApp.Views
 
                 return;
             }
-     
 
             if (string.IsNullOrEmpty(ofert.fecha_inicio))
             {   
@@ -165,7 +164,6 @@ namespace OfertApp.Views
 
             }
 
-
             oferta.Add(ofert);
 
             ofertas.oferta = oferta;
@@ -181,7 +179,7 @@ namespace OfertApp.Views
             {
                 Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Actualizar", "Editar Completado", "OK");
-               // n.actualizarVistaAsync();
+              
                 await Navigation.PopModalAsync();
             }
             else
@@ -251,11 +249,13 @@ namespace OfertApp.Views
         {
             fechaF = e.NewDate;
 
-            fecha_final = fechaF.ToString("dd/MM/yyyy");
+            
             if (fechaF < actual)
             {
                  App.Current.MainPage.DisplayAlert("Error", "Seleccione una fecha final mayor o igual al dia de hoy", "OK");
             }
+            fecha_final = fechaF.ToString("dd/MM/yyyy");
+
         }
     }
  }

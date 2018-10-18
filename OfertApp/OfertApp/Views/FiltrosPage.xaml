@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="OfertApp.Views.FiltrosPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#b42554</Color>
+            <Color x:Key="Accent">#751836</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Lobster">
+                <On Platform="Android" Value="Lobster.otf#Lobster" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout BackgroundColor="{StaticResource Primary}"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label Text="Bienvenido al Popup" />
+        <Button Text="Boton" />
+    </StackLayout>
+</pages:PopupPage>

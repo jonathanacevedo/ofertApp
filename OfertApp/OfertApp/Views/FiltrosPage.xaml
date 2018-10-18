@@ -15,10 +15,48 @@
             </OnPlatform>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout BackgroundColor="{StaticResource Primary}"
+    <Frame Margin="60" Padding="20">
+        <StackLayout BackgroundColor="#FFFFFF"
                  HorizontalOptions="Center"
                  VerticalOptions="Center">
-        <Label Text="Bienvenido al Popup" />
-        <Button Text="Boton" />
-    </StackLayout>
+            <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,0,0,1" VerticalOptions="FillAndExpand">
+                        <Label Margin="10, 0, 10, 20" FontSize="18" FontFamily="{StaticResource Lobster}" TextColor="{StaticResource Primary}" Text="Filtrar Ofertas" HorizontalOptions="Center"/>
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Restaurante" TextColor="{StaticResource Primary}" 
+                       FontFamily="{StaticResource Lobster}" FontSize="16"
+                       Margin="10, 0, 10, 20" Grid.Row="0" Grid.Column="0" />
+                <Switch x:Name="restaurante" Margin="10, 0, 10, 10" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Hotel" TextColor="{StaticResource Primary}" 
+                       FontFamily="{StaticResource Lobster}" FontSize="16"
+                       Margin="10, 0, 10, 20" Grid.Row="1" Grid.Column="0" />
+                <Switch x:Name="hotel" Margin="10, 0, 10, 10" Grid.Row="1" Grid.Column="1" />
+                <Label Text="Bar" TextColor="{StaticResource Primary}" 
+                       FontFamily="{StaticResource Lobster}" FontSize="16"
+                       Margin="10, 0, 10, 20" Grid.Row="2" Grid.Column="0" />
+                <Switch x:Name="bar" Margin="10, 0, 10, 10" Grid.Row="2" Grid.Column="1" />
+                <Label Text="Almacen" TextColor="{StaticResource Primary}" 
+                       FontFamily="{StaticResource Lobster}" FontSize="16"
+                       Margin="10, 0, 10, 20" Grid.Row="3" Grid.Column="0" />
+                <Switch x:Name="almacen" Margin="10, 0, 10, 10" Grid.Row="3" Grid.Column="1" />
+                <Label Text="Otro" TextColor="{StaticResource Primary}" 
+                       FontFamily="{StaticResource Lobster}" FontSize="16"
+                       Margin="10, 0, 10, 20" Grid.Row="4" Grid.Column="0" />
+                <Switch x:Name="otro" Margin="10, 0, 10, 10" Grid.Row="4" Grid.Column="1" />
+            </Grid>
+            <Button Margin="20" Text="Filtrar" BackgroundColor="{StaticResource Primary}" Clicked="Filtrar_Clicked" TextColor="White" FontSize="14"/>
+        </StackLayout>
+    </Frame>
 </pages:PopupPage>

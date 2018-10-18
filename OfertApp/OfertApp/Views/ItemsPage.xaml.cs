@@ -89,6 +89,15 @@ namespace OfertApp.Views
 
         private async Task MostrarFiltros()
         {
+            MessagingCenter.Unsubscribe<FiltrosPage, string>(this, "tipoNegocio");
+
+            Xamarin.Forms.MessagingCenter.Subscribe<FiltrosPage, string>(this, "tipoNegocio", (sender, arg) =>
+            {
+                VaciarOfertas(stackOfertas.Children.Count);
+                map.Pins.Clear();
+                AplicarFiltros(arg);
+            });
+
             await PopupNavigation.Instance.PushAsync(new FiltrosPage());
         }
 
@@ -98,6 +107,176 @@ namespace OfertApp.Views
             {
                 stackOfertas.Children.RemoveAt(0);
             }
+        }
+
+        public async void AplicarFiltros(string tiponegocio)
+        {
+                Console.WriteLine("Aplicando filtros");
+                Button btnTodos = new Button
+                {
+                    Text = "<",
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    FontSize = 10,
+                    HeightRequest = 30,
+                    WidthRequest = 30,
+                    Padding = new Thickness(0, 0, 0, 0),
+                    BackgroundColor = Color.FromHex("b42554".ToString()),
+                    TextColor = Color.White
+                };
+
+                btnTodos.Clicked += (sender, args) =>
+                {
+                    scrollOfertas.TranslationX = 0.0;
+                    MostrarNegocios(map);
+                    GetOfertas();
+                };
+
+                stackOfertas.Children.Add(btnTodos);
+
+                cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+                var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar/negocio/" + tiponegocio, String.Empty));
+                var response = await cliente.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
+                        foreach (var negocio in negocios)
+                        {
+                            FiltrarOfertas(negocio.idnegocio);
+                        }
+                    MostrarNegociosFiltros(map, negocios);
+                    }
+                catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    finally
+                    {
+                        IsBusy = false;
+                    }
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
+                    Console.WriteLine("Error");
+                }
+           
+        }
+
+        public async void FiltrarOfertas(string idnegocio)
+        {
+                cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+                var uri = new Uri(String.Format(Constants.IP + ":8092/ofertas/listar/negocio/" + idnegocio, String.Empty));
+                var response = await cliente.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        var ofertas = JsonConvert.DeserializeObject<List<Oferta>>(content);
+                        foreach (var oferta in ofertas)
+                        {
+                            itemOferta = new StackLayout
+                            {
+                                Spacing = 0,
+                                Orientation = StackOrientation.Vertical,
+                                HorizontalOptions = LayoutOptions.Center,
+                                Padding = new Thickness(10, 10, 10, 10),
+                                Children = {
+                                new Label { Text = oferta.producto,
+                                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                                        TextColor = Color.FromHex("b42554".ToString()), FontSize = 18,
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
+                                 new Image { Source = oferta.foto, HeightRequest=50, WidthRequest= 50},
+                                new StackLayout //Layout Tipo
+                                {
+                                    Orientation = StackOrientation.Horizontal,
+                                    Children =
+                                    {
+                                    new Image { Source = "tipo.png", HeightRequest=10, WidthRequest=10},
+                                    new Label { Text = "Tipo:",
+                                        TextColor = Color.FromHex("b42554".ToString()),
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
+
+                                    new Label { Text = oferta.tipo},
+                                    }
+                                },
+                                new StackLayout //Layout Descuento
+                                {
+                                    Orientation = StackOrientation.Horizontal,
+                                    Children =
+                                    {
+                                    new Image { Source = "oferta.png", HeightRequest=10, WidthRequest=10},
+                                    new Label { Text = "Oferta:",
+                                        TextColor = Color.FromHex("b42554".ToString()),
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
+                                    new Label { Text = oferta.descuento},
+                                    }
+                                }
+                            }
+                            };
+
+                            var stackBotones = new StackLayout
+                            {
+                                Orientation = StackOrientation.Horizontal,
+                                HorizontalOptions = LayoutOptions.CenterAndExpand
+                            };
+
+                            Button btnUbicar = new Button
+                            {
+                                Text = "Ubicar",
+                                VerticalOptions = LayoutOptions.CenterAndExpand,
+                                HorizontalOptions = LayoutOptions.Center,
+                                FontSize = 10,
+                                Padding = new Thickness(0, 0, 0, 0),
+                                HeightRequest = 25,
+                                BackgroundColor = Color.FromHex("b42554".ToString()),
+                                TextColor = Color.White
+                            };
+                            Button btnNegocio = new Button
+                            {
+                                Text = "Negocio",
+                                VerticalOptions = LayoutOptions.Start,
+                                HorizontalOptions = LayoutOptions.Center,
+                                FontSize = 10,
+                                HeightRequest = 25,
+                                Padding = new Thickness(0, 0, 0, 0),
+                                BackgroundColor = Color.FromHex("b42554".ToString()),
+                                TextColor = Color.White
+                            };
+
+                            btnUbicar.Clicked += (sender, args) =>
+                            {
+                                GetCoordsNegocio(oferta.idnegocio);
+                            };
+                            btnNegocio.Clicked += (sender, args) =>
+                            {
+                                MostrarNegocioOferta(oferta.idnegocio);
+                            };
+                            stackBotones.Children.Add(btnNegocio);
+                            stackBotones.Children.Add(btnUbicar);
+                            itemOferta.Children.Add(stackBotones);
+                            stackOfertas.Children.Add(itemOferta);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                    finally
+                    {
+                        IsBusy = false;
+                    }
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
+                    Console.WriteLine("Error");
+                }
         }
 
         public async void GetOfertasPorNegocio(string idnegocio)
@@ -128,6 +307,7 @@ namespace OfertApp.Views
                     btnTodos.Clicked += (sender, args) =>
                     {
                         scrollOfertas.TranslationX = 0.0;
+                        MostrarNegocios(map);
                         GetOfertas();
                     };
 
@@ -232,6 +412,8 @@ namespace OfertApp.Views
                 await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
                 Console.WriteLine("Error");
             }
+            UserDialogs.Instance.HideLoading();
+
         }
 
 
@@ -323,7 +505,6 @@ namespace OfertApp.Views
                             btnUbicar.Clicked += (sender, args) =>
                            {
                                GetCoordsNegocio(oferta.idnegocio);
-
                            };
                             btnNegocio.Clicked += (sender, args) =>
                             {
@@ -349,11 +530,10 @@ namespace OfertApp.Views
                     await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
                     Console.WriteLine("Error");
                 }
-                UserDialogs.Instance.HideLoading();
             }
-        }
+            }
 
-        private async void GetCoordsNegocio(string idnegocio)
+            private async void GetCoordsNegocio(string idnegocio)
         {
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
             var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar/" + idnegocio, String.Empty));
@@ -406,6 +586,43 @@ namespace OfertApp.Views
             }
         }
 
+        private void MostrarNegociosFiltros(Map map, List<Negocio> negocios)
+        {
+
+                try
+                {
+                    foreach (var negocio in negocios)
+                    {
+                        var latitud = negocio.latitud.Replace(".", ",");
+                        var longitud = negocio.longitud.Replace(".", ",");
+                        var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
+                        var pin = new Pin
+                        {
+                            Type = PinType.Place,
+                            Position = posicionPrueba,
+                            Label = negocio.nombre,
+                            Address = negocio.tipo
+                        };
+
+                        pin.Clicked += (sender, args) =>
+                        {
+                            GetOfertasPorNegocio(negocio.idnegocio);
+                            scrollOfertas.ScrollToAsync(0.0, 0.0, true);
+                        };
+
+                        map.Pins.Add(pin);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
+            }
+
         private async void MostrarNegocios(Map map)
         {
         cliente.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -418,7 +635,7 @@ namespace OfertApp.Views
                  var content = await response.Content.ReadAsStringAsync();
 
                  var negocios = JsonConvert.DeserializeObject<List<Negocio>>(content);
-
+                    map.Pins.Clear();
 
                  foreach (var negocio in negocios)
                  {

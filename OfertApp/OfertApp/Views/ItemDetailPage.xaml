@@ -42,8 +42,8 @@
                 <ActivityIndicator BindingContext="{x:Reference imagenNegocio}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"/>
             </StackLayout>
             <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                <Label Text="{Binding Negocio.detalle}" FontSize="18" FontFamily="{StaticResource Lobster}"
-                       LineBreakMode="CharacterWrap"/>
+                <Editor IsEnabled="False" TextColor="Black" Opacity="1" PlaceholderColor="Black" Text="{Binding Negocio.detalle}" HorizontalOptions="Center" FontSize="18" FontFamily="{StaticResource Lobster}"/>
+
             </StackLayout>
 
             <StackLayout  Margin="40,5">

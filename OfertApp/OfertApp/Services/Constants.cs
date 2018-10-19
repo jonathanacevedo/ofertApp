@@ -15,7 +15,7 @@
 		public static string AccessTokenUrl = "https://www.googleapis.com/oauth2/v3/token";
 		public static string UserInfoUrl = "https://www.googleapis.com/oauth2/v2/userinfo";
 
-        public const string IP = "http://172.16.1.21";
+        public const string IP = "http://172.16.0.210";
 
         // Set these to reversed iOS/Android client ids, with :/oauth2redirect appended
         public static string iOSRedirectUrl = "<insert IOS redirect URL here>:/oauth2redirect";

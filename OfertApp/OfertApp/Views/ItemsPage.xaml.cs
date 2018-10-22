@@ -17,6 +17,8 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using Acr.UserDialogs;
 using Rg.Plugins.Popup.Services;
+using Xamarin.Forms.PlatformConfiguration;
+using Android.OS;
 
 namespace OfertApp.Views
 {
@@ -579,7 +581,7 @@ namespace OfertApp.Views
                     await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
                     Console.WriteLine("Error");
                 }
-            }
+              }
             }
 
             private async void GetCoordsNegocio(string idnegocio)
@@ -591,14 +593,44 @@ namespace OfertApp.Views
             {
                 try
                 {
+                    //String deviceName = Android.os.Build.MODEL;
+                    String nombre = Build.Manufacturer;
+                    Console.WriteLine("ESTA ES LA MARCA");
+                    Console.WriteLine(nombre);
                     var content = await response.Content.ReadAsStringAsync();
                     var negocios = JsonConvert.DeserializeObject<Negos>(content);
 
+                    double resultado;
+                    double latitud = 0;
+                    double longitud = 0;
+
+                    if (double.TryParse(negocios.negocio[0].latitud, out resultado)) {
+                        latitud = resultado;
+                    }
+                    else
+                    {
+                        latitud = Convert.ToDouble(negocios.negocio[0].latitud.Replace(".", ","));
+                    }
+
+                    if(double.TryParse(negocios.negocio[0].longitud, out resultado))
+                    {
+                        longitud = resultado;
+                    }
+                    else
+                    {
+                        longitud = Convert.ToDouble(negocios.negocio[0].longitud.Replace(".", ","));
+                    }
+
                     map.MoveToRegion(MapSpan.FromCenterAndRadius(
-                    new Position(Convert.ToDouble(negocios.negocio[0].latitud.Replace(".", ",")), Convert.ToDouble(negocios.negocio[0].longitud.Replace(".", ","))), Distance.FromMiles(1)));
+                    //new Position(Convert.ToDouble(negocios.negocio[0].latitud.Replace(".", ",")), Convert.ToDouble(negocios.negocio[0].longitud.Replace(".", ","))), Distance.FromMiles(1)));
+                    new Position(latitud, longitud),
+                    Distance.FromMiles(1)));
+
+
                 }
                 catch (Exception ex)
                 {
+                    await DisplayAlert("error", "dispositivo no compatible", "ok");
                     Console.WriteLine(ex);
                 }
                 finally
@@ -642,9 +674,31 @@ namespace OfertApp.Views
                 {
                     foreach (var negocio in negocios)
                     {
-                        var latitud = negocio.latitud.Replace(".", ",");
-                        var longitud = negocio.longitud.Replace(".", ",");
-                        var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
+                    //var latitud = negocio.latitud.Replace(".", ",");
+                    double resultado;
+                    double latitud = 0;
+                    double longitud = 0;
+
+                    if (double.TryParse(negocio.latitud, out resultado))
+                    {
+
+                        latitud = resultado;
+                    }
+                    else
+                    {
+                        latitud = Convert.ToDouble(negocio.latitud.Replace(".", ","));
+                    }
+
+                    if (double.TryParse(negocio.longitud, out resultado))
+                    {
+                        longitud = resultado;
+                    }
+                    else
+                    {
+                        longitud = Convert.ToDouble(negocio.longitud.Replace(".", ","));
+                    }
+                    var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
+                    
                         var pin = new Pin
                         {
                             Type = PinType.Place,
@@ -664,6 +718,7 @@ namespace OfertApp.Views
                 }
                 catch (Exception ex)
                 {
+                
                     Console.WriteLine(ex);
                 }
                 finally
@@ -715,8 +770,9 @@ namespace OfertApp.Views
 
                  foreach (var negocio in negocios)
                  {
-                        var latitud = negocio.latitud.Replace(".", ",");
-                        var longitud = negocio.longitud.Replace(".", ",");
+                        //var latitud = negocio.latitud.Replace(".", ",");
+                        var latitud = negocio.latitud;
+                        var longitud = negocio.longitud;
                         var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
                         var pin = new Pin
                         {

@@ -67,7 +67,7 @@
                         <Button x:Name="btnPick" Image="camara.png" BackgroundColor="Transparent" WidthRequest="45" HeightRequest="45" Clicked="btnPick_Clicked"></Button>
                     </StackLayout>
 
-                    <Button Margin="0,25" Text="Editar" BackgroundColor="{StaticResource Primary}" TextColor="White" Clicked="Button_Clicked" FontSize="16"/>
+                    <Button Margin="0,25" Text="Editar" BackgroundColor="{StaticResource Primary}" TextColor="White" Clicked="btnEditar_Clicked" FontSize="16"/>
                     <Label Text="{Binding Message, Mode=OneWay}" TextColor="#0072BD"/>
                 </StackLayout>
             </StackLayout>

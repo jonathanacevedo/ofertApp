@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using appOfertas.Models;
 using Firebase.Storage;
+using Java.Util;
 using Newtonsoft.Json;
 using OfertApp.Models;
 using OfertApp.Services;
@@ -35,7 +36,7 @@ namespace OfertApp.Views
         MediaFile file;
         Utilidades utilidades = new Utilidades();
 
-        //fechas
+      //fechas
         DateTime actual = DateTime.Now;
         String fecha_inicial;
         String fecha_final;
@@ -54,14 +55,17 @@ namespace OfertApp.Views
             BindingContext = this.viewModel = viewModel;
 
             fotoVieja = viewModel.Oferta.foto;
+           // parsedDateInicio = DateTime.Parse(viewModel.Oferta.fecha_inicio);
+            bool fecha = DateTime.TryParse(viewModel.Oferta.fecha_inicio, out parsedDateInicio );
 
-            parsedDateInicio = DateTime.Parse(viewModel.Oferta.fecha_inicio);
-            parsedDateFin = DateTime.Parse(viewModel.Oferta.fecha_fin);
-           
+            //parsedDateFin = DateTime.Parse(viewModel.Oferta.fecha_fin);
+            bool fecha2 = DateTime.TryParse(viewModel.Oferta.fecha_fin, out parsedDateFin);
+
+
             fecha_inicioFront.Date = parsedDateInicio;
             fecha_finFront.Date = parsedDateFin;
-            fecha_inicioFront.MinimumDate = actual;
-            fecha_finFront.MinimumDate = actual;
+
+
             //  imgChoosed.Text = viewModel.Oferta.foto;
         }
 
@@ -81,7 +85,7 @@ namespace OfertApp.Views
         }
 
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void btnEditar_Clicked(object sender, EventArgs e)
         {
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
 

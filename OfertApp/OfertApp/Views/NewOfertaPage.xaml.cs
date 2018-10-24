@@ -46,6 +46,14 @@ namespace OfertApp.Views
         DateTime fechaI;
         DateTime fechaF;
 
+        
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            fecha_inicial = actual.ToString("dd/MM/yyyy");
+            fecha_final = actual.ToString("dd/MM/yyyy");
+        }
+
         public NewOfertaPage()
         {
             InitializeComponent();
@@ -171,15 +179,14 @@ namespace OfertApp.Views
             var response = await cliente.PostAsync(URL, content);
             var res = await response.Content.ReadAsStringAsync();
 
-            if (response.IsSuccessStatusCode)
+            if (response.IsSuccessStatusCode || response.StatusCode.Equals("202"))
             {
-                Console.WriteLine(res);
                 await App.Current.MainPage.DisplayAlert("Registro", "Registro Completado", "OK");
                 await Navigation.PopModalAsync();
             }
             else
             {
-                Console.WriteLine(res);
+
                 await App.Current.MainPage.DisplayAlert("Error", "Algo salió mal", "OK");
                 Console.WriteLine("Error");
             }

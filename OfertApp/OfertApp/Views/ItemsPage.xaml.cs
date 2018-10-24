@@ -17,6 +17,8 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using Acr.UserDialogs;
 using Rg.Plugins.Popup.Services;
+using Xamarin.Forms.PlatformConfiguration;
+using Android.OS;
 
 namespace OfertApp.Views
 {
@@ -186,7 +188,7 @@ namespace OfertApp.Views
                                 HorizontalOptions = LayoutOptions.Center,
                                 Padding = new Thickness(10, 10, 10, 10),
                                 Children = {
-                                new Label { Text = oferta.producto,
+                                new Label { Text = oferta.producto,  //Layout titulo
                                         HorizontalOptions = LayoutOptions.CenterAndExpand,
                                         TextColor = Color.FromHex("b42554".ToString()), FontSize = 18,
                                         FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
@@ -438,17 +440,27 @@ namespace OfertApp.Views
                                 Spacing = 0,
                                 Orientation = StackOrientation.Vertical,
                                 HorizontalOptions = LayoutOptions.Center,
-                                Padding = new Thickness(10, 10, 10, 10),
-                                Children = {
-                                new Label { Text = oferta.producto,
-                                        HorizontalOptions = LayoutOptions.CenterAndExpand,
-                                        TextColor = Color.FromHex("b42554".ToString()), FontSize = 18,
+                                Padding = new Thickness(10, 10, 10, 10)
+                            };
+
+                            //Reestructuración.
+                            StackLayout descuento = new StackLayout //Layout Descuento
+                            {
+                                Orientation = StackOrientation.Horizontal,
+                                Children =
+                                    {
+                                    new Image { Source = "oferta.png", HeightRequest=10, WidthRequest=10},
+                                    new Label { Text = "Oferta:",
+                                        TextColor = Color.FromHex("b42554".ToString()),
                                         FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
-                                 new Image { Source = oferta.foto, HeightRequest=50, WidthRequest= 50},
-                                new StackLayout //Layout Tipo
-                                {
-                                    Orientation = StackOrientation.Horizontal,
-                                    Children =
+                                    new Label { Text = oferta.descuento},
+                                    }
+                            };
+
+                            StackLayout tipo = new StackLayout //Layout Tipo
+                            {
+                                Orientation = StackOrientation.Horizontal,
+                                Children =
                                     {
                                     new Image { Source = "tipo.png", HeightRequest=10, WidthRequest=10},
                                     new Label { Text = "Tipo:",
@@ -457,25 +469,53 @@ namespace OfertApp.Views
 
                                     new Label { Text = oferta.tipo},
                                     }
-                                },
-                                new StackLayout //Layout Descuento
-                                {
-                                    Orientation = StackOrientation.Horizontal,
-                                    Children =
-                                    {
-                                    new Image { Source = "oferta.png", HeightRequest=10, WidthRequest=10},
-                                    new Label { Text = "Oferta:",
-                                        TextColor = Color.FromHex("b42554".ToString()),
-                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null },
-                                    new Label { Text = oferta.descuento},
-                                    }
-                                }
-                            }
                             };
+
+                            Image imagen = new Image { Source = oferta.foto, HeightRequest = 50, WidthRequest = 50 };
+
+
+                            StackLayout titulo = new StackLayout //Layout Titulo
+                            {
+                                Orientation = StackOrientation.Horizontal,
+                                Children =
+                                    {
+                                        new Label { Text = oferta.producto,
+                                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                                        TextColor = Color.FromHex("b42554".ToString()), FontSize = 18,
+                                        FontFamily = Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ? "Lobster.otf#Lobster" : null }
+                                    },
+
+                            };
+
+                            Button btnDetalle = new Button
+                            {
+                                Text = "!",
+                                VerticalOptions = LayoutOptions.Start,
+                                HorizontalOptions = LayoutOptions.Center,
+                                FontSize = 10,
+                                WidthRequest = 25,
+                                HeightRequest = 20,
+                                Padding = new Thickness(0, 0, 0, 0),
+                                BackgroundColor = Color.FromHex("b42554".ToString()),
+                                TextColor = Color.White
+                            };
+
+                            titulo.Children.Add(btnDetalle);
+
+                            itemOferta.Children.Add(titulo);
+                            itemOferta.Children.Add(imagen);
+                            itemOferta.Children.Add(tipo);
+                            itemOferta.Children.Add(descuento);
+                            //Fin de Reestructuración
 
                             var stackBotones = new StackLayout
                             {
                                 Orientation = StackOrientation.Horizontal,
+                                HorizontalOptions = LayoutOptions.CenterAndExpand
+                            };
+                            var containerStackBotones = new StackLayout
+                            {
+                                Orientation = StackOrientation.Vertical,
                                 HorizontalOptions = LayoutOptions.CenterAndExpand
                             };
 
@@ -486,7 +526,7 @@ namespace OfertApp.Views
                                 HorizontalOptions = LayoutOptions.Center,
                                 FontSize = 10,
                                 Padding = new Thickness(0, 0, 0, 0),
-                                HeightRequest = 25,
+                                HeightRequest = 20,
                                 BackgroundColor = Color.FromHex("b42554".ToString()),
                                 TextColor = Color.White
                             };
@@ -496,22 +536,33 @@ namespace OfertApp.Views
                                 VerticalOptions = LayoutOptions.Start,
                                 HorizontalOptions = LayoutOptions.Center,
                                 FontSize = 10,
-                                HeightRequest = 25,
+                                HeightRequest = 20,
                                 Padding = new Thickness(0, 0, 0, 0),
                                 BackgroundColor = Color.FromHex("b42554".ToString()),
                                 TextColor = Color.White
                             };
 
+
                             btnUbicar.Clicked += (sender, args) =>
                            {
                                GetCoordsNegocio(oferta.idnegocio);
                            };
+
+                            btnDetalle.Clicked += (sender, args) =>
+                            {
+                                MostrarDetalleOferta(oferta.id);
+                            };
                             btnNegocio.Clicked += (sender, args) =>
                             {
                                 MostrarNegocioOferta(oferta.idnegocio);
                             };
                             stackBotones.Children.Add(btnNegocio);
+                            //stackBotones.Children.Add(btnDetalle);
                             stackBotones.Children.Add(btnUbicar);
+
+                            //containerStackBotones.Children.Add(stackBotones);
+                            //containerStackBotones.Children.Add(btnDetalle);
+
                             itemOferta.Children.Add(stackBotones);
                             stackOfertas.Children.Add(itemOferta);
                         }
@@ -530,11 +581,11 @@ namespace OfertApp.Views
                     await App.Current.MainPage.DisplayAlert("Error", "Servidor no disponible", "OK");
                     Console.WriteLine("Error");
                 }
-            }
+              }
             }
 
             private async void GetCoordsNegocio(string idnegocio)
-        {
+            {
             cliente.DefaultRequestHeaders.Add("Accept", "application/json");
             var uri = new Uri(String.Format(Constants.IP + ":8091/negocios/listar/" + idnegocio, String.Empty));
             var response = await cliente.GetAsync(uri);
@@ -542,14 +593,44 @@ namespace OfertApp.Views
             {
                 try
                 {
+                    //String deviceName = Android.os.Build.MODEL;
+                    String nombre = Build.Manufacturer;
+                    Console.WriteLine("ESTA ES LA MARCA");
+                    Console.WriteLine(nombre);
                     var content = await response.Content.ReadAsStringAsync();
                     var negocios = JsonConvert.DeserializeObject<Negos>(content);
 
+                    double resultado;
+                    double latitud = 0;
+                    double longitud = 0;
+
+                    if (double.TryParse(negocios.negocio[0].latitud, out resultado)) {
+                        latitud = resultado;
+                    }
+                    else
+                    {
+                        latitud = Convert.ToDouble(negocios.negocio[0].latitud.Replace(".", ","));
+                    }
+
+                    if(double.TryParse(negocios.negocio[0].longitud, out resultado))
+                    {
+                        longitud = resultado;
+                    }
+                    else
+                    {
+                        longitud = Convert.ToDouble(negocios.negocio[0].longitud.Replace(".", ","));
+                    }
+
                     map.MoveToRegion(MapSpan.FromCenterAndRadius(
-                    new Position(Convert.ToDouble(negocios.negocio[0].latitud.Replace(".", ",")), Convert.ToDouble(negocios.negocio[0].longitud.Replace(".", ","))), Distance.FromMiles(1)));
+                    //new Position(Convert.ToDouble(negocios.negocio[0].latitud.Replace(".", ",")), Convert.ToDouble(negocios.negocio[0].longitud.Replace(".", ","))), Distance.FromMiles(1)));
+                    new Position(latitud, longitud),
+                    Distance.FromMiles(1)));
+
+
                 }
                 catch (Exception ex)
                 {
+                    await DisplayAlert("error", "dispositivo no compatible", "ok");
                     Console.WriteLine(ex);
                 }
                 finally
@@ -593,9 +674,31 @@ namespace OfertApp.Views
                 {
                     foreach (var negocio in negocios)
                     {
-                        var latitud = negocio.latitud.Replace(".", ",");
-                        var longitud = negocio.longitud.Replace(".", ",");
-                        var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
+                    //var latitud = negocio.latitud.Replace(".", ",");
+                    double resultado;
+                    double latitud = 0;
+                    double longitud = 0;
+
+                    if (double.TryParse(negocio.latitud, out resultado))
+                    {
+
+                        latitud = resultado;
+                    }
+                    else
+                    {
+                        latitud = Convert.ToDouble(negocio.latitud.Replace(".", ","));
+                    }
+
+                    if (double.TryParse(negocio.longitud, out resultado))
+                    {
+                        longitud = resultado;
+                    }
+                    else
+                    {
+                        longitud = Convert.ToDouble(negocio.longitud.Replace(".", ","));
+                    }
+                    var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
+                    
                         var pin = new Pin
                         {
                             Type = PinType.Place,
@@ -615,6 +718,7 @@ namespace OfertApp.Views
                 }
                 catch (Exception ex)
                 {
+                
                     Console.WriteLine(ex);
                 }
                 finally
@@ -622,6 +726,33 @@ namespace OfertApp.Views
                     IsBusy = false;
                 }
             }
+
+
+        private async void MostrarDetalleOferta(string idoferta)
+        {
+            cliente.DefaultRequestHeaders.Add("Accept", "application/json");
+            var uri = new Uri(String.Format(Constants.IP + ":8092/ofertas/listar/oferta/" + idoferta, String.Empty));
+            var response = await cliente.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                try
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var ofertas = JsonConvert.DeserializeObject<List<Oferta>>(content);
+                    OfertaUserDetailPage pagDetalle = new OfertaUserDetailPage(new ofertaDetailViewModel(ofertas[0]));
+                    var agregarNegocio = Navigation.PushModalAsync(new NavigationPage(pagDetalle));
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
+            }
+        }
 
         private async void MostrarNegocios(Map map)
         {
@@ -639,8 +770,9 @@ namespace OfertApp.Views
 
                  foreach (var negocio in negocios)
                  {
-                        var latitud = negocio.latitud.Replace(".", ",");
-                        var longitud = negocio.longitud.Replace(".", ",");
+                        //var latitud = negocio.latitud.Replace(".", ",");
+                        var latitud = negocio.latitud;
+                        var longitud = negocio.longitud;
                         var posicionPrueba = new Position(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
                         var pin = new Pin
                         {

@@ -27,10 +27,9 @@ namespace OfertApp.Services
                 var localizaciones = (await coder.GetPositionsForAddressAsync(direccion +" AN CO" )).ToList();
                 var localizacion = localizaciones.FirstOrDefault();
                 */
-
-                var localizaciones = await Geocoding.GetLocationsAsync(direccion + " AN CO");
+                var localizaciones = await Geocoding.GetLocationsAsync(direccion + " Medellin Antioquia Colombia");
                 var localizacion = localizaciones.First();
-                Console.WriteLine("ESTA ES LA LOCALIZACION: " + localizacion.ToString());
+                // Console.WriteLine("ESTA ES LA LOCALIZACION: " + localizacion.ToString());
 
                 if (localizacion != null)
                 {                    

@@ -1,7 +1,6 @@
 ﻿using Acr.UserDialogs;
 using appOfertas.Models;
 using Firebase.Storage;
-using Java.Util;
 using Newtonsoft.Json;
 using OfertApp.Models;
 using OfertApp.Services;
@@ -46,6 +45,7 @@ namespace OfertApp.Views
         DateTime parsedDateInicio;
         DateTime parsedDateFin;
 
+
         internal OfertaEditPage(ofertaDetailViewModel viewModel, Ofertas n)
         {
             InitializeComponent();
@@ -55,12 +55,12 @@ namespace OfertApp.Views
             BindingContext = this.viewModel = viewModel;
 
             fotoVieja = viewModel.Oferta.foto;
-           // parsedDateInicio = DateTime.Parse(viewModel.Oferta.fecha_inicio);
+            // parsedDateInicio = DateTime.Parse(viewModel.Oferta.fecha_inicio);
+            DisplayAlert("ddd", viewModel.Oferta.fecha_inicio, "ok");
             bool fecha = DateTime.TryParse(viewModel.Oferta.fecha_inicio, out parsedDateInicio );
 
             //parsedDateFin = DateTime.Parse(viewModel.Oferta.fecha_fin);
             bool fecha2 = DateTime.TryParse(viewModel.Oferta.fecha_fin, out parsedDateFin);
-
 
             fecha_inicioFront.Date = parsedDateInicio;
             fecha_finFront.Date = parsedDateFin;
@@ -68,6 +68,8 @@ namespace OfertApp.Views
 
             //  imgChoosed.Text = viewModel.Oferta.foto;
         }
+
+        
 
         public OfertaEditPage()
         {

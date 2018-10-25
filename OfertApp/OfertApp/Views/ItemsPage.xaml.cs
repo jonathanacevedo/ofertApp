@@ -18,7 +18,6 @@ using System.Collections.ObjectModel;
 using Acr.UserDialogs;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms.PlatformConfiguration;
-using Android.OS;
 
 namespace OfertApp.Views
 {
@@ -594,9 +593,9 @@ namespace OfertApp.Views
                 try
                 {
                     //String deviceName = Android.os.Build.MODEL;
-                    String nombre = Build.Manufacturer;
-                    Console.WriteLine("ESTA ES LA MARCA");
-                    Console.WriteLine(nombre);
+                    //  String nombre = Build.Manufacturer;
+                    //  Console.WriteLine("ESTA ES LA MARCA");
+                    // Console.WriteLine(nombre);
                     var content = await response.Content.ReadAsStringAsync();
                     var negocios = JsonConvert.DeserializeObject<Negos>(content);
 

@@ -103,7 +103,7 @@ namespace OfertApp.Views
             {
                 nego.latitud = "";
                 nego.longitud = "";
-                await DisplayAlert("Problema con la direccion", "No fue posible verficar la dirección", "OK");
+                await DisplayAlert("Problema con la direccion", "No fue posible verificar la dirección", "OK");
                 return;
             }
             else
